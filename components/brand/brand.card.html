@@ -1,0 +1,28 @@
+<!-- @dsCard group="Components" viewport="700x420" name="Mark (logo)" -->
+<!DOCTYPE html>
+<html><head><link rel="stylesheet" href="../../styles.css">
+<style>body{margin:0;background:var(--surface-page);font-family:var(--font-grotesque)}</style>
+</head><body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel" data-presets="react">
+const { Mark } = window.JWL;
+function Demo() {
+  return (
+    <div style={{display:'flex', flexWrap:'wrap', gap:32, padding:28, alignItems:'flex-start'}}>
+      <div style={{padding:16}}><Mark variant="default" width={180} /></div>
+      <div style={{background:'var(--surface-ink)', padding:16}}><Mark variant="reversed" width={180} /></div>
+      <div style={{padding:16}}><Mark variant="contained" width={160} ticks={9} /></div>
+      <div style={{padding:16, display:'flex', flexDirection:'column', gap:8, alignItems:'center'}}>
+        <Mark variant="favicon" />
+        <span style={{font:'var(--text-eyebrow)', color:'var(--text-muted)'}}>16PX FAVICON</span>
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+</body></html>

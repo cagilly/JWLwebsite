@@ -1,0 +1,42 @@
+<!-- @dsCard group="Website" viewport="1280x640" -->
+<!-- @startingPoint section="Website" subtitle="JWL homepage, paper/ink hero toggle, nav, sectors" viewport="1280x900" -->
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../styles.css">
+<style>body{margin:0}</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel" data-presets="react" src="Header.jsx"></script>
+<script type="text/babel" data-presets="react" src="Hero.jsx"></script>
+<script type="text/babel" data-presets="react" src="Sectors.jsx"></script>
+<script type="text/babel" data-presets="react" src="Footer.jsx"></script>
+<script type="text/babel" data-presets="react">
+function App() {
+  const [ground, setGround] = React.useState('paper');
+  return (
+    <div style={{ fontFamily: 'var(--font-grotesque)' }}>
+      <div style={{ padding: '10px 24px', background: 'var(--charcoal)', color: 'var(--paper)', display: 'flex', gap: 12, alignItems: 'center', font: 'var(--text-body-sm)' }}>
+        <span>Hero ground:</span>
+        <button onClick={() => setGround('paper')} style={{ padding: '4px 10px', background: ground === 'paper' ? 'var(--brass)' : 'transparent', color: ground === 'paper' ? 'var(--ink-navy)' : 'var(--paper)', border: '1px solid var(--paper)', cursor: 'pointer' }}>A, Paper</button>
+        <button onClick={() => setGround('ink')} style={{ padding: '4px 10px', background: ground === 'ink' ? 'var(--brass)' : 'transparent', color: ground === 'ink' ? 'var(--ink-navy)' : 'var(--paper)', border: '1px solid var(--paper)', cursor: 'pointer' }}>B, Ink</button>
+      </div>
+      <Header onDark={ground === 'ink'} current="Approach" />
+      <Hero ground={ground} />
+      <Sectors />
+      <Footer />
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+<script src="./enquiry-config.js"></script>
+<script src="./enquiry-store.js"></script>
+<script src="./enquiry-modal.js" defer></script>
+<script src="./cookie-notice.js" defer></script>
+</body>
+</html>

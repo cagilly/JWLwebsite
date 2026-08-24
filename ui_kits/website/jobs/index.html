@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>JWL Jobs, Team Portal</title>
+<link rel="stylesheet" href="../../../styles.css">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--ink-navy);font-family:var(--font-grotesque);color:var(--text-primary);-webkit-font-smoothing:antialiased}
+  a{color:var(--ink-navy);text-decoration:none}
+  a:hover{color:var(--brass-dim)}
+  .app{max-width:520px;margin:0 auto;min-height:100vh;background:var(--paper);position:relative;display:flex;flex-direction:column;box-shadow:0 0 80px rgba(0,0,0,.35)}
+  .num{font-variant-numeric:tabular-nums}
+
+  /* ---------- chrome ---------- */
+  .top{background:var(--ink-navy);color:var(--paper);padding:14px 18px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:40}
+  .top .mark{font:600 1rem/1 var(--font-serif);letter-spacing:.02em;color:var(--paper)}
+  .top .mark b{color:var(--brass)}
+  .top h1{font:600 1rem/1.2 var(--font-serif);margin:0;flex:1;color:var(--paper)}
+  .top .who{font-size:.6875rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-inverse-muted);display:flex;align-items:center;gap:7px}
+  .top .who i{width:22px;height:22px;border-radius:50%;background:var(--brass);color:var(--ink-navy);font-style:normal;font-size:.625rem;font-weight:700;display:grid;place-items:center;letter-spacing:0}
+  .back{background:none;border:0;color:var(--paper);font:inherit;font-size:1.1rem;cursor:pointer;padding:0 4px 0 0;line-height:1}
+
+  main{flex:1;padding-bottom:78px}
+  .pad{padding:18px}
+  .eyebrow{font-size:.625rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-dim);font-weight:600}
+  h2.sec{font:600 1.35rem/1.2 var(--font-serif);color:var(--text-heading);margin:0}
+
+  /* ---------- tabs ---------- */
+  .tabs{display:flex;gap:0;border-bottom:1px solid var(--hairline);background:var(--paper);position:sticky;top:50px;z-index:30;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tabs button{flex:none;background:none;border:0;border-bottom:2.5px solid transparent;padding:13px 15px;font:inherit;font-size:.8125rem;font-weight:600;color:var(--charcoal-60);cursor:pointer;white-space:nowrap;min-height:46px}
+  .tabs button[aria-selected=true]{color:var(--ink-navy);border-bottom-color:var(--ink-navy)}
+  .tabs button .c{font-variant-numeric:tabular-nums;color:var(--brass-dim);margin-left:5px;font-weight:500}
+
+  /* ---------- job list ---------- */
+  .search{padding:12px 18px;border-bottom:1px solid var(--hairline)}
+  .search input{width:100%;font:inherit;font-size:.9375rem;padding:11px 13px;border:1px solid var(--hairline);background:var(--paper);border-radius:0;min-height:44px}
+  .search input:focus{outline:none;border-color:var(--ink-navy);box-shadow:inset 0 -2px 0 var(--brass)}
+  .list{display:flex;flex-direction:column}
+  .job{display:block;width:100%;text-align:left;background:var(--paper);border:0;border-bottom:1px solid var(--hairline);padding:15px 18px;cursor:pointer;font:inherit;position:relative;min-height:44px}
+  .job:active{background:var(--ink-navy-06)}
+  .job.urgent{border-left:3px solid var(--brass);padding-left:15px}
+  .job .r1{display:flex;align-items:baseline;gap:9px;margin-bottom:5px}
+  .job .ref{font-size:.6875rem;letter-spacing:.06em;color:var(--charcoal-60);font-variant-numeric:tabular-nums}
+  .job .addr{font:600 1rem/1.28 var(--font-serif);color:var(--text-heading);margin:0 0 5px}
+  .job .r2{display:flex;flex-wrap:wrap;align-items:center;gap:7px}
+  .job .type{font-size:.75rem;color:var(--text-primary)}
+  .job .when{font-size:.6875rem;color:var(--charcoal-60);margin-left:auto;flex:none}
+  .empty{padding:44px 18px;text-align:center;color:var(--charcoal-60);font-size:.875rem;line-height:1.5}
+
+  .pill{font-size:.625rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700;padding:4px 7px;white-space:nowrap;border:1px solid}
+  .pill.s-new{background:var(--brass);color:var(--ink-navy);border-color:var(--brass)}
+  .pill.s-live{background:var(--ink-navy);color:var(--paper);border-color:var(--ink-navy)}
+  .pill.s-soft{background:transparent;color:var(--charcoal-60);border-color:var(--hairline)}
+  .pill.s-paid{background:transparent;color:var(--ink-navy);border-color:var(--ink-navy)}
+  .pill.u{background:transparent;color:var(--brass-dim);border-color:var(--brass)}
+  .pill.mine{background:var(--ink-navy-10);color:var(--ink-navy);border-color:var(--ink-navy-10)}
+
+  /* ---------- detail ---------- */
+  .dhead{padding:18px;border-bottom:1px solid var(--hairline)}
+  .dhead .ref{font-size:.6875rem;letter-spacing:.08em;color:var(--charcoal-60);text-transform:uppercase}
+  .dhead h2{font:600 1.4rem/1.22 var(--font-serif);color:var(--text-heading);margin:7px 0 10px}
+  .dhead .meta{display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+  .block{border-top:1px solid var(--hairline);padding:16px 18px}
+  .block:first-of-type{border-top:0}
+  .block h3{font-size:.625rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-dim);margin:0 0 12px;font-weight:600}
+  dl.kv{margin:0}
+  dl.kv div{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px solid var(--hairline);font-size:.875rem}
+  dl.kv div:last-child{border-bottom:0}
+  dl.kv dt{color:var(--charcoal-60);flex:none}
+  dl.kv dd{margin:0;text-align:right;font-weight:600;color:var(--text-heading)}
+  dl.kv dd a{font-weight:600}
+
+  .stepper{display:flex;flex-direction:column;gap:0}
+  .step{display:flex;gap:12px;align-items:flex-start;padding:0}
+  .step .dot{flex:none;width:13px;height:13px;border:2px solid var(--hairline);background:var(--paper);margin-top:3px;position:relative}
+  .step .dot::after{content:"";position:absolute;left:50%;top:100%;transform:translateX(-50%);width:2px;height:18px;background:var(--hairline)}
+  .step:last-child .dot::after{display:none}
+  .step.done .dot{background:var(--ink-navy);border-color:var(--ink-navy)}
+  .step.done .dot::after{background:var(--ink-navy)}
+  .step.now .dot{background:var(--brass);border-color:var(--brass)}
+  .step .lab{font-size:.8125rem;padding-bottom:18px;color:var(--charcoal-60);line-height:1.3}
+  .step.done .lab,.step.now .lab{color:var(--text-heading);font-weight:600}
+  .step .lab small{display:block;font-weight:400;color:var(--charcoal-60);font-size:.6875rem;margin-top:2px}
+
+  .btn2{display:block;width:100%;padding:14px;font:inherit;font-size:.9375rem;font-weight:600;cursor:pointer;border-radius:0;min-height:48px;text-align:center;transition:background .18s,color .18s}
+  a.btn2{text-decoration:none}
+  a.btn2.sec:hover{color:var(--ink-navy)}
+  .btn2.pri{background:var(--ink-navy);color:var(--paper);border:1px solid var(--ink-navy)}
+  .btn2.pri:hover{background:var(--brass-dim);border-color:var(--brass-dim)}
+  .btn2.sec{background:transparent;color:var(--ink-navy);border:1px solid var(--ink-navy)}
+  .btn2.sec:hover{background:var(--ink-navy-06)}
+  .btn2.ghost{background:transparent;color:var(--charcoal-60);border:1px solid var(--hairline)}
+  .btn2:disabled{opacity:.42;cursor:not-allowed}
+  .btnrow{display:flex;flex-direction:column;gap:9px}
+  .btnrow.two{flex-direction:row}
+  .btnrow.two .btn2{flex:1}
+  .locknote{font-size:.75rem;color:var(--charcoal-60);line-height:1.45;margin:9px 0 0;display:flex;gap:7px}
+  .locknote b{color:var(--brass-dim);flex:none}
+  .wapv{margin-top:2px}
+  .wapv summary{font-size:.75rem;color:var(--charcoal-60);cursor:pointer;padding:8px 0;list-style:none;display:flex;align-items:center;gap:6px;min-height:36px}
+  .wapv summary::-webkit-details-marker{display:none}
+  .wapv summary::before{content:"+";color:var(--brass);font-size:.9rem}
+  .wapv[open] summary::before{content:"\2013"}
+  .wapv pre{user-select:all;font:inherit;font-size:.8125rem;line-height:1.5;white-space:pre-wrap;margin:0;padding:12px 14px;background:var(--surface-raised);border-left:2px solid var(--brass);color:var(--text-heading)}
+  .wapv p{font-size:.75rem;color:var(--charcoal-60);line-height:1.45;margin:9px 0 0}
+
+  .notes{display:flex;flex-direction:column;gap:12px;margin-bottom:14px}
+  .note{border-left:2px solid var(--hairline);padding:0 0 0 12px}
+  .note .m{font-size:.625rem;letter-spacing:.06em;text-transform:uppercase;color:var(--charcoal-60);margin-bottom:3px}
+  .note p{margin:0;font-size:.875rem;line-height:1.45}
+  textarea,input[type=text],input[type=email],input[type=tel],input[type=date],input[type=datetime-local],input[type=number],select,input[type=password]{width:100%;font:inherit;font-size:.9375rem;padding:11px 13px;border:1px solid var(--hairline);background:var(--paper);border-radius:0;color:var(--text-heading);min-height:44px}
+  textarea{min-height:76px;resize:vertical}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--ink-navy);box-shadow:inset 0 -2px 0 var(--brass)}
+  label.f{display:block;font-size:.625rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-primary);font-weight:600;margin-bottom:7px}
+  .f-wrap{margin-bottom:15px}
+  .f-wrap .hint{font-size:.75rem;color:var(--charcoal-60);margin-top:6px;display:block;line-height:1.4}
+
+  .audit{display:flex;flex-direction:column;gap:0}
+  .audit div{font-size:.75rem;color:var(--charcoal-60);padding:7px 0;border-bottom:1px solid var(--hairline);display:flex;gap:9px;line-height:1.4}
+  .audit div:last-child{border-bottom:0}
+  .audit time{flex:none;font-variant-numeric:tabular-nums;color:var(--brass-dim)}
+
+  /* ---------- overview ---------- */
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--hairline);border:1px solid var(--hairline);margin-bottom:22px}
+  .stat{background:var(--paper);padding:15px}
+  .stat .n{font:600 1.65rem/1 var(--font-serif);color:var(--ink-navy);font-variant-numeric:tabular-nums}
+  .stat .l{font-size:.6875rem;letter-spacing:.06em;text-transform:uppercase;color:var(--charcoal-60);margin-top:6px;line-height:1.3}
+  .stat.alert .n{color:var(--brass-dim)}
+  .rep{margin-bottom:24px}
+  .rep h3{font-size:.625rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-dim);margin:0 0 12px;font-weight:600}
+  .bars{display:flex;flex-direction:column;gap:9px}
+  .bar{display:grid;grid-template-columns:1fr;gap:5px}
+  .bar .t{display:flex;justify-content:space-between;font-size:.8125rem;gap:12px}
+  .bar .t b{font-variant-numeric:tabular-nums;font-weight:600}
+  .bar .track{height:5px;background:var(--ink-navy-06)}
+  .bar .fill{height:5px;background:var(--ink-navy)}
+  .bar.acc .fill{background:var(--brass)}
+  .spark{display:flex;align-items:flex-end;gap:5px;height:76px;border-bottom:1px solid var(--hairline);padding-bottom:0}
+  .spark div{flex:1;background:var(--ink-navy);min-height:2px;position:relative}
+  .spark div span{position:absolute;bottom:-19px;left:0;right:0;text-align:center;font-size:.5625rem;color:var(--charcoal-60);letter-spacing:.04em}
+  .sparkwrap{padding-bottom:22px}
+
+  /* ---------- bottom nav ---------- */
+  .tabbar{position:fixed;bottom:0;left:0;right:0;max-width:520px;margin:0 auto;background:var(--paper);border-top:1px solid var(--hairline);display:flex;z-index:50;padding-bottom:env(safe-area-inset-bottom)}
+  .tabbar button{flex:1;background:none;border:0;padding:11px 4px 13px;font:inherit;font-size:.625rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--charcoal-60);cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:5px;min-height:56px}
+  .tabbar button[aria-current=page]{color:var(--ink-navy)}
+  .tabbar button[aria-current=page] .ic{border-color:var(--ink-navy);background:var(--ink-navy)}
+  .tabbar .ic{width:17px;height:17px;border:1.5px solid var(--charcoal-60);position:relative;display:block}
+  .tabbar .ic.add::before,.tabbar .ic.add::after{content:"";position:absolute;background:var(--charcoal-60);left:50%;top:50%;transform:translate(-50%,-50%)}
+  .tabbar .ic.add::before{width:9px;height:1.5px}
+  .tabbar .ic.add::after{width:1.5px;height:9px}
+  .tabbar button[aria-current=page] .ic.add{background:var(--ink-navy)}
+  .tabbar button[aria-current=page] .ic.add::before,.tabbar button[aria-current=page] .ic.add::after{background:var(--paper)}
+  .tabbar .icwrap{position:relative;display:block;height:17px}
+  .tabbar .ic.rep{border:0;display:flex;align-items:flex-end;gap:2px;height:17px}
+  .tabbar .ic.rep i{width:3.5px;background:var(--charcoal-60);display:block}
+  .tabbar .ic.rep i:nth-child(1){height:8px}.tabbar .ic.rep i:nth-child(2){height:14px}.tabbar .ic.rep i:nth-child(3){height:11px}
+  .tabbar button[aria-current=page] .ic.rep{background:none}
+  .tabbar button[aria-current=page] .ic.rep i{background:var(--ink-navy)}
+  .tabbar .badge{position:absolute;top:7px;margin-left:20px;background:var(--brass);color:var(--ink-navy);font-size:.5625rem;font-weight:700;min-width:15px;height:15px;border-radius:8px;display:grid;place-items:center;padding:0 3px;letter-spacing:0}
+
+  /* ---------- sign in ---------- */
+  .signin{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:30px 26px;background:var(--ink-navy);color:var(--paper)}
+  .signin .mk{font:600 1.6rem/1 var(--font-serif);color:var(--paper);letter-spacing:.04em;margin-bottom:6px}
+  .signin .mk b{color:var(--brass)}
+  .signin .sub{font-size:.8125rem;color:var(--text-inverse-muted);margin:0 0 34px;line-height:1.5}
+  .signin label{display:block;font-size:.625rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-inverse-muted);margin-bottom:7px;font-weight:600}
+  .signin input{background:transparent;border:1px solid var(--hairline-on-ink);color:var(--paper);margin-bottom:15px}
+  .signin input:focus{border-color:var(--brass);box-shadow:none}
+  .signin .go{width:100%;background:var(--brass);color:var(--ink-navy);border:0;padding:15px;font:inherit;font-weight:700;font-size:.9375rem;cursor:pointer;min-height:48px;letter-spacing:.02em}
+  .signin .go:hover{background:var(--paper)}
+  .demo{margin-top:34px;border-top:1px solid var(--hairline-on-ink);padding-top:18px}
+  .demo p{font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brass);margin:0 0 12px;font-weight:600}
+  .demo button{display:flex;width:100%;align-items:center;gap:11px;background:none;border:0;border-bottom:1px solid var(--hairline-on-ink);padding:12px 2px;color:var(--paper);font:inherit;font-size:.875rem;cursor:pointer;text-align:left;min-height:48px}
+  .demo button:hover{color:var(--brass)}
+  .demo button i{width:28px;height:28px;border-radius:50%;background:var(--hairline-on-ink);color:var(--paper);font-style:normal;font-size:.6875rem;font-weight:700;display:grid;place-items:center;flex:none}
+  .demo button em{font-style:normal;font-size:.6875rem;color:var(--text-inverse-muted);margin-left:auto;letter-spacing:.06em;text-transform:uppercase}
+  .secnote{margin-top:26px;font-size:.6875rem;color:var(--text-inverse-muted);line-height:1.55}
+
+  .flag{border:1px solid var(--brass);background:var(--surface-raised);padding:13px 15px;font-size:.8125rem;line-height:1.5;margin:18px}
+  .flag b{display:block;font-size:.5625rem;letter-spacing:.12em;text-transform:uppercase;color:var(--brass-dim);margin-bottom:5px}
+
+  .toast{position:fixed;left:50%;bottom:92px;transform:translate(-50%,14px);background:var(--ink-navy);color:var(--paper);padding:12px 18px;font-size:.8125rem;z-index:80;opacity:0;pointer-events:none;transition:opacity .22s,transform .22s;max-width:88%;text-align:center}
+  .toast.on{opacity:1;transform:translate(-50%,0)}
+  @media (prefers-reduced-motion:reduce){.toast{transition:none}}
+  @media (min-width:560px){.app{margin:26px auto;min-height:calc(100vh - 52px)}}
+</style>
+</head>
+<body>
+
+<div class="app" id="app"></div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================================================
+   JWL Jobs, front-end prototype.
+   Sample data in localStorage. No real authentication: the
+   sign-in screen demonstrates the flow and role model only.
+   ============================================================ */
+
+const TEAM = [
+  { id:'shane',  name:'Shane Cooke',  init:'SC', role:'owner'  },
+  { id:'anne',   name:'Anne Doyle',   init:'AD', role:'admin'  },
+  { id:'joe',    name:'Joe Brennan',  init:'JB', role:'valuer' },
+  { id:'marie',  name:'Marie Kelly',  init:'MK', role:'valuer' },
+  { id:'declan', name:'Declan Ryan',  init:'DR', role:'valuer' }
+];
+
+const STATUSES = ['New / unclaimed','Claimed','Quoted','Inspection booked','Inspected','Invoiced','Paid','Closed'];
+const TERMINAL = 'Lost / declined';
+const PURPOSES = ['Property valuation (general)','Bank or credit union','Probate','Family law / separation','Fair Deal Scheme','Local Property Tax (LPT)','Local authority loan','Historic / retrospective','Blue Book / EVS','Mortgage switcher','Rental / market rent','Loan to value (LTV)'];
+const SOURCES = ['Web form','Pop-up form','Phone','Referral','Solicitor','Repeat client'];
+
+const KEY = 'jwl-jobs-v2', UKEY = 'jwl-jobs-user';
+const day = 864e5;
+const ago = d => new Date(Date.now() - d*day).toISOString();
+
+function seed(){
+  const j = (o,i) => Object.assign({
+    id:'j'+i, urgent:false, assignee:null, inspectAt:'', counterparty:'',
+    invoiceNo:'', invoiceAmount:'', paidOn:'', notes:[], audit:[]
+  }, o);
+  return [
+    j({ ref:'JWL-2614', address:'14 Marlborough Road, Donnybrook, Dublin 4', client:'Eileen Fitzgerald',
+        email:'e.fitzgerald@example.ie', phone:'086 231 8890', purpose:'Probate', source:'Web form',
+        status:'New / unclaimed', urgent:true, createdAt:ago(0.2), counterparty:'Kearney & Co Solicitors',
+        notes:[{by:'Anne Doyle', at:ago(0.15), text:'Solicitor needs the report for a 12 September Revenue filing. Flagged urgent.'}] },0),
+    j({ ref:'JWL-2613', address:'Apt 42, The Malthouse, Grand Canal Dock, Dublin 2', client:'Ronan Whelan',
+        email:'ronan.whelan@example.com', phone:'087 445 1132', purpose:'Mortgage switcher', source:'Pop-up form',
+        status:'New / unclaimed', createdAt:ago(0.6) },1),
+    j({ ref:'JWL-2612', address:'7 Beechwood Park, Naas, Co. Kildare', client:'Deirdre Nolan',
+        email:'dnolan@example.ie', phone:'085 992 4417', purpose:'Fair Deal Scheme', source:'Phone',
+        status:'Claimed', assignee:'joe', createdAt:ago(1.4) },2),
+    j({ ref:'JWL-2611', address:'Cloneen House, Enniskerry, Co. Wicklow', client:'Peter & Sylvia Hanlon',
+        email:'phanlon@example.ie', phone:'086 770 2245', purpose:'Family law / separation', source:'Referral',
+        status:'Inspection booked', assignee:'marie', inspectAt:'2026-08-27T10:30',
+        counterparty:'Ms J. Ahern BL', createdAt:ago(3.1), urgent:true,
+        notes:[{by:'Marie Kelly', at:ago(1.9), text:'Joint instruction from both parties. Court listing 6 October, report must be with both solicitors two weeks prior.'}] },3),
+    j({ ref:'JWL-2610', address:'23 Sundrive Road, Kimmage, Dublin 12', client:'Aoife McGrath',
+        email:'aoife.mcgrath@example.com', phone:'089 118 6603', purpose:'Loan to value (LTV)', source:'Web form',
+        status:'Inspected', assignee:'joe', inspectAt:'2026-08-20T14:00', counterparty:'Permanent TSB',
+        createdAt:ago(5.2) },4),
+    j({ ref:'JWL-2609', address:'Unit 3, Mill Lane, Palmerstown, Dublin 20', client:'Brendan Lawless',
+        email:'b.lawless@example.ie', phone:'087 663 9014', purpose:'Rental / market rent', source:'Repeat client',
+        status:'Invoiced', assignee:'declan', inspectAt:'2026-08-14T11:00', invoiceNo:'INV-1188',
+        invoiceAmount:'450', createdAt:ago(9.4) },5),
+    j({ ref:'JWL-2608', address:'52 Rathdown Park, Greystones, Co. Wicklow', client:'Niamh Carroll',
+        email:'niamh.c@example.com', phone:'086 209 5528', purpose:'Probate', source:'Solicitor',
+        status:'Invoiced', assignee:'marie', inspectAt:'2026-08-11T09:30', counterparty:'Boland Reid LLP',
+        invoiceNo:'INV-1186', invoiceAmount:'525', createdAt:ago(12.1) },6),
+    j({ ref:'JWL-2607', address:'8 The Paddocks, Ashbourne, Co. Meath', client:'Tom Sheridan',
+        email:'tsheridan@example.ie', phone:'085 447 7761', purpose:'Bank or credit union', source:'Web form',
+        status:'Paid', assignee:'joe', inspectAt:'2026-08-06T13:00', counterparty:'Ulster Bank',
+        invoiceNo:'INV-1181', invoiceAmount:'400', paidOn:'2026-08-18', createdAt:ago(17.3) },7),
+    j({ ref:'JWL-2606', address:'Ardmore, Blessington Road, Naas, Co. Kildare', client:'Fiona Dunne',
+        email:'fdunne@example.ie', phone:'087 331 0092', purpose:'Local Property Tax (LPT)', source:'Phone',
+        status:'Closed', assignee:'declan', invoiceNo:'INV-1177', invoiceAmount:'300',
+        paidOn:'2026-08-12', createdAt:ago(23.6) },8),
+    j({ ref:'JWL-2605', address:'19 Clonliffe Avenue, Ballybough, Dublin 3', client:'Gerry Moloney',
+        email:'gmoloney@example.com', phone:'086 550 8823', purpose:'Property valuation (general)',
+        source:'Web form', status:'Lost / declined', createdAt:ago(26.2),
+        notes:[{by:'Shane Cooke', at:ago(24), text:'Client wanted a free verbal appraisal for sale purposes. Referred elsewhere, not our work.'}] },9)
+  ];
+}
+
+let JOBS = JSON.parse(localStorage.getItem(KEY) || 'null') || seed();
+let ME = TEAM.find(t => t.id === localStorage.getItem(UKEY)) || null;
+let view = { screen:'queue', tab:'unclaimed', jobId:null, q:'' };
+
+const save = () => localStorage.setItem(KEY, JSON.stringify(JOBS));
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const person = id => TEAM.find(t => t.id === id);
+const canMoney = () => ME && (ME.role === 'owner' || ME.role === 'admin');
+const isOwner = () => ME && ME.role === 'owner';
+
+function rel(iso){
+  const h = (Date.now() - new Date(iso)) / 36e5;
+  if (h < 1) return Math.max(1, Math.round(h*60)) + ' min';
+  if (h < 24) return Math.round(h) + ' hr';
+  return Math.round(h/24) + ' d';
+}
+function dt(v){
+  if (!v) return '—';
+  const d = new Date(v);
+  return d.toLocaleDateString('en-IE',{day:'numeric',month:'short'}) + ', ' +
+         d.toLocaleTimeString('en-IE',{hour:'2-digit',minute:'2-digit',hour12:false});
+}
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('on');
+  clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('on'), 2400);
+}
+function area(addr){
+  const parts = String(addr).split(',').map(s => s.trim()).filter(Boolean);
+  return parts.length > 1 ? parts.slice(-2).join(', ') : parts[0] || '';
+}
+function waText(j){
+  const lines = ['New enquiry \u00b7 ' + j.ref];
+  if (j.urgent) lines.push('URGENT');
+  lines.push(j.purpose + ' \u00b7 ' + area(j.address));
+  const dl = (j.notes || []).find(n => /^Deadline given: /.test(n.text));
+  if (dl) lines.push(dl.text.replace('Deadline given: ', 'Deadline: '));
+  if (j.inspectAt) lines.push('Inspection: ' + dt(j.inspectAt));
+  lines.push('jwl.ie/jobs');
+  return lines.join('\n');
+}
+function waHref(j){ return 'https://wa.me/?text=' + encodeURIComponent(waText(j)); }
+function copyWA(id){
+  const j = JOBS.find(x => x.id === id); if (!j) return;
+  const t = waText(j);
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(t).then(
+      () => toast('Message copied, paste it into WhatsApp.'),
+      () => toast('Copy failed. Select the text below instead.')
+    );
+  } else {
+    toast('Select the text below and copy it.');
+  }
+}
+function log(job, what){
+  job.audit.unshift({ by: ME.name, at: new Date().toISOString(), what });
+}
+function pillClass(s){
+  if (s === 'New / unclaimed') return 's-new';
+  if (s === 'Paid') return 's-paid';
+  if (s === 'Closed' || s === TERMINAL) return 's-soft';
+  return 's-live';
+}
+
+/* ---------------- filtering ---------------- */
+function filtered(){
+  const q = view.q.trim().toLowerCase();
+  let out = JOBS.slice();
+  if (view.tab === 'unclaimed') out = out.filter(j => !j.assignee && j.status !== TERMINAL && j.status !== 'Closed');
+  if (view.tab === 'mine')      out = out.filter(j => j.assignee === ME.id);
+  if (view.tab === 'urgent')    out = out.filter(j => j.urgent && j.status !== 'Closed' && j.status !== TERMINAL);
+  if (view.tab === 'unpaid')    out = out.filter(j => j.status === 'Invoiced');
+  if (q) out = out.filter(j => (j.address+' '+j.client+' '+j.ref+' '+j.purpose).toLowerCase().includes(q));
+  return out.sort((a,b) => (b.urgent - a.urgent) || (new Date(b.createdAt) - new Date(a.createdAt)));
+}
+const counts = () => ({
+  unclaimed: JOBS.filter(j => !j.assignee && j.status !== TERMINAL && j.status !== 'Closed').length,
+  mine:      JOBS.filter(j => j.assignee === ME.id).length,
+  urgent:    JOBS.filter(j => j.urgent && j.status !== 'Closed' && j.status !== TERMINAL).length,
+  unpaid:    JOBS.filter(j => j.status === 'Invoiced').length
+});
+
+/* ---------------- screens ---------------- */
+function signIn(){
+  return `<div class="signin">
+    <div class="mk">JW<b>L</b></div>
+    <p class="sub">Team portal, job queue, assignment and reporting. Authorised staff only.</p>
+    <label for="em">Email address</label>
+    <input type="email" id="em" placeholder="name@jwl.ie" autocomplete="username">
+    <label for="pw">Password</label>
+    <input type="password" id="pw" placeholder="••••••••" autocomplete="current-password">
+    <button class="go" onclick="toast('Prototype, pick a team member below to explore the portal.')">Sign in</button>
+    <div class="demo">
+      <p>Prototype, sign in as</p>
+      ${TEAM.map(t => `<button onclick="login('${t.id}')"><i>${t.init}</i>${esc(t.name)}<em>${t.role}</em></button>`).join('')}
+    </div>
+    <p class="secnote">In the live system this screen uses two-factor authentication, and each person sees only what their role permits. All access is logged.</p>
+  </div>`;
+}
+
+function queue(){
+  const c = counts(), jobs = filtered();
+  const tab = (id,label,n) => `<button role="tab" aria-selected="${view.tab===id}" onclick="setTab('${id}')">${label}${n?`<span class="c">${n}</span>`:''}</button>`;
+  return `${topBar('Job queue')}
+  <div class="tabs" role="tablist">
+    ${tab('unclaimed','Unclaimed',c.unclaimed)}
+    ${tab('mine','Mine',c.mine)}
+    ${tab('urgent','Urgent',c.urgent)}
+    ${canMoney() ? tab('unpaid','Unpaid',c.unpaid) : ''}
+    ${tab('all','All',JOBS.length)}
+  </div>
+  <div class="search"><input type="text" placeholder="Search address, client or reference" value="${esc(view.q)}" oninput="setQ(this.value)"></div>
+  <div class="list">
+    ${jobs.length ? jobs.map(jobRow).join('') : `<p class="empty">Nothing here.${view.tab==='unclaimed'?'<br>Every enquiry has been picked up.':''}</p>`}
+  </div>`;
+}
+
+function jobRow(j){
+  const who = j.assignee ? person(j.assignee) : null;
+  return `<button class="job${j.urgent?' urgent':''}" onclick="openJob('${j.id}')">
+    <div class="r1">
+      <span class="ref">${esc(j.ref)}</span>
+      ${j.urgent ? '<span class="pill u">Urgent</span>' : ''}
+      <span class="when">${rel(j.createdAt)}</span>
+    </div>
+    <p class="addr">${esc(j.address)}</p>
+    <div class="r2">
+      <span class="pill ${pillClass(j.status)}">${esc(j.status)}</span>
+      <span class="type">${esc(j.purpose)}</span>
+      ${who ? `<span class="pill mine">${esc(who.init)}</span>` : ''}
+    </div>
+  </button>`;
+}
+
+function detail(){
+  const j = JOBS.find(x => x.id === view.jobId);
+  if (!j) return queue();
+  const who = j.assignee ? person(j.assignee) : null;
+  const mine = j.assignee === ME.id;
+  const idx = STATUSES.indexOf(j.status);
+  const lost = j.status === TERMINAL;
+
+  const steps = STATUSES.map((s,i) => {
+    const cls = lost ? '' : (i < idx ? 'done' : i === idx ? 'now' : '');
+    let sub = '';
+    if (s === 'Inspection booked' && j.inspectAt) sub = dt(j.inspectAt);
+    if (s === 'Invoiced' && j.invoiceNo) sub = j.invoiceNo + (j.invoiceAmount ? ' · €' + j.invoiceAmount : '');
+    if (s === 'Paid' && j.paidOn) sub = new Date(j.paidOn).toLocaleDateString('en-IE',{day:'numeric',month:'long',year:'numeric'});
+    return `<div class="step ${cls}"><span class="dot"></span><span class="lab">${esc(s)}${sub?`<small>${esc(sub)}</small>`:''}</span></div>`;
+  }).join('');
+
+  let next = (!lost && idx > -1 && idx < STATUSES.length - 1) ? STATUSES[idx+1] : null;
+  if (next === 'Claimed') next = null; // claiming is the only route into Claimed
+  const nextBlocked = next === 'Paid' && !canMoney();
+
+  return `${topBar(j.ref, true)}
+  <div class="dhead">
+    <div class="ref">${esc(j.purpose)} · via ${esc(j.source)}</div>
+    <h2>${esc(j.address)}</h2>
+    <div class="meta">
+      <span class="pill ${pillClass(j.status)}">${esc(j.status)}</span>
+      ${j.urgent ? '<span class="pill u">Urgent</span>' : ''}
+      ${who ? `<span class="pill mine">${esc(who.name)}</span>` : '<span class="pill s-soft">Unclaimed</span>'}
+    </div>
+  </div>
+
+  <div class="block">
+    <h3>Actions</h3>
+    <div class="btnrow">
+      ${!j.assignee
+        ? `<button class="btn2 pri" onclick="claim('${j.id}')">Put my name to this job</button>`
+        : mine
+          ? `<button class="btn2 ghost" onclick="unclaim('${j.id}')">Release this job</button>`
+          : isOwner()
+            ? `<button class="btn2 sec" onclick="reassign('${j.id}')">Reassign from ${esc(who.name)}</button>`
+            : ''}
+      ${next ? `<button class="btn2 ${nextBlocked?'ghost':'sec'}" ${nextBlocked?'disabled':''} onclick="advance('${j.id}')">Mark as ${esc(next).toLowerCase()}</button>` : ''}
+      <a class="btn2 sec" href="${waHref(j)}" target="_blank" rel="noopener">Post to the WhatsApp group</a>
+      <details class="wapv">
+        <summary>What gets sent</summary>
+        <pre>${esc(waText(j))}</pre>
+        <button class="btn2 ghost" style="margin-top:9px" onclick="copyWA('${j.id}')">Copy message</button>
+        <p>No client name, phone or full address, those stay behind the portal login.</p>
+      </details>
+      <div class="btnrow two">
+        <button class="btn2 ghost" onclick="toggleUrgent('${j.id}')">${j.urgent?'Clear urgent':'Flag urgent'}</button>
+        ${lost ? `<button class="btn2 ghost" onclick="reopen('${j.id}')">Reopen</button>`
+               : `<button class="btn2 ghost" onclick="lose('${j.id}')">Lost / declined</button>`}
+      </div>
+    </div>
+    ${nextBlocked ? `<p class="locknote"><b>Restricted</b>Only Shane or Anne can mark a job paid. Financial fields are limited by role.</p>` : ''}
+  </div>
+
+  <div class="block">
+    <h3>Progress</h3>
+    ${lost ? `<p style="font-size:.875rem;margin:0 0 14px;color:var(--charcoal-60);line-height:1.5">Marked lost or declined. Reopen to return it to the pipeline.</p>` : ''}
+    <div class="stepper">${steps}</div>
+  </div>
+
+  <div class="block">
+    <h3>Client</h3>
+    <dl class="kv">
+      <div><dt>Name</dt><dd>${esc(j.client)}</dd></div>
+      <div><dt>Phone</dt><dd><a href="tel:${esc(j.phone.replace(/\s/g,''))}">${esc(j.phone)}</a></dd></div>
+      <div><dt>Email</dt><dd><a href="mailto:${esc(j.email)}">${esc(j.email)}</a></dd></div>
+      <div><dt>Enquiry received</dt><dd>${new Date(j.createdAt).toLocaleDateString('en-IE',{day:'numeric',month:'long'})}</dd></div>
+    </dl>
+  </div>
+
+  <div class="block">
+    <h3>Job detail</h3>
+    <div class="f-wrap">
+      <label class="f" for="insp">Inspection date &amp; time</label>
+      <input type="datetime-local" id="insp" value="${esc(j.inspectAt)}" onchange="setField('${j.id}','inspectAt',this.value,'inspection time')">
+    </div>
+    <div class="f-wrap">
+      <label class="f" for="cp">Lender / solicitor</label>
+      <input type="text" id="cp" value="${esc(j.counterparty)}" placeholder="Who is the report for?" onchange="setField('${j.id}','counterparty',this.value,'counterparty')">
+    </div>
+    <div class="f-wrap">
+      <label class="f" for="inv">Invoice number</label>
+      <input type="text" id="inv" value="${esc(j.invoiceNo)}" placeholder="INV-0000" ${canMoney()?'':'disabled'} onchange="setField('${j.id}','invoiceNo',this.value,'invoice number')">
+      ${canMoney()?'':'<span class="hint">Financial fields are owner and admin only.</span>'}
+    </div>
+    ${canMoney() ? `<div class="f-wrap">
+      <label class="f" for="amt">Invoice amount (€)</label>
+      <input type="number" id="amt" value="${esc(j.invoiceAmount)}" placeholder="0" onchange="setField('${j.id}','invoiceAmount',this.value,'invoice amount')">
+    </div>
+    <div class="f-wrap">
+      <label class="f" for="pd">Date paid</label>
+      <input type="date" id="pd" value="${esc(j.paidOn)}" onchange="setField('${j.id}','paidOn',this.value,'date paid')">
+    </div>` : ''}
+  </div>
+
+  <div class="block">
+    <h3>Internal notes</h3>
+    ${j.notes.length ? `<div class="notes">${j.notes.map(n => `<div class="note">
+      <div class="m">${esc(n.by)} · ${rel(n.at)} ago</div><p>${esc(n.text)}</p></div>`).join('')}</div>` : ''}
+    <div class="f-wrap"><textarea id="nn" placeholder="Add a note for the team…"></textarea></div>
+    <button class="btn2 sec" onclick="addNote('${j.id}')">Add note</button>
+  </div>
+
+  <div class="block">
+    <h3>History</h3>
+    ${j.audit.length
+      ? `<div class="audit">${j.audit.map(a => `<div><time>${rel(a.at)} ago</time><span>${esc(a.by)}, ${esc(a.what)}</span></div>`).join('')}</div>`
+      : `<p style="font-size:.8125rem;color:var(--charcoal-60);margin:0;line-height:1.5">No changes recorded yet. Every claim, status change and edit is logged here with the person and time.</p>`}
+  </div>`;
+}
+
+function addJob(){
+  return `${topBar('Add a job', true)}
+  <div class="pad">
+    <p style="font-size:.875rem;color:var(--text-primary);margin:0 0 20px;line-height:1.55">For enquiries that arrive by phone, referral or in person, anything that did not come through the website.</p>
+    <div class="f-wrap"><label class="f" for="a-addr">Property address <span style="color:var(--brass)">*</span></label><input type="text" id="a-addr" placeholder="Including Eircode if known"></div>
+    <div class="f-wrap"><label class="f" for="a-cl">Client name <span style="color:var(--brass)">*</span></label><input type="text" id="a-cl"></div>
+    <div class="f-wrap"><label class="f" for="a-ph">Phone <span style="color:var(--brass)">*</span></label><input type="tel" id="a-ph"></div>
+    <div class="f-wrap"><label class="f" for="a-em">Email</label><input type="email" id="a-em"></div>
+    <div class="f-wrap"><label class="f" for="a-pu">Valuation type <span style="color:var(--brass)">*</span></label>
+      <select id="a-pu">${PURPOSES.map(p => `<option>${p}</option>`).join('')}</select></div>
+    <div class="f-wrap"><label class="f" for="a-so">How it came in</label>
+      <select id="a-so">${SOURCES.filter(s => !s.includes('form')).map(s => `<option>${s}</option>`).join('')}</select></div>
+    <div class="f-wrap"><label class="f" for="a-cp">Lender / solicitor</label><input type="text" id="a-cp"></div>
+    <div class="f-wrap"><label class="f" for="a-nt">Opening note</label><textarea id="a-nt" placeholder="Anything the team should know."></textarea></div>
+    <label class="f" style="display:flex;gap:10px;align-items:center;text-transform:none;letter-spacing:0;font-size:.875rem;font-weight:400;padding:14px 0;border-top:1px solid var(--hairline);margin-bottom:16px;min-height:44px">
+      <input type="checkbox" id="a-ug" style="width:19px;height:19px;min-height:0;accent-color:var(--ink-navy)"> Flag as urgent
+    </label>
+    <label class="f" style="display:flex;gap:10px;align-items:center;text-transform:none;letter-spacing:0;font-size:.875rem;font-weight:400;padding-bottom:18px;min-height:44px">
+      <input type="checkbox" id="a-me" checked style="width:19px;height:19px;min-height:0;accent-color:var(--ink-navy)"> Put my name to it now
+    </label>
+    <button class="btn2 pri" onclick="createJob()">Create job</button>
+  </div>`;
+}
+
+function overview(){
+  const live = JOBS.filter(j => j.status !== 'Closed' && j.status !== TERMINAL);
+  const c = counts();
+  const outstanding = JOBS.filter(j => j.status === 'Invoiced')
+    .reduce((n,j) => n + (parseFloat(j.invoiceAmount) || 0), 0);
+
+  const byStatus = STATUSES.concat([TERMINAL])
+    .map(s => ({ k:s, n:JOBS.filter(j => j.status === s).length }))
+    .filter(r => r.n);
+  const byValuer = TEAM.filter(t => t.role !== 'admin')
+    .map(t => ({ k:t.name, n:live.filter(j => j.assignee === t.id).length }));
+  const bySource = SOURCES.map(s => ({ k:s, n:JOBS.filter(j => j.source === s).length })).filter(r => r.n);
+
+  const weeks = [4,3,2,1,0].map(w => ({
+    k:'w-'+w,
+    n:JOBS.filter(j => { const d = (Date.now() - new Date(j.createdAt))/day; return d >= w*7 && d < (w+1)*7; }).length
+  }));
+
+  const bars = (rows, acc) => {
+    const max = Math.max(1, ...rows.map(r => r.n));
+    return `<div class="bars">${rows.map(r => `<div class="bar${acc?' acc':''}">
+      <div class="t"><span>${esc(r.k)}</span><b>${r.n}</b></div>
+      <div class="track"><div class="fill" style="width:${Math.round(r.n/max*100)}%"></div></div>
+    </div>`).join('')}</div>`;
+  };
+
+  const wmax = Math.max(1, ...weeks.map(w => w.n));
+  const labels = ['4 wks','3 wks','2 wks','Last wk','This wk'];
+
+  return `${topBar('Overview')}
+  <div class="pad">
+    <div class="stats">
+      <div class="stat"><div class="n">${live.length}</div><div class="l">Live jobs</div></div>
+      <div class="stat${c.unclaimed?' alert':''}"><div class="n">${c.unclaimed}</div><div class="l">Unclaimed</div></div>
+      <div class="stat${c.urgent?' alert':''}"><div class="n">${c.urgent}</div><div class="l">Urgent</div></div>
+      <div class="stat"><div class="n">€${outstanding.toLocaleString('en-IE')}</div><div class="l">Outstanding fees</div></div>
+    </div>
+
+    ${c.unclaimed ? `<div class="rep"><h3>Needs attention</h3>
+      <div class="list" style="border-top:1px solid var(--hairline)">
+      ${JOBS.filter(j => !j.assignee && j.status !== TERMINAL && j.status !== 'Closed').map(jobRow).join('')}</div></div>` : ''}
+
+    <div class="rep"><h3>Jobs by status</h3>${bars(byStatus)}</div>
+    <div class="rep"><h3>Live jobs per valuer</h3>${bars(byValuer)}</div>
+    <div class="rep sparkwrap"><h3>Enquiries per week</h3>
+      <div class="spark">${weeks.map((w,i) => `<div style="height:${Math.round(w.n/wmax*100)}%" title="${w.n}"><span>${labels[i]}</span></div>`).join('')}</div>
+    </div>
+    <div class="rep"><h3>Where enquiries came from</h3>${bars(bySource, true)}</div>
+  </div>
+  <div class="flag"><b>Prototype note</b>Figures are calculated live from the sample jobs. Average turnaround and conversion rate are straightforward to add once real dates are flowing through.</div>`;
+}
+
+function account(){
+  return `${topBar('Account')}
+  <div class="pad">
+    <div class="stats" style="grid-template-columns:1fr">
+      <div class="stat"><div class="n" style="font-size:1.2rem">${esc(ME.name)}</div><div class="l">${esc(ME.role)} · ${esc(ME.id)}@jwl.ie</div></div>
+    </div>
+    <div class="rep"><h3>What your role permits</h3>
+      <dl class="kv">
+        <div><dt>See all jobs</dt><dd>${isOwner()?'Yes':'Yes'}</dd></div>
+        <div><dt>Claim jobs</dt><dd>Yes</dd></div>
+        <div><dt>Reassign others</dt><dd>${isOwner()?'Yes':'No'}</dd></div>
+        <div><dt>Invoice &amp; mark paid</dt><dd>${canMoney()?'Yes':'No'}</dd></div>
+        <div><dt>Owner overview</dt><dd>${isOwner()?'Yes':'No'}</dd></div>
+      </dl>
+    </div>
+    <div class="rep"><h3>Data protection</h3>
+      <dl class="kv">
+        <div><dt>Data location</dt><dd>Ireland (EU)</dd></div>
+        <div><dt>Retention</dt><dd>6 years from completion</dd></div>
+        <div><dt>Access logging</dt><dd>All changes</dd></div>
+        <div><dt>Two-factor</dt><dd>Required</dd></div>
+      </dl>
+      <p style="font-size:.8125rem;color:var(--charcoal-60);line-height:1.55;margin:14px 0 0">Client enquiry data is personal data. It is held on the lawful basis of contract and legitimate interest, kept for six years from job completion to meet professional-indemnity and Revenue requirements, then deleted automatically. Subject access and erasure requests are handled from the owner account.</p>
+    </div>
+    <button class="btn2 ghost" onclick="logout()">Sign out</button>
+  </div>`;
+}
+
+/* ---------------- shell ---------------- */
+function topBar(title, back){
+  return `<div class="top">
+    ${back ? `<button class="back" onclick="go('queue')" aria-label="Back">‹</button>`
+           : `<span class="mark">JW<b>L</b></span>`}
+    <h1>${esc(title)}</h1>
+    <span class="who"><i>${esc(ME.init)}</i></span>
+  </div>`;
+}
+
+function tabbar(){
+  const c = counts();
+  const b = (id,label,icon,badge) => `<button onclick="go('${id}')" ${view.screen===id?'aria-current="page"':''}>
+    <span class="icwrap">${icon}${badge?`<span class="badge">${badge}</span>`:''}</span>${label}</button>`;
+  return `<nav class="tabbar">
+    ${b('queue','Jobs','<span class="ic"></span>', c.unclaimed)}
+    ${b('add','Add','<span class="ic add"></span>')}
+    ${isOwner() ? b('overview','Overview','<span class="ic rep"><i></i><i></i><i></i></span>') : ''}
+    ${b('account','You','<span class="ic" style="border-radius:50%"></span>')}
+  </nav>`;
+}
+
+function render(){
+  const app = document.getElementById('app');
+  if (!ME){ app.innerHTML = signIn(); return; }
+  const body = view.screen === 'detail'   ? detail()
+             : view.screen === 'add'      ? addJob()
+             : view.screen === 'overview' ? overview()
+             : view.screen === 'account'  ? account()
+             : queue();
+  app.innerHTML = `<main>${body}</main>${tabbar()}`;
+}
+
+/* ---------------- actions ---------------- */
+function login(id){ ME = person(id); localStorage.setItem(UKEY, id); view = {screen:'queue', tab:'unclaimed', jobId:null, q:''}; render(); }
+function logout(){ ME = null; localStorage.removeItem(UKEY); render(); }
+function go(s){ view.screen = s; render(); window.scrollTo(0,0); }
+function setTab(t){ view.tab = t; render(); }
+function setQ(v){ view.q = v; const l = document.querySelector('.list'); if (l) l.innerHTML = filtered().map(jobRow).join('') || '<p class="empty">No match.</p>'; }
+function openJob(id){ view.jobId = id; view.screen = 'detail'; render(); window.scrollTo(0,0); }
+
+function withJob(id, fn, msg){
+  const j = JOBS.find(x => x.id === id); if (!j) return;
+  fn(j); save(); render(); if (msg) toast(msg);
+}
+function claim(id){ withJob(id, j => {
+  j.assignee = ME.id;
+  if (j.status === 'New / unclaimed') j.status = 'Claimed';
+  log(j, 'claimed the job');
+}, 'Yours, it now shows under Mine.'); }
+
+function unclaim(id){ withJob(id, j => { j.assignee = null; log(j, 'released the job'); }, 'Released back to the queue.'); }
+
+function reassign(id){ withJob(id, j => {
+  const names = TEAM.filter(t => t.role !== 'admin');
+  const i = names.findIndex(t => t.id === j.assignee);
+  const nxt = names[(i+1) % names.length];
+  j.assignee = nxt.id;
+  log(j, 'reassigned to ' + nxt.name);
+}, 'Reassigned.'); }
+
+function advance(id){ withJob(id, j => {
+  const i = STATUSES.indexOf(j.status);
+  if (i < 0 || i >= STATUSES.length - 1) return;
+  const to = STATUSES[i+1];
+  if (to === 'Paid' && !canMoney()) return;
+  j.status = to;
+  if (to === 'Paid' && !j.paidOn) j.paidOn = new Date().toISOString().slice(0,10);
+  log(j, 'moved to ' + to);
+}); }
+
+function toggleUrgent(id){ withJob(id, j => {
+  j.urgent = !j.urgent;
+  log(j, j.urgent ? 'flagged urgent' : 'cleared urgent');
+}); }
+function lose(id){ withJob(id, j => { j.status = TERMINAL; log(j, 'marked lost / declined'); }); }
+function reopen(id){ withJob(id, j => { j.status = j.assignee ? 'Claimed' : 'New / unclaimed'; log(j, 'reopened'); }); }
+
+function setField(id, key, val, label){ withJob(id, j => {
+  j[key] = val;
+  log(j, 'updated ' + label);
+}); }
+
+function addNote(id){
+  const box = document.getElementById('nn'); if (!box) return;
+  const text = box.value.trim(); if (!text) return;
+  withJob(id, j => {
+    j.notes.unshift({ by: ME.name, at: new Date().toISOString(), text });
+    log(j, 'added a note');
+  }, 'Note added.');
+}
+
+function createJob(){
+  const v = id => (document.getElementById(id).value || '').trim();
+  const addr = v('a-addr'), cl = v('a-cl'), ph = v('a-ph');
+  if (!addr || !cl || !ph){ toast('Address, client name and phone are needed.'); return; }
+  const next = 2615 + JOBS.filter(j => j.ref.startsWith('JWL-26')).length - 10;
+  const mine = document.getElementById('a-me').checked;
+  const j = {
+    id:'j'+Date.now(), ref:'JWL-'+next, address:addr, client:cl, phone:ph, email:v('a-em'),
+    purpose:v('a-pu'), source:v('a-so'), counterparty:v('a-cp'),
+    urgent:document.getElementById('a-ug').checked,
+    status: mine ? 'Claimed' : 'New / unclaimed', assignee: mine ? ME.id : null,
+    inspectAt:'', invoiceNo:'', invoiceAmount:'', paidOn:'',
+    notes: v('a-nt') ? [{ by:ME.name, at:new Date().toISOString(), text:v('a-nt') }] : [],
+    audit: [{ by:ME.name, at:new Date().toISOString(), what:'created the job manually' }],
+    createdAt:new Date().toISOString()
+  };
+  JOBS.unshift(j); save();
+  view.jobId = j.id; view.screen = 'detail'; render(); window.scrollTo(0,0);
+  toast(j.ref + ' created.');
+}
+
+render();
+</script>
+</body>
+</html>

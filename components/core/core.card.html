@@ -1,0 +1,38 @@
+<!-- @dsCard group="Components" viewport="700x360" name="Button, Badge, Divider, SectorCard" -->
+<!DOCTYPE html>
+<html><head><link rel="stylesheet" href="../../styles.css">
+<style>body{margin:0;background:var(--surface-page)}</style>
+</head><body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel" data-presets="react">
+const { Button, Badge, Divider, SectorCard } = window.JWL;
+function Demo() {
+  return (
+    <div style={{padding:24, display:'flex', flexDirection:'column', gap:20, fontFamily:'var(--font-grotesque)'}}>
+      <div style={{display:'flex', gap:12, flexWrap:'wrap', alignItems:'center'}}>
+        <Button variant="primary">Request a Valuation</Button>
+        <Button variant="secondary">How we work →</Button>
+        <Button variant="ghost" size="sm">Instruct JWL</Button>
+        <Badge>SCSI Registered Valuers</Badge>
+        <Badge tone="brass">Est. 1998</Badge>
+      </div>
+      <div style={{background:'var(--surface-ink)', padding:16, display:'flex', gap:12}}>
+        <Button variant="primary" onDark>Request a Valuation</Button>
+        <Button variant="secondary" onDark>How we work →</Button>
+      </div>
+      <Divider />
+      <div style={{display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:16}}>
+        <SectorCard title="Secured lending" description="Red Book valuations for mortgage and refinance decisions." />
+        <SectorCard title="Probate & litigation" description="Defensible figures for estates, family law and dispute." />
+        <SectorCard title="Commercial & land" description="Retail, industrial and development sites assessed on evidence." />
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+</body></html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JWL Property Valuations | Property Valuations Dublin & Leinster</title>
+<style>
+  :root{
+    --navy:#1B3A5C; --navy-dark:#132A44; --gold:#B8860B; --green:#2E7D5B;
+    --ink:#222; --grey:#5A6672; --line:#E3E7EB; --bg:#FFFFFF; --bg-soft:#F5F7F9;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Segoe UI',Calibri,Arial,sans-serif;color:var(--ink);line-height:1.6;background:var(--bg);}
+  h1,h2,h3,h4{font-family:Georgia,'Times New Roman',serif;color:var(--navy);margin:0 0 .5em;text-wrap:balance;}
+  a{color:var(--navy);text-decoration:none;}
+  .container{max-width:1180px;margin:0 auto;padding:0 24px;}
+  img.ph{width:100%;height:100%;object-fit:cover;display:block;}
+  .placeholder{
+    background:linear-gradient(135deg,#c9d2da,#e3e7eb);
+    display:flex;align-items:center;justify-content:center;
+    color:#7d8894;font-size:.85rem;font-style:italic;text-align:center;padding:20px;
+    border-radius:8px;
+  }
+
+  /* ===== NAV ===== */
+  header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--line);}
+  .navwrap{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1180px;margin:0 auto;}
+  .logo{font-family:Georgia,serif;font-weight:bold;font-size:1.4rem;color:var(--navy);}
+  .logo span{color:var(--gold);}
+  nav.mainnav{display:flex;align-items:center;gap:28px;}
+  nav.mainnav ul{list-style:none;display:flex;gap:26px;margin:0;padding:0;align-items:center;}
+  nav.mainnav > ul > li{position:relative;}
+  nav.mainnav a.navlink{font-size:.95rem;font-weight:600;color:var(--navy);padding:8px 0;}
+  nav.mainnav a.navlink:hover{color:var(--gold);}
+  button.navlink{background:none;border:none;font:inherit;font-size:.95rem;font-weight:600;color:var(--navy);cursor:pointer;padding:8px 0;display:flex;align-items:center;gap:5px;}
+  button.navlink:hover{color:var(--gold);}
+  .caret{font-size:.65rem;transition:transform .15s;}
+  li.has-dd[data-open="true"] .caret{transform:rotate(180deg);}
+  .cta-group{display:flex;align-items:center;gap:18px;}
+  .phone-link{font-size:.9rem;font-weight:600;color:var(--navy);white-space:nowrap;}
+  .btn{display:inline-block;background:var(--gold);color:#fff;font-weight:700;padding:11px 22px;border-radius:4px;font-size:.9rem;white-space:nowrap;border:none;cursor:pointer;}
+  .btn:hover{background:#96690a;}
+  .btn-outline{background:transparent;border:2px solid #fff;color:#fff;}
+  .btn-outline:hover{background:rgba(255,255,255,.15);}
+
+  /* mega menu */
+  .megamenu{
+    position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);
+    background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 14px 34px rgba(20,30,45,.14);
+    padding:26px;display:none;min-width:560px;z-index:50;
+  }
+  li.has-dd[data-open="true"] .megamenu{display:block;}
+  .mm-cols{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+  .mm-cols h4{font-size:.95rem;text-align:center;letter-spacing:.03em;text-transform:uppercase;color:var(--gold);margin:0 0 14px;padding-bottom:10px;border-bottom:2px solid var(--line);font-family:Calibri,Arial,sans-serif;}
+  .mm-cols ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;}
+  .mm-cols a{font-size:.88rem;color:#333;}
+  .mm-cols a:hover{color:var(--gold);}
+  .mm-viewall{display:block;text-align:center;margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-weight:700;font-size:.85rem;color:var(--navy);}
+  .mm-viewall:hover{color:var(--gold);}
+
+  /* mobile nav */
+  .burger{display:none;background:none;border:none;font-size:1.6rem;color:var(--navy);cursor:pointer;}
+  @media (max-width:900px){
+    nav.mainnav > ul{display:none;}
+    .cta-group .phone-link{display:none;}
+    .burger{display:block;}
+  }
+  @media (max-width:520px){
+    .navwrap{flex-wrap:wrap;gap:10px;}
+    .logo{font-size:1.05rem;}
+    .logo span{display:none;} /* wordmark only on very small screens */
+    .cta-group{gap:10px;}
+    .btn{padding:9px 14px;font-size:.82rem;}
+  }
+
+  /* ===== HERO ===== */
+  .hero{background:linear-gradient(180deg,#f8f9fa,#fff);padding:64px 0 48px;}
+  .hero-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:center;}
+  .hero h1{font-size:2.5rem;line-height:1.15;margin-bottom:14px;}
+  .hero-sub{font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:1.3rem;margin-bottom:18px;}
+  .hero p.body{color:var(--grey);font-size:1.05rem;max-width:560px;margin-bottom:26px;}
+  .hero-ctas{display:flex;gap:14px;margin-bottom:26px;flex-wrap:wrap;}
+  .btn-secondary{background:transparent;border:2px solid var(--navy);color:var(--navy);font-weight:700;padding:9px 20px;border-radius:4px;font-size:.9rem;}
+  .badges-row{display:flex;gap:26px;flex-wrap:wrap;align-items:center;}
+  .badge{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:.72rem;color:var(--grey);text-align:center;width:92px;}
+  .badge .mark{width:52px;height:52px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:Georgia,serif;font-size:.8rem;}
+  .hero-photo{aspect-ratio:4/5;}
+
+  /* ===== TRUST BAR ===== */
+  .trustbar{background:var(--navy);color:#fff;padding:26px 0;}
+  .trustbar .container{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;}
+  .trustbar strong{display:block;color:var(--gold);font-family:Georgia,serif;font-size:1.02rem;margin-bottom:4px;}
+  .trustbar span{font-size:.85rem;color:#dfe6ec;}
+
+  /* ===== SECTION GENERIC ===== */
+  section{padding:64px 0;}
+  .section-soft{background:var(--bg-soft);}
+  .section-head{text-align:center;max-width:680px;margin:0 auto 40px;}
+  .section-head h2{font-size:1.9rem;}
+  .section-head p{color:var(--grey);}
+  .kicker{color:var(--gold);font-weight:700;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px;display:block;}
+
+  /* ===== JWL positioning ===== */
+  .jwl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;}
+  .jwl-card{border-top:4px solid var(--gold);padding-top:18px;}
+  .jwl-card h3{font-size:1.15rem;margin-bottom:10px;}
+  .jwl-card h3 .first-letter{color:var(--gold);}
+  .jwl-card p{color:var(--grey);font-size:.95rem;}
+  .closing-line{text-align:center;font-family:Georgia,serif;font-style:italic;color:var(--navy);font-size:1.3rem;margin-top:38px;border-left:4px solid var(--gold);display:inline-block;padding-left:16px;}
+  .closing-wrap{text-align:center;}
+
+  /* ===== FEATURED SERVICES ===== */
+  .featured-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .feat-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:28px;box-shadow:0 6px 18px rgba(20,30,45,.05);}
+  .feat-card .icon{width:44px;height:44px;border-radius:50%;background:var(--bg-soft);color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:16px;}
+  .feat-card h3{font-size:1.1rem;}
+  .feat-card p{color:var(--grey);font-size:.92rem;margin-bottom:14px;}
+  .feat-card a{font-weight:700;font-size:.88rem;color:var(--gold);}
+
+  /* ===== WHY CHOOSE ===== */
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+  .why-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px 22px;box-shadow:0 6px 18px rgba(20,30,45,.05);text-align:center;}
+  .why-card .icon{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 16px;}
+  .why-card .icon.navy{background:var(--navy);}
+  .why-card .icon.gold{background:var(--gold);}
+  .why-card .icon.green{background:var(--green);}
+  .why-card h3{font-size:1rem;color:var(--navy);}
+  .why-card p{color:var(--grey);font-size:.9rem;}
+
+  /* ===== HOW IT WORKS ===== */
+  .steps-section{background:linear-gradient(180deg,var(--navy-dark),var(--navy));}
+  .steps-section .section-head p{color:#c7d1db;}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative;}
+  .steps-line{position:absolute;top:36px;left:12.5%;right:12.5%;height:2px;background:rgba(255,255,255,.25);z-index:0;}
+  @media (max-width:900px){.steps-line{display:none;}}
+  .step{text-align:center;position:relative;z-index:1;}
+  .step .num{width:72px;height:72px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin:0 auto 12px;box-shadow:0 6px 16px rgba(0,0,0,.25);}
+  .step .num.navy{background:var(--navy);border:3px solid #fff;}
+  .step .num.gold{background:var(--gold);border:3px solid #fff;}
+  .step .num.green{background:var(--green);border:3px solid #fff;}
+  .step-label{display:block;color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;}
+  .step h4{font-size:.98rem;margin-bottom:8px;color:#fff;}
+  .step p{font-size:.88rem;color:#c7d1db;}
+
+  /* ===== PRACTICE ===== */
+  .practice-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:44px;align-items:center;}
+  .practice-photo{aspect-ratio:4/5;}
+  .credential-line{font-weight:700;color:var(--gold);letter-spacing:.02em;margin-bottom:14px;}
+
+  /* ===== AREAS ===== */
+  .areas-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+  .areas-map{aspect-ratio:1/1;}
+
+  /* ===== INSIGHTS ===== */
+  .insights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .insight-card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 6px 18px rgba(20,30,45,.05);}
+  .insight-img{aspect-ratio:16/10;}
+  .insight-body{padding:20px;}
+  .insight-tag{color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;}
+  .insight-body h3{font-size:1rem;margin:8px 0 10px;}
+  .insight-body a{font-size:.85rem;font-weight:700;color:var(--navy);}
+
+  /* ===== CLOSING CTA ===== */
+  .closing-cta{background:var(--navy);color:#fff;text-align:center;padding:70px 0;}
+  .closing-cta h2{color:#fff;font-size:2rem;}
+  .closing-cta p{color:#dfe6ec;max-width:520px;margin:0 auto 28px;}
+  .closing-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  .closing-cta .contact-line{margin-top:18px;color:#c7d1db;font-size:.92rem;}
+
+  /* ===== FOOTER ===== */
+  footer{background:var(--navy-dark);color:#c7d1db;padding:50px 0 26px;font-size:.9rem;}
+  .footer-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;margin-bottom:30px;align-items:start;}
+  .footer-tagline{font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:1.15rem;margin:10px 0 12px;}
+  footer a{color:#c7d1db;}
+  footer a:hover{color:var(--gold);}
+  .footer-contact p{margin:0 0 8px;}
+  .footer-badges{display:flex;gap:14px;margin-top:18px;}
+  .footer-badges .badge{color:#c7d1db;}
+  .footer-badges .badge .mark{background:#fff;color:var(--navy);}
+  .footer-legal{display:flex;gap:18px;justify-content:flex-end;}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:20px;font-size:.8rem;color:#8fa0b3;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+
+  @media (max-width:900px){
+    .hero-grid,.practice-grid,.areas-grid{grid-template-columns:1fr;}
+    .jwl-grid,.featured-grid,.why-grid,.steps,.insights-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr;}
+    .footer-legal{justify-content:flex-start;}
+    .hero h1{font-size:1.9rem;}
+  }
+</style>
+</head>
+<body>
+
+<!--
+  PLACEHOLDERS STILL TO SWAP IN:
+  - Logo: text wordmark only. Swap the .logo <a> content for the real logo file (svg/png) once you have it.
+  - Colours: --navy #1B3A5C / --gold #B8860B / --green #2E7D5B are guesses, not confirmed brand hex codes
+    (the positioning doc only names the colours, not values, and I couldn't access the Claude Design
+    brand link). Swap the four --navy/--navy-dark/--gold/--green values at the top of <style> once you
+    have the real palette — everything else references those variables, so it's a one-place fix.
+  - Fonts: Georgia (headings) + system sans-serif (body) are placeholders too. Swap the font-family
+    values in the h1-h4 rule and the body rule for the real brand typefaces when known.
+  - Badges (TRV/IPAV/PSRA) and photos: grey circles/blocks with initials or captions — replace with the
+    real badge images and photography when ready.
+-->
+
+<!-- ============ NAV ============ -->
+<header>
+  <div class="navwrap">
+    <a href="#" class="logo">JWL <span>Property Valuations</span></a>
+    <nav class="mainnav" aria-label="Primary">
+      <ul>
+        <li><a class="navlink" href="#">Home</a></li>
+        <li><a class="navlink" href="#">About</a></li>
+        <li class="has-dd" data-open="false">
+          <button class="navlink" aria-haspopup="true" aria-expanded="false" onclick="toggleMenu(this)">
+            Services <span class="caret">▾</span>
+          </button>
+          <div class="megamenu" role="menu">
+            <div class="mm-cols">
+              <div>
+                <h4>Lending &amp; Finance</h4>
+                <ul>
+                  <li><a href="#">Bank &amp; Credit Union Valuation</a></li>
+                  <li><a href="#">Loan to Value (LTV) Valuation</a></li>
+                  <li><a href="#">Switcher Valuation</a></li>
+                  <li><a href="#">Local Authority Valuation</a></li>
+                  <li><a href="#">Blue Book Valuation</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4>Legal &amp; Statutory</h4>
+                <ul>
+                  <li><a href="#">Probate Valuation</a></li>
+                  <li><a href="#">Family Law Valuation</a></li>
+                  <li><a href="#">Fair Deal Valuation</a></li>
+                  <li><a href="#">LPT Valuation</a></li>
+                  <li><a href="#">Historic Valuation</a></li>
+                </ul>
+              </div>
+            </div>
+            <a href="#" class="mm-viewall">View All Valuations (incl. Property &amp; Rental) →</a>
+          </div>
+        </li>
+        <li><a class="navlink" href="#">Insights</a></li>
+        <li><a class="navlink" href="#">FAQ</a></li>
+        <li><a class="navlink" href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="cta-group">
+      <a class="phone-link" href="tel:+353879604211">📞 087 960 4211</a>
+      <a class="btn" href="#">Request a Valuation</a>
+      <button class="burger" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>Property Valuations in Dublin and Leinster</h1>
+      <div class="hero-sub">Evidence before opinion.</div>
+      <p class="body">When a valuation has to satisfy a lender, a solicitor, the Revenue Commissioners or a court, the figure on its own is not enough. You need to know where it came from. JWL has been valuing property across the greater Dublin area and Leinster for more than ten years, and every valuation we issue is built on real comparable evidence, current market conditions and the expert judgement that comes from knowing these areas well.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="#">Request a Valuation</a>
+        <a class="btn-secondary" href="tel:+353879604211">Call 087 960 4211</a>
+      </div>
+      <div class="badges-row">
+        <div class="badge"><div class="mark">TRV</div>TEGoVA Residential Valuer</div>
+        <div class="badge"><div class="mark">IPAV</div>Institute of Professional Auctioneers &amp; Valuers</div>
+        <div class="badge"><div class="mark">PSRA</div>Licence No. 004865</div>
+      </div>
+    </div>
+    <div class="placeholder hero-photo">[Photo: Dublin/Leinster<br>residential street —<br>Georgian red brick, semi<br>or period terrace,<br>shot in daylight]</div>
+  </div>
+</section>
+
+<!-- ============ TRUST BAR ============ -->
+<div class="trustbar">
+  <div class="container">
+    <div><strong>10+ years</strong><span>valuing property across Dublin &amp; Leinster</span></div>
+    <div><strong>Regulated</strong><span>PSRA Licence No. 004865</span></div>
+    <div><strong>Qualified</strong><span>MIPAV, REV, RESI &amp; TRV accredited</span></div>
+    <div><strong>Accepted</strong><span>by lenders, credit unions, solicitors &amp; the HSE</span></div>
+  </div>
+</div>
+
+<!-- ============ POSITIONING (J.W.L.) ============ -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>What goes into a JWL Property Valuation</h2>
+      <p>Three things, in every valuation we issue.</p>
+    </div>
+    <div class="jwl-grid">
+      <div class="jwl-card">
+        <h3><span class="first-letter">J</span>udgement</h3>
+        <p>More than ten years valuing property across Dublin and Leinster — knowing how a particular road or estate actually trades, not what an online estimate or index suggests.</p>
+      </div>
+      <div class="jwl-card">
+        <h3><span class="first-letter">W</span>orth</h3>
+        <p>A figure grounded in the market as it stands: recent sales of comparable properties, current conditions, and the particular qualities of the property itself.</p>
+      </div>
+      <div class="jwl-card">
+        <h3><span class="first-letter">L</span>egitimacy</h3>
+        <p>Professional accreditation and recognised valuation standards behind the report — so it is accepted by the lender, solicitor or authority who has to rely on it.</p>
+      </div>
+    </div>
+    <div class="closing-wrap">
+      <div class="closing-line">That is what we mean by evidence before opinion.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED SERVICES ============ -->
+<section class="section-soft">
+  <div class="container">
+    <div class="section-head">
+      <h2>Our most requested valuations</h2>
+    </div>
+    <div class="featured-grid">
+      <div class="feat-card">
+        <div class="icon">🏠</div>
+        <h3>Property Valuation</h3>
+        <p>An independent market valuation of your home or investment property, backed by comparable sales evidence you can see.</p>
+        <a href="#">Property valuation →</a>
+      </div>
+      <div class="feat-card">
+        <div class="icon">🏦</div>
+        <h3>Bank &amp; Credit Union Valuation</h3>
+        <p>Lender-format valuation reports prepared to the standards banks and credit unions require, issued promptly.</p>
+        <a href="#">Bank &amp; credit union valuation →</a>
+      </div>
+      <div class="feat-card">
+        <div class="icon">📈</div>
+        <h3>Loan to Value (LTV) Valuation</h3>
+        <p>If your property has risen in value, an up-to-date valuation may move your mortgage into a lower LTV rate band.</p>
+        <a href="#">LTV valuation →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE ============ -->
+<section class="section-soft">
+  <div class="container">
+    <div class="section-head"><h2>Why Dublin and Leinster clients choose JWL</h2></div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="icon navy">⚖️</div>
+        <h3>We do not sell property</h3>
+        <p>An estate agent valuing your home is usually also pitching to sell it. We are not. There is nothing riding on the figure being anything other than right.</p>
+      </div>
+      <div class="why-card">
+        <div class="icon gold">🎓</div>
+        <h3>An accredited valuer, every time</h3>
+        <p>Every JWL valuation is carried out by a qualified valuer who inspects the property and signs the report.</p>
+      </div>
+      <div class="why-card">
+        <div class="icon green">🎯</div>
+        <h3>Built for whoever is receiving it</h3>
+        <p>A lender, a solicitor, the HSE and Revenue all want something slightly different. We work to what they need.</p>
+      </div>
+      <div class="why-card">
+        <div class="icon navy">💬</div>
+        <h3>Straight answers</h3>
+        <p>If the valuation is not what you were hoping for, we will tell you plainly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="steps-section">
+  <div class="container">
+    <div class="section-head" style="color:#fff;"><h2 style="color:#fff;">How a JWL valuation works</h2></div>
+    <div class="steps">
+      <div class="steps-line"></div>
+      <div class="step">
+        <div class="num navy">📞</div>
+        <span class="step-label">Step 1</span>
+        <h4>Get in touch</h4>
+        <p>Tell us about the property and what the valuation is for. Call, email, or use the form.</p>
+      </div>
+      <div class="step">
+        <div class="num gold">🏠</div>
+        <span class="step-label">Step 2</span>
+        <h4>Inspection</h4>
+        <p>We arrange a time that suits and inspect the property in person.</p>
+      </div>
+      <div class="step">
+        <div class="num green">🔍</div>
+        <span class="step-label">Step 3</span>
+        <h4>Evidence and analysis</h4>
+        <p>We assemble comparable evidence and apply professional valuation practice and experience.</p>
+      </div>
+      <div class="step">
+        <div class="num navy">📄</div>
+        <span class="step-label">Step 4</span>
+        <h4>Your valuation</h4>
+        <p>Issued in the format required — typically within <em>[2–3 working days]</em> of inspection.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE PRACTICE ============ -->
+<section class="section-soft">
+  <div class="container practice-grid">
+    <div class="placeholder practice-photo">[Photo: Shane Cooke,<br>on location — outside a<br>period property or at a<br>desk with plans]</div>
+    <div>
+      <h2>The practice behind the valuation</h2>
+      <p style="font-family:Georgia,serif;font-size:1.1rem;color:var(--navy);margin-bottom:2px;">Shane Cooke — Director</p>
+      <div class="credential-line">MIPAV | REV | RESI | MMCEPI</div>
+      <p style="color:var(--grey);">JWL was founded on a straightforward conviction: that a valuation should be able to withstand any amount of scrutiny, because the evidence behind it is there to see and the reasoning is transparent. Our valuers have been working the Dublin and Leinster market for over ten years, and the practice is led by Shane Cooke, MIPAV REV RESI MMCEPI.</p>
+      <p style="color:var(--grey);">Every valuation is carried out by an accredited valuer who inspects the property, prepares the report and signs it.</p>
+      <a href="#" style="font-weight:700;color:var(--gold);">More about JWL →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AREAS WE COVER ============ -->
+<section>
+  <div class="container areas-grid">
+    <div>
+      <h2>Valuations across Dublin and Leinster</h2>
+      <p style="color:var(--grey);">We cover the greater Dublin area in full — Dublin city, north Dublin and Fingal, south Dublin and Dún Laoghaire-Rathdown, and west Dublin — along with Kildare, Wicklow, Meath, Louth, Carlow, Kilkenny, Laois, Longford, Offaly, Westmeath and Wexford.</p>
+      <p style="color:var(--grey);">Local knowledge counts for a lot in this work. If you are not sure whether your property is within our area, give us a call — and if we are not the right practice for it, we will tell you.</p>
+    </div>
+    <div class="placeholder areas-map">[Illustrated map of<br>Leinster — covered<br>counties highlighted<br>in brand colours]</div>
+  </div>
+</section>
+
+<!-- ============ INSIGHTS ============ -->
+<section class="section-soft">
+  <div class="container">
+    <div class="section-head">
+      <h2>Insights from the Dublin and Leinster market</h2>
+      <p>Practical guidance on valuation, grounded in what the evidence actually shows.</p>
+    </div>
+    <div class="insights-grid">
+      <div class="insight-card">
+        <div class="placeholder insight-img">[Article image]</div>
+        <div class="insight-body">
+          <span class="insight-tag">Probate</span>
+          <h3>What a Probate Valuation Actually Involves — And Why the Date Matters</h3>
+          <a href="#">Read more →</a>
+        </div>
+      </div>
+      <div class="insight-card">
+        <div class="placeholder insight-img">[Article image]</div>
+        <div class="insight-body">
+          <span class="insight-tag">LPT</span>
+          <h3>Local Property Tax 2026: How to Value Your Home for the New Bands</h3>
+          <a href="#">Read more →</a>
+        </div>
+      </div>
+      <div class="insight-card">
+        <div class="placeholder insight-img">[Article image]</div>
+        <div class="insight-body">
+          <span class="insight-tag">LTV</span>
+          <h3>Could a Loan to Value Valuation Cut Your Mortgage Rate?</h3>
+          <a href="#">Read more →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING CTA ============ -->
+<div class="closing-cta">
+  <div class="container">
+    <h2>Need a valuation you can rely on?</h2>
+    <p>Tell us about the property and what the valuation is for. We will confirm the fee and the timeline before any work begins.</p>
+    <div class="closing-ctas">
+      <a class="btn" href="#">Request a Valuation</a>
+      <a class="btn btn-outline" href="tel:+353879604211">Call 087 960 4211</a>
+    </div>
+    <div class="contact-line">Or email shane@jwl.ie</div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="color:#fff;">JWL <span>Property Valuations</span></div>
+        <div class="footer-tagline">Evidence before opinion.</div>
+        <p style="max-width:360px;">Independent property valuations across Dublin and Leinster.</p>
+        <div class="footer-badges">
+          <div class="badge"><div class="mark">TRV</div></div>
+          <div class="badge"><div class="mark">IPAV</div></div>
+          <div class="badge"><div class="mark">PSRA</div></div>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <p>📞 <a href="tel:+353879604211">087 960 4211</a></p>
+        <p>✉️ <a href="mailto:shane@jwl.ie">shane@jwl.ie</a></p>
+        <p style="color:#8fa0b3;">Greater Dublin area &amp; Leinster</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 JWL Property Valuations.</span>
+      <span>PSRA Licence No. 004865</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu(btn){
+    const li = btn.closest('li');
+    const isOpen = li.getAttribute('data-open') === 'true';
+    document.querySelectorAll('li.has-dd').forEach(el => el.setAttribute('data-open','false'));
+    li.setAttribute('data-open', isOpen ? 'false' : 'true');
+    btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+  }
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('li.has-dd')){
+      document.querySelectorAll('li.has-dd').forEach(el => el.setAttribute('data-open','false'));
+    }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      document.querySelectorAll('li.has-dd').forEach(el => el.setAttribute('data-open','false'));
+    }
+  });
+</script>
+</body>
+</html>

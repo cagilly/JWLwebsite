@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="./styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+  doc-page:not(:defined){visibility:hidden}
+  a{color:#12233C;text-decoration:underline;text-decoration-color:#B08A4A;text-underline-offset:2px}
+  a:hover{color:#B08A4A}
+</style>
+<script src="./doc-page.js"></script>
+</helmet>
+<doc-page margin="0.8in">
+
+<div slot="footer" style="display:flex;justify-content:space-between;align-items:baseline;padding-top:8px;border-top:1px solid #DCD6CB;font:400 8.5pt/1.4 'Public Sans',sans-serif;color:#7C7A73;letter-spacing:.04em">
+  <span>JWL Property Valuations, Team Portal, technical specification</span>
+  <span>Commercial in confidence, revision A, August 2026</span>
+</div>
+
+<div style="font:400 15px/1.6 'Public Sans',sans-serif;color:#3A3833">
+
+<p style="font:600 9pt/1 'Public Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#B08A4A;margin:0 0 10px">Scope of works, for tender</p>
+<h1 style="font:700 30pt/1.1 'Source Serif 4',Georgia,serif;color:#12233C;margin:0 0 12px;letter-spacing:-.01em">JWL Jobs, team portal build</h1>
+<p style="font:400 12.5pt/1.55 'Public Sans',sans-serif;color:#3A3833;margin:0 0 22px;max-width:44em">A working front-end prototype exists and is signed off. This document specifies what a contract developer is being asked to build behind it: a real database, authentication, role-based permissions and notifications, deployed on infrastructure JWL owns.</p>
+
+<table style="width:100%;border-collapse:collapse;font-size:10.5pt;margin:0 0 30px;break-inside:avoid">
+  <tbody>
+    <tr><td style="padding:7px 12px 7px 0;color:#7C7A73;width:9.5em;border-bottom:1px solid #EDE8DF">Client</td><td style="padding:7px 0;border-bottom:1px solid #EDE8DF;color:#12233C;font-weight:500">JWL Property Valuations, Dublin</td></tr>
+    <tr><td style="padding:7px 12px 7px 0;color:#7C7A73;border-bottom:1px solid #EDE8DF">Contact</td><td style="padding:7px 0;border-bottom:1px solid #EDE8DF">Shane Cooke, owner</td></tr>
+    <tr><td style="padding:7px 12px 7px 0;color:#7C7A73;border-bottom:1px solid #EDE8DF">Users</td><td style="padding:7px 0;border-bottom:1px solid #EDE8DF">5 at launch, 1 owner, 1 admin, 3 valuers. Provision to 12.</td></tr>
+    <tr><td style="padding:7px 12px 7px 0;color:#7C7A73;border-bottom:1px solid #EDE8DF">Volume</td><td style="padding:7px 0;border-bottom:1px solid #EDE8DF">Roughly 60 to 120 jobs a month. Not a scale problem.</td></tr>
+    <tr><td style="padding:7px 12px 7px 0;color:#7C7A73;border-bottom:1px solid #EDE8DF">Prototype</td><td style="padding:7px 0;border-bottom:1px solid #EDE8DF"><code style="font:400 10pt/1 ui-monospace,monospace;color:#12233C">/jobs/index.html</code>, single file, sample data in <code style="font:400 10pt/1 ui-monospace,monospace;color:#12233C">localStorage</code></td></tr>
+    <tr><td style="padding:7px 12px 7px 0;color:#7C7A73;border-bottom:1px solid #EDE8DF">Estimate</td><td style="padding:7px 0;border-bottom:1px solid #EDE8DF">22 to 30 developer days across six phases</td></tr>
+    <tr><td style="padding:7px 12px 7px 0;color:#7C7A73">Running cost</td><td style="padding:7px 0">Approximately €95 a month at launch, inherited by JWL. Itemised in section 7.</td></tr>
+  </tbody>
+</table>
+
+<h2 style="font:600 17pt/1.2 'Source Serif 4',Georgia,serif;color:#12233C;margin:0 0 4px;padding-bottom:7px;border-bottom:2px solid #12233C">1. What exists, and what it is worth</h2>
+<p style="margin:14px 0 12px">The prototype is not a mock-up. It is a functioning single-page application containing the finished interaction design, the full job lifecycle, the role model, the copy and the visual system. Every screen the developer needs to build has already been designed, reviewed and approved by the client.</p>
+<p style="margin:0 0 12px">The developer should treat it as the specification of record for behaviour and appearance. What it lacks is everything below the interface:</p>
+<ul style="margin:0 0 14px;padding-left:20px">
+  <li style="margin-bottom:6px">No server, no database. State lives in one browser's <code style="font:400 10pt/1 ui-monospace,monospace">localStorage</code> key and does not leave the device.</li>
+  <li style="margin-bottom:6px">No authentication. The sign-in screen shows the flow; picking a name switches role without a credential check.</li>
+  <li style="margin-bottom:6px">No enforcement. Role restrictions are cosmetic, hiding fields in the browser rather than refusing requests at the server.</li>
+  <li style="margin-bottom:6px">No notifications. The WhatsApp action composes the right message and hands it to the user to send by hand.</li>
+  <li>No audit durability. The history panel is real in shape but is wiped with the browser store.</li>
+</ul>
+<p style="margin:0 0 22px;padding:13px 16px;background:#FAF7F1;border-left:3px solid #B08A4A;break-inside:avoid">The commercial point: design and UX are done and paid for. This engagement is backend, security and deployment work. A developer quoting for a full product design cycle has misread the brief.</p>
+
+<h2 style="font:600 17pt/1.2 'Source Serif 4',Georgia,serif;color:#12233C;margin:0 0 4px;padding-bottom:7px;border-bottom:2px solid #12233C">2. Recommended stack</h2>
+<p style="margin:14px 0 14px">The governing constraint is that a five-person valuation practice in Dublin must be able to keep this running for years without a retained developer. That rules out anything requiring servers to be patched, containers to be orchestrated, or a build pipeline only its author understands. Every choice below is managed, has a free or near-free tier at JWL's volume, and can be handed to another developer without archaeology.</p>
+
+<table style="width:100%;border-collapse:collapse;font-size:10.5pt;margin:0 0 20px">
+  <thead>
+    <tr>
+      <th style="text-align:left;padding:9px 10px 9px 0;border-bottom:1.5px solid #12233C;font:600 9pt/1.2 'Public Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#12233C;width:8.5em">Layer</th>
+      <th style="text-align:left;padding:9px 10px;border-bottom:1.5px solid #12233C;font:600 9pt/1.2 'Public Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#12233C;width:9em">Choice</th>
+      <th style="text-align:left;padding:9px 0 9px 10px;border-bottom:1.5px solid #12233C;font:600 9pt/1.2 'Public Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#12233C">Why this one</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="break-inside:avoid"><td style="padding:9px 10px 9px 0;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#7C7A73">Application</td><td style="padding:9px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#12233C;font-weight:500">Next.js 15, App Router, TypeScript</td><td style="padding:9px 0 9px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top">Marketing site and portal in one codebase, one deployment, one domain. Server components keep client records off the client until a permitted user asks for them.</td></tr>
+    <tr style="break-inside:avoid"><td style="padding:9px 10px 9px 0;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#7C7A73">Database, auth, files</td><td style="padding:9px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#12233C;font-weight:500">Supabase, EU region (Frankfurt or Dublin)</td><td style="padding:9px 0 9px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top">Plain Postgres, so no lock-in beyond SQL. Row Level Security expresses the role model in the database itself, which is where it has to live. Auth, storage for report PDFs and daily backups included.</td></tr>
+    <tr style="break-inside:avoid"><td style="padding:9px 10px 9px 0;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#7C7A73">Hosting</td><td style="padding:9px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#12233C;font-weight:500">Vercel</td><td style="padding:9px 0 9px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top">Deploys on git push, previews per branch, TLS and CDN handled. Nothing for JWL to administer.</td></tr>
+    <tr style="break-inside:avoid"><td style="padding:9px 10px 9px 0;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#7C7A73">Transactional email</td><td style="padding:9px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#12233C;font-weight:500">Resend</td><td style="padding:9px 0 9px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top">Enquiry acknowledgements and internal alerts. Proper deliverability with SPF, DKIM and DMARC, which a valuation practice emailing solicitors needs.</td></tr>
+    <tr style="break-inside:avoid"><td style="padding:9px 10px 9px 0;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#7C7A73">Team alerts</td><td style="padding:9px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#12233C;font-weight:500">Twilio WhatsApp Business API</td><td style="padding:9px 0 9px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top">Phase 5, optional. The team already coordinates on WhatsApp, so automating the new-job notice removes the one manual step left in the flow. See section 6.</td></tr>
+    <tr style="break-inside:avoid"><td style="padding:9px 10px 9px 0;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#7C7A73">Error monitoring</td><td style="padding:9px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#12233C;font-weight:500">Sentry</td><td style="padding:9px 0 9px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top">Without it, a broken enquiry form is discovered by a client complaining. Free tier is sufficient.</td></tr>
+    <tr style="break-inside:avoid"><td style="padding:9px 10px 9px 0;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#7C7A73">Source control</td><td style="padding:9px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#12233C;font-weight:500">GitHub, private repo</td><td style="padding:9px 0 9px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top">Owned by JWL's account from day one, with the developer added as a collaborator. Not the reverse.</td></tr>
+    <tr style="break-inside:avoid"><td style="padding:9px 10px 9px 0;vertical-align:top;color:#7C7A73">Bot defence</td><td style="padding:9px 10px;vertical-align:top;color:#12233C;font-weight:500">Cloudflare Turnstile</td><td style="padding:9px 0 9px 10px;vertical-align:top">Public enquiry forms attract spam. Invisible to real clients, free, and no consent banner implications.</td></tr>
+  </tbody>
+</table>
+
+<p style="margin:0 0 22px;font-size:10.5pt;color:#7C7A73">A developer proposing an alternative stack should be heard out, but should be asked two questions: who patches it, and what happens if they are unavailable for six months. Substituting Netlify for Vercel, or Neon plus Auth.js for Supabase, is defensible. Substituting a self-managed VPS, WordPress, or a bespoke PHP application is not.</p>
+
+<h2 style="font:600 17pt/1.2 'Source Serif 4',Georgia,serif;color:#12233C;margin:0 0 4px;padding-bottom:7px;border-bottom:2px solid #12233C">3. Data flow</h2>
+<p style="margin:14px 0 18px">An enquiry has one path in and one record thereafter. The diagram traces a probate enquiry submitted at 21:40 on a Sunday through to a paid invoice.</p>
+
+<div style="break-inside:avoid;padding:24px 20px;background:#FAF7F1;border:1px solid #DCD6CB;margin:0 0 10px;font:400 9.5pt/1.35 'Public Sans',sans-serif">
+
+  <p style="margin:0 0 12px;font:600 8pt/1 'Public Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#B08A4A;text-align:center">Capture</p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 4px">
+    <div style="padding:11px 12px;background:#fff;border:1px solid #DCD6CB;text-align:center"><b style="display:block;color:#12233C;font-weight:600;margin-bottom:3px">Website form</b><span style="color:#7C7A73">Service page enquiry</span></div>
+    <div style="padding:11px 12px;background:#fff;border:1px solid #DCD6CB;text-align:center"><b style="display:block;color:#12233C;font-weight:600;margin-bottom:3px">Pop-up form</b><span style="color:#7C7A73">Exit intent, mobile</span></div>
+    <div style="padding:11px 12px;background:#fff;border:1px solid #DCD6CB;text-align:center"><b style="display:block;color:#12233C;font-weight:600;margin-bottom:3px">Staff entry</b><span style="color:#7C7A73">Phone, referral, walk-in</span></div>
+  </div>
+  <p style="margin:0;text-align:center;color:#B08A4A;font-size:13pt;line-height:1.5">&#8595;</p>
+
+  <div style="padding:13px 16px;background:#12233C;color:#FAF7F1;text-align:center;margin:0 0 4px">
+    <b style="display:block;font-weight:600;margin-bottom:4px">POST /api/enquiries</b>
+    <span style="color:#B9C2CE">Zod schema validation · Turnstile token check · IP rate limit · honeypot · normalise Eircode</span>
+  </div>
+  <p style="margin:0;text-align:center;color:#B08A4A;font-size:13pt;line-height:1.5">&#8595;</p>
+
+  <div style="padding:13px 16px;background:#fff;border:1.5px solid #12233C;text-align:center;margin:0 0 4px">
+    <b style="display:block;color:#12233C;font-weight:600;margin-bottom:4px">Postgres, EU region</b>
+    <span style="color:#3A3833"><code style="font:400 9pt/1 ui-monospace,monospace">jobs</code> row written, status <i>New / unclaimed</i>, reference JWL&#8209;2615 allocated by sequence · <code style="font:400 9pt/1 ui-monospace,monospace">audit_log</code> row written in the same transaction</span>
+  </div>
+
+  <p style="margin:0;text-align:center;color:#B08A4A;font-size:13pt;line-height:1.5">&#8595;</p>
+  <p style="margin:0 0 10px;font:600 8pt/1 'Public Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#B08A4A;text-align:center">Notify, fired from a database trigger, not the browser</p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 4px">
+    <div style="padding:11px 12px;background:#fff;border:1px solid #DCD6CB"><b style="display:block;color:#12233C;font-weight:600;margin-bottom:3px">Resend &#8594; client</b><span style="color:#7C7A73">Acknowledgement, reference number, what happens next</span></div>
+    <div style="padding:11px 12px;background:#fff;border:1px solid #DCD6CB"><b style="display:block;color:#12233C;font-weight:600;margin-bottom:3px">Resend &#8594; office</b><span style="color:#7C7A73">Full detail to the JWL inbox, deep link to the job</span></div>
+    <div style="padding:11px 12px;background:#fff;border:1px solid #DCD6CB"><b style="display:block;color:#12233C;font-weight:600;margin-bottom:3px">Twilio &#8594; WhatsApp</b><span style="color:#7C7A73">Type, area, deadline only. No name, phone or full address.</span></div>
+  </div>
+  <p style="margin:0;text-align:center;color:#B08A4A;font-size:13pt;line-height:1.5">&#8595;</p>
+
+  <div style="padding:13px 16px;background:#fff;border:1.5px solid #12233C;text-align:center;margin:0 0 4px">
+    <b style="display:block;color:#12233C;font-weight:600;margin-bottom:4px">Portal, authenticated session</b>
+    <span style="color:#3A3833">Every read and write passes Row Level Security. Claim &#8594; quote &#8594; book inspection &#8594; inspect &#8594; invoice &#8594; paid &#8594; close. Financial columns invisible to the valuer role at the database, not merely in the interface.</span>
+  </div>
+  <p style="margin:0;text-align:center;color:#B08A4A;font-size:13pt;line-height:1.5">&#8595;</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+    <div style="padding:11px 12px;background:#fff;border:1px solid #DCD6CB"><b style="display:block;color:#12233C;font-weight:600;margin-bottom:3px">audit_log, append only</b><span style="color:#7C7A73">Actor, action, before and after, timestamp. No update or delete grant to any application role.</span></div>
+    <div style="padding:11px 12px;background:#fff;border:1px solid #DCD6CB"><b style="display:block;color:#12233C;font-weight:600;margin-bottom:3px">Owner reporting</b><span style="color:#7C7A73">Pipeline by status, valuer load, enquiry source, outstanding invoices, CSV export.</span></div>
+  </div>
+</div>
+<p style="margin:0 0 22px;font-size:9.5pt;color:#7C7A73">Figure 1. Enquiry to settlement. The single API entry point matters: staff-entered jobs use the same validation and audit path as web enquiries, so there is one code path to test and one place where a job can be created.</p>
+
+<h2 style="font:600 17pt/1.2 'Source Serif 4',Georgia,serif;color:#12233C;margin:0 0 4px;padding-bottom:7px;border-bottom:2px solid #12233C">4. Data model</h2>
+<p style="margin:14px 0 14px">Seven tables. The prototype's sample data in <code style="font:400 10pt/1 ui-monospace,monospace">/jobs/index.html</code> is the authoritative field list and should be read alongside this.</p>
+<table style="width:100%;border-collapse:collapse;font-size:10.5pt;margin:0 0 14px">
+  <thead>
+    <tr>
+      <th style="text-align:left;padding:9px 10px 9px 0;border-bottom:1.5px solid #12233C;font:600 9pt/1.2 'Public Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#12233C;width:9em">Table</th>
+      <th style="text-align:left;padding:9px 0 9px 10px;border-bottom:1.5px solid #12233C;font:600 9pt/1.2 'Public Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#12233C">Contents and notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="break-inside:avoid"><td style="padding:8px 10px 8px 0;border-bottom:1px solid #EDE8DF;vertical-align:top;font:500 10pt/1.4 ui-monospace,monospace;color:#12233C">jobs</td><td style="padding:8px 0 8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top">Reference, address, Eircode, purpose, source, status, urgency, assignee, inspection datetime, counterparty, invoice number, invoice amount, date paid, created and updated timestamps. Status and purpose as Postgres enums, matching the prototype's twelve valuation types and nine states exactly.</td></tr>
+    <tr style="break-inside:avoid"><td style="padding:8px 10px 8px 0;border-bottom:1px solid #EDE8DF;vertical-align:top;font:500 10pt/1.4 ui-monospace,monospace;color:#12233C">clients</td><td style="padding:8px 0 8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top">Name, phone, email. Separated from <code style="font:400 10pt/1 ui-monospace,monospace">jobs</code> so repeat instructions link to one client, and so the personal data has its own retention and erasure boundary.</td></tr>
+    <tr style="break-inside:avoid"><td style="padding:8px 10px 8px 0;border-bottom:1px solid #EDE8DF;vertical-align:top;font:500 10pt/1.4 ui-monospace,monospace;color:#12233C">users</td><td style="padding:8px 0 8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top">Mirrors Supabase auth users, adds display name, initials and role. Role is an enum of owner, admin, valuer.</td></tr>
+    <tr style="break-inside:avoid"><td style="padding:8px 10px 8px 0;border-bottom:1px solid #EDE8DF;vertical-align:top;font:500 10pt/1.4 ui-monospace,monospace;color:#12233C">notes</td><td style="padding:8px 0 8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top">Internal commentary, author and timestamp. Editable for fifteen minutes after writing, then frozen.</td></tr>
+    <tr style="break-inside:avoid"><td style="padding:8px 10px 8px 0;border-bottom:1px solid #EDE8DF;vertical-align:top;font:500 10pt/1.4 ui-monospace,monospace;color:#12233C">audit_log</td><td style="padding:8px 0 8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top">Append only, written by trigger rather than application code. Family law and probate work can end up in front of a court, so who changed what and when must be defensible.</td></tr>
+    <tr style="break-inside:avoid"><td style="padding:8px 10px 8px 0;border-bottom:1px solid #EDE8DF;vertical-align:top;font:500 10pt/1.4 ui-monospace,monospace;color:#12233C">documents</td><td style="padding:8px 0 8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top">Report PDFs and site photographs in Supabase Storage, private bucket, signed URLs only. Phase 6.</td></tr>
+    <tr style="break-inside:avoid"><td style="padding:8px 10px 8px 0;vertical-align:top;font:500 10pt/1.4 ui-monospace,monospace;color:#12233C">notifications</td><td style="padding:8px 0 8px 10px;vertical-align:top">Outbound queue with delivery state, so a failed WhatsApp or email send is retried and visible rather than silently lost.</td></tr>
+  </tbody>
+</table>
+<p style="margin:0 0 22px;padding:13px 16px;background:#FAF7F1;border-left:3px solid #B08A4A;break-inside:avoid;font-size:10.5pt"><b style="color:#12233C">Permissions belong in the database.</b> The three roles must be enforced by Row Level Security policies on <code style="font:400 10pt/1 ui-monospace,monospace">jobs</code>, <code style="font:400 10pt/1 ui-monospace,monospace">clients</code> and <code style="font:400 10pt/1 ui-monospace,monospace">notes</code>, not by conditional rendering. Concretely: a valuer authenticating and querying the API directly must be unable to read <code style="font:400 10pt/1 ui-monospace,monospace">invoice_amount</code> or write <code style="font:400 10pt/1 ui-monospace,monospace">paid_on</code>. This is a test case, not a preference.</p>
+
+<h2 style="font:600 17pt/1.2 'Source Serif 4',Georgia,serif;color:#12233C;margin:0 0 4px;padding-bottom:7px;border-bottom:2px solid #12233C">5. Phased plan</h2>
+<p style="margin:14px 0 16px">Ordered so that each phase ends with something demonstrable, and so JWL can stop after phase 4 with a usable system if budget requires.</p>
+
+<div style="break-inside:avoid;margin:0 0 12px;padding:14px 16px;border:1px solid #DCD6CB;background:#fff">
+  <p style="margin:0 0 5px;font:600 9pt/1 'Public Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#B08A4A">Phase 1 &middot; 3 to 4 days</p>
+  <h3 style="font:600 13pt/1.3 'Source Serif 4',Georgia,serif;color:#12233C;margin:0 0 7px">Foundations</h3>
+  <p style="margin:0">Repository under JWL's GitHub account. Next.js and TypeScript scaffold. Supabase project in an EU region. Schema and enums migrated as versioned SQL files, not clicked into a dashboard. Seed script reproducing the prototype's ten sample jobs. Vercel connected, staging and production environments split. <b style="color:#12233C">Done when</b> a fresh clone plus one command yields a running local instance with seeded data.</p>
+</div>
+<div style="break-inside:avoid;margin:0 0 12px;padding:14px 16px;border:1px solid #DCD6CB;background:#fff">
+  <p style="margin:0 0 5px;font:600 9pt/1 'Public Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#B08A4A">Phase 2 &middot; 3 to 4 days</p>
+  <h3 style="font:600 13pt/1.3 'Source Serif 4',Georgia,serif;color:#12233C;margin:0 0 7px">Authentication and roles</h3>
+  <p style="margin:0">Supabase Auth with email and password, plus TOTP second factor, which the prototype's sign-in screen already promises. Invitation-only, no public registration. Password reset. Row Level Security policies for all three roles, with an automated test per policy. Session expiry and forced re-authentication for financial writes. <b style="color:#12233C">Done when</b> the policy test suite passes and a valuer's token is provably refused the financial columns.</p>
+</div>
+<div style="break-inside:avoid;margin:0 0 12px;padding:14px 16px;border:1px solid #DCD6CB;background:#fff">
+  <p style="margin:0 0 5px;font:600 9pt/1 'Public Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#B08A4A">Phase 3 &middot; 6 to 8 days</p>
+  <h3 style="font:600 13pt/1.3 'Source Serif 4',Georgia,serif;color:#12233C;margin:0 0 7px">The portal itself</h3>
+  <p style="margin:0">Port every prototype screen to real components against real data: queue with its four tabs and counts, search, job detail, the eight-step progress stepper, claim, release, reassign, advance, urgency flag, lost and reopen, notes, audit history, manual job entry, and the owner's overview with its four charts and CSV export. Mobile first, since valuers use this standing in somebody's hallway. <b style="color:#12233C">Done when</b> the prototype and the build are indistinguishable in behaviour, screen by screen.</p>
+</div>
+<div style="break-inside:avoid;margin:0 0 12px;padding:14px 16px;border:1px solid #DCD6CB;background:#fff">
+  <p style="margin:0 0 5px;font:600 9pt/1 'Public Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#B08A4A">Phase 4 &middot; 3 to 4 days</p>
+  <h3 style="font:600 13pt/1.3 'Source Serif 4',Georgia,serif;color:#12233C;margin:0 0 7px">Website integration and email</h3>
+  <p style="margin:0">Replace the prototype bridge in <code style="font:400 10pt/1 ui-monospace,monospace">enquiry-store.js</code> with a real endpoint. Wire the service-page forms and the pop-up. Validation, Turnstile, rate limiting, honeypot. Resend with SPF, DKIM and DMARC on the jwl.ie domain, client acknowledgement and internal alert templates. <b style="color:#12233C">Done when</b> a form submission on the public site appears as an unclaimed job and both emails arrive in the inbox, not the spam folder.</p>
+</div>
+<div style="break-inside:avoid;margin:0 0 12px;padding:14px 16px;border:1px solid #DCD6CB;background:#fff">
+  <p style="margin:0 0 5px;font:600 9pt/1 'Public Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#B08A4A">Phase 5 &middot; 2 to 3 days, optional</p>
+  <h3 style="font:600 13pt/1.3 'Source Serif 4',Georgia,serif;color:#12233C;margin:0 0 7px">WhatsApp notification</h3>
+  <p style="margin:0">Twilio WhatsApp sender, Meta business verification, one approved template matching the prototype's message format. Queue with retry and a visible failure state. <b style="color:#12233C">Done when</b> a new urgent enquiry reaches the team group within a minute, carrying no client-identifying detail.</p>
+</div>
+<div style="break-inside:avoid;margin:0 0 12px;padding:14px 16px;border:1px solid #DCD6CB;background:#fff">
+  <p style="margin:0 0 5px;font:600 9pt/1 'Public Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#B08A4A">Phase 6 &middot; 4 to 6 days</p>
+  <h3 style="font:600 13pt/1.3 'Source Serif 4',Georgia,serif;color:#12233C;margin:0 0 7px">Hardening, launch, handover</h3>
+  <p style="margin:0">Document storage with signed URLs. Sentry. Automated backup verification, meaning a restore actually performed once and witnessed. Accessibility pass to WCAG 2.2 AA. Penetration sanity check on authentication and the enquiry endpoint. Written runbook, environment variable inventory, and a two-hour training session with the team. <b style="color:#12233C">Done when</b> Shane can add a staff member, reset a password and export a month's figures without assistance.</p>
+</div>
+<p style="margin:0 0 22px;font-size:10.5pt;color:#7C7A73">Phases 1 to 4 give a working system: 15 to 20 days. All six: 22 to 30 days. At Dublin contract rates of €450 to €600 a day that is roughly €10,000 to €18,000, and a quote materially outside that range deserves an explanation in either direction.</p>
+
+<h2 style="font:600 17pt/1.2 'Source Serif 4',Georgia,serif;color:#12233C;margin:0 0 4px;padding-bottom:7px;border-bottom:2px solid #12233C">6. WhatsApp, the honest version</h2>
+<p style="margin:14px 0 12px">The team's habit of coordinating on WhatsApp is a genuine requirement, but automated sending is not as simple as the prototype's share button implies, and the developer should price it with open eyes.</p>
+<ul style="margin:0 0 12px;padding-left:20px">
+  <li style="margin-bottom:6px">Sending programmatically requires the WhatsApp Business API through a provider such as Twilio, plus Meta business verification, which takes days to weeks and needs company documentation from JWL.</li>
+  <li style="margin-bottom:6px">Business-initiated messages must use templates approved by Meta in advance. Free-form text is only permitted inside a 24-hour window opened by the recipient.</li>
+  <li style="margin-bottom:6px">Posting into an existing group chat is not supported by the API. The practical patterns are a broadcast to each team member individually, or a small Twilio-owned group. Whichever is chosen, it is not literally the group they use today.</li>
+  <li>Client-identifying data must never appear in the notification. The prototype already gets this right, sending type, area and deadline only, and that constraint is a requirement rather than a nicety.</li>
+</ul>
+<p style="margin:0 0 22px">If verification or cost proves obstructive, the fallback is SMS through the same Twilio account, roughly €0.05 per message, no template approval, delivered instantly. The recommendation is to build phase 4's email alerts first, run for a fortnight, and decide whether WhatsApp is still wanted.</p>
+
+<h2 style="font:600 17pt/1.2 'Source Serif 4',Georgia,serif;color:#12233C;margin:0 0 4px;padding-bottom:7px;border-bottom:2px solid #12233C">7. Running costs inherited by JWL</h2>
+<p style="margin:14px 0 14px">Monthly, excluding VAT, at launch volumes. Prices move, so treat these as accurate to the order rather than to the cent, and verify at contract signing.</p>
+<table style="width:100%;border-collapse:collapse;font-size:10.5pt;margin:0 0 14px">
+  <thead>
+    <tr>
+      <th style="text-align:left;padding:9px 10px 9px 0;border-bottom:1.5px solid #12233C;font:600 9pt/1.2 'Public Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#12233C">Service</th>
+      <th style="text-align:left;padding:9px 10px;border-bottom:1.5px solid #12233C;font:600 9pt/1.2 'Public Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#12233C;width:7em">Plan</th>
+      <th style="text-align:right;padding:9px 10px;border-bottom:1.5px solid #12233C;font:600 9pt/1.2 'Public Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#12233C;width:6em">Per month</th>
+      <th style="text-align:left;padding:9px 0 9px 10px;border-bottom:1.5px solid #12233C;font:600 9pt/1.2 'Public Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#12233C;width:13em">Note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="break-inside:avoid"><td style="padding:8px 10px 8px 0;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#12233C;font-weight:500">Vercel</td><td style="padding:8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#7C7A73">Pro</td><td style="padding:8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;text-align:right;font-variant-numeric:tabular-nums">€19</td><td style="padding:8px 0 8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#7C7A73">Per seat. Commercial use is outside the free tier.</td></tr>
+    <tr style="break-inside:avoid"><td style="padding:8px 10px 8px 0;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#12233C;font-weight:500">Supabase</td><td style="padding:8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#7C7A73">Pro</td><td style="padding:8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;text-align:right;font-variant-numeric:tabular-nums">€23</td><td style="padding:8px 0 8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#7C7A73">Needed for daily backups and no project pausing. Free tier is fine during the build.</td></tr>
+    <tr style="break-inside:avoid"><td style="padding:8px 10px 8px 0;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#12233C;font-weight:500">Resend</td><td style="padding:8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#7C7A73">Pro</td><td style="padding:8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;text-align:right;font-variant-numeric:tabular-nums">€19</td><td style="padding:8px 0 8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#7C7A73">Free tier covers 3,000 sends a month and may well suffice. Pro adds a custom domain and retention.</td></tr>
+    <tr style="break-inside:avoid"><td style="padding:8px 10px 8px 0;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#12233C;font-weight:500">Twilio WhatsApp</td><td style="padding:8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#7C7A73">Usage</td><td style="padding:8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;text-align:right;font-variant-numeric:tabular-nums">€10 to €25</td><td style="padding:8px 0 8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#7C7A73">Roughly €0.04 to €0.08 per message, times jobs times recipients. Phase 5 only.</td></tr>
+    <tr style="break-inside:avoid"><td style="padding:8px 10px 8px 0;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#12233C;font-weight:500">Sentry</td><td style="padding:8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#7C7A73">Developer</td><td style="padding:8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;text-align:right;font-variant-numeric:tabular-nums">€0</td><td style="padding:8px 0 8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#7C7A73">Free tier is ample at this volume.</td></tr>
+    <tr style="break-inside:avoid"><td style="padding:8px 10px 8px 0;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#12233C;font-weight:500">GitHub</td><td style="padding:8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#7C7A73">Free</td><td style="padding:8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;text-align:right;font-variant-numeric:tabular-nums">€0</td><td style="padding:8px 0 8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#7C7A73">Private repositories are free. Team plan only if branch protection is wanted, €4 per user.</td></tr>
+    <tr style="break-inside:avoid"><td style="padding:8px 10px 8px 0;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#12233C;font-weight:500">Turnstile</td><td style="padding:8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#7C7A73">Free</td><td style="padding:8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;text-align:right;font-variant-numeric:tabular-nums">€0</td><td style="padding:8px 0 8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#7C7A73">No paid tier needed.</td></tr>
+    <tr style="break-inside:avoid"><td style="padding:8px 10px 8px 0;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#12233C;font-weight:500">Domain, jwl.ie</td><td style="padding:8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#7C7A73">Annual</td><td style="padding:8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;text-align:right;font-variant-numeric:tabular-nums">€2</td><td style="padding:8px 0 8px 10px;border-bottom:1px solid #EDE8DF;vertical-align:top;color:#7C7A73">Around €20 to €25 a year, likely already held.</td></tr>
+    <tr style="break-inside:avoid"><td style="padding:11px 10px 11px 0;border-top:1.5px solid #12233C;color:#12233C;font-weight:600">Total</td><td style="padding:11px 10px;border-top:1.5px solid #12233C"></td><td style="padding:11px 10px;border-top:1.5px solid #12233C;text-align:right;color:#12233C;font-weight:600;font-variant-numeric:tabular-nums">€63 to €88</td><td style="padding:11px 0 11px 10px;border-top:1.5px solid #12233C;color:#7C7A73">Lower without WhatsApp, higher as staff are added</td></tr>
+  </tbody>
+</table>
+<p style="margin:0 0 22px;font-size:10.5pt;color:#7C7A73">Every account must be created under a JWL-controlled email address, ideally a shared one such as accounts@jwl.ie, with billing on a JWL card. A developer signing services up under their own account is the single most common way a small business loses control of its own system.</p>
+
+<h2 style="font:600 17pt/1.2 'Source Serif 4',Georgia,serif;color:#12233C;margin:0 0 4px;padding-bottom:7px;border-bottom:2px solid #12233C">8. Data protection</h2>
+<p style="margin:14px 0 12px">The portal holds names, addresses, telephone numbers and, by implication, information about bereavement, separation and long-term care. That is sensitive in substance even where it is not special category data under GDPR, and the practice is regulated. Requirements:</p>
+<ul style="margin:0 0 22px;padding-left:20px">
+  <li style="margin-bottom:6px">All data resident in the EU. Database, file storage and backups.</li>
+  <li style="margin-bottom:6px">Data processing agreements on file for every processor: Supabase, Vercel, Resend, Twilio, Sentry.</li>
+  <li style="margin-bottom:6px">Personal data scrubbed from error reports before they reach Sentry.</li>
+  <li style="margin-bottom:6px">A documented retention rule, and an implemented one. Professional indemnity practice points to holding valuation files for a defined number of years; Shane's insurer sets the number, and the developer implements whatever he specifies.</li>
+  <li style="margin-bottom:6px">A subject access request must be answerable from the interface, not by a developer writing SQL.</li>
+  <li>The portal excluded from search engine indexing, as the prototype already does, and rate-limited against credential stuffing.</li>
+</ul>
+
+<h2 style="font:600 17pt/1.2 'Source Serif 4',Georgia,serif;color:#12233C;margin:0 0 4px;padding-bottom:7px;border-bottom:2px solid #12233C">9. Handover, and what JWL must own</h2>
+<p style="margin:14px 0 12px">Payment of the final phase should be contingent on all of the following existing:</p>
+<ul style="margin:0 0 22px;padding-left:20px">
+  <li style="margin-bottom:6px">The repository in JWL's GitHub organisation, with full history. Not a zip file, not the developer's account.</li>
+  <li style="margin-bottom:6px">Every third-party account owned by JWL, with the developer's access removable in one action.</li>
+  <li style="margin-bottom:6px">An environment variable inventory naming every secret, where it lives, and how it is rotated.</li>
+  <li style="margin-bottom:6px">A README that takes a competent stranger from clone to running locally in under thirty minutes.</li>
+  <li style="margin-bottom:6px">Database migrations as files in the repository, so the schema can be rebuilt from scratch.</li>
+  <li style="margin-bottom:6px">One restore from backup performed and witnessed before launch. An untested backup is not a backup.</li>
+  <li>A runbook covering the six things that will actually happen: add a user, remove a user, reset a password, the site is down, the emails stopped, a client asks for their data.</li>
+</ul>
+
+<h2 style="font:600 17pt/1.2 'Source Serif 4',Georgia,serif;color:#12233C;margin:0 0 4px;padding-bottom:7px;border-bottom:2px solid #12233C">10. Out of scope</h2>
+<p style="margin:14px 0 12px">Named so that nobody quotes for them and nobody expects them: accounting integration, whether Xero, Sage or Bullet; automated valuation report generation; client-facing job tracking; e-signature; diary synchronisation with Google or Outlook calendars; Property Price Register or Tailte Éireann data feeds; a native mobile application. Each is a reasonable second-phase conversation. None is in this contract.</p>
+
+<h2 style="font:600 17pt/1.2 'Source Serif 4',Georgia,serif;color:#12233C;margin:0 0 4px;padding-bottom:7px;border-bottom:2px solid #12233C">11. Decisions needed before work starts</h2>
+<ol style="margin:14px 0 22px;padding-left:20px">
+  <li style="margin-bottom:6px">Is the WhatsApp notification in or out of the initial contract, given section 6?</li>
+  <li style="margin-bottom:6px">How many years are valuation records retained, per the professional indemnity policy?</li>
+  <li style="margin-bottom:6px">Does the valuer role see invoice amounts on its own jobs, or none at all? The prototype currently says none.</li>
+  <li style="margin-bottom:6px">Are historical jobs being migrated from existing spreadsheets or files, and if so how many? This is not currently costed.</li>
+  <li>Who at JWL holds the account credentials and the payment card, and who is the named deputy?</li>
+</ol>
+
+<p style="margin:26px 0 0;padding-top:14px;border-top:1px solid #DCD6CB;font-size:10pt;color:#7C7A73">Prepared for issue to a contract developer alongside read access to the prototype at <code style="font:400 10pt/1 ui-monospace,monospace">/jobs/index.html</code> and the design system in this project. Questions on scope to Shane Cooke.</p>
+
+</div>
+</doc-page>
+
+</x-dc>
+</body>
+</html>

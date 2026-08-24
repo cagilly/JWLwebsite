@@ -1,0 +1,786 @@
+JWL Property Valuations
+Website Copy — Content Only
+Evidence Before Opinion
+Prepared for: Shane Cooke, Director, JWL Property Valuations
+Date: August 2026
+What this document is
+This is every word of copy for the site — headlines, body text, bullet points and calls to action — with the SEO strategy, page-build notes, meta titles and design instructions left out. A separate, fuller document carries all of that for the designer and developer to build from; this one is just for reading and marking up.
+Anything in [square brackets] is still a placeholder — a number, date or fact that needs your confirmation before it goes on the site.
+Boxed notes marked &quot;CLIENT&quot; are questions for you, left in place at the point in the copy they affect.
+A short checklist of things to verify sits below, and the full list of open questions is at the end.
+Before this goes live — operational claims to check
+Website copy inevitably describes how a business works, and I have written this draft from how a valuation practice of JWL&apos;s type would normally operate rather than from observing JWL itself. That is fine for a first draft, but every line below is a promise the practice would have to keep. Please read them as a checklist and correct anything that is not accurate — it is much cheaper to change now than after a client holds you to it.
+Turnaround. The draft says inspection within [1–2 working days] and the valuation issued within [2–3 working days]. Both are placeholders and both appear in several places.
+Fees. The draft says a fee is confirmed before any work starts. It no longer promises a fixed fee — tell me if you do quote fixed fees, because that is a stronger selling point.
+What the client actually receives. Each service page carries a &quot;What your valuation includes&quot; list. These are informed assumptions, not descriptions of your reports. One redacted sample report would let me rewrite all twelve accurately.
+Who the valuation goes to. The draft assumes it can be issued to the client or directly to a lender, solicitor or authority, whichever suits.
+Lender panels. Several pages, and the whole LTV service, depend on which panels JWL is on. This is the single most important item on the list.
+Working with third parties. The draft says you will deal directly with solicitors and brokers where that is easier.
+Access and inspection. The draft says inspections are arranged at a time that suits, that the property does not need to be prepared, and that you will arrange access with tenants or family members directly.
+Who carries out the work. The draft says an accredited valuer inspects the property, prepares the report and puts their name to it.
+Where I was not confident, I have softened the wording rather than invented a process. That means a few sections are deliberately general and would be stronger once you tell me what actually happens.
+3. Homepage
+Hero section
+Property Valuations in Dublin and Leinster
+Evidence before opinion.
+When a valuation has to satisfy a lender, a solicitor, the Revenue Commissioners or a court, the figure on its own is not enough. You need to know where it came from. JWL has been valuing property across the greater Dublin area and Leinster for more than ten years, and every valuation we issue is built on real comparable evidence, current market conditions and the expert judgement that comes from knowing these areas well.
+Primary button: Request a Valuation
+Secondary button: Call 087 960 4211
+TRV — TEGoVA Residential Valuer  ·  IPAV — Institute of Professional Auctioneers &amp; Valuers  ·  PSRA Licence No. 004865
+Trust bar
+10+ years — valuing property across Dublin and Leinster
+Regulated — PSRA Licence No. 004865
+Qualified — MIPAV, REV, RESI and TRV accredited
+Accepted — by lenders, credit unions, solicitors and the HSE
+Positioning section
+What goes into a JWL Property Valuation
+Three things, in every valuation we issue.
+Judgement
+More than ten years valuing property across Dublin and Leinster — knowing how a particular road or estate actually trades, not what an online estimate or index suggests.
+Worth
+A figure grounded in the market as it stands: recent sales of comparable properties, current conditions, and the particular qualities of the property itself.
+Legitimacy
+Professional accreditation and recognised valuation standards behind the report — so it is accepted by the lender, solicitor or authority who has to rely on it.
+That is what we mean by evidence before opinion.
+Featured services — the three most requested
+Our most requested valuations
+Property Valuation
+An independent market valuation of your home or investment property, backed by comparable sales evidence you can see. The starting point for most decisions involving property.
+Link: Property valuation →
+Bank &amp; Credit Union Valuation
+Lender-format valuation reports prepared to the standards banks and credit unions require, issued promptly so your loan or drawdown is not the thing holding up the transaction.
+Link: Bank &amp; credit union valuation →
+Loan to Value (LTV) Valuation
+If your property has risen in value, an up-to-date valuation may move your mortgage into a lower LTV rate band. Several of the main lenders have a formal process for it — the valuation is usually the only thing standing in the way.
+Link: LTV valuation →
+CLIENT DECISION (design review): the full 12-tile service grid that previously sat here has been removed from the homepage at your request. Internal linking to all 12 pages is unaffected — every one is still reachable from the Services menu on every page and from the /services/ hub page, which keeps its own full grid. Nothing crawlable was lost, just the duplication on the homepage.
+Why clients choose JWL
+Why Dublin and Leinster clients choose JWL
+We do not sell property
+An estate agent valuing your home is usually also pitching to sell it. We are not. Valuation is the whole business, so there is nothing riding on the figure being anything other than right.
+An accredited valuer, every time
+Every JWL valuation is carried out by a qualified valuer who inspects the property and signs the report. Whoever you deal with, the accreditation and the standard behind the figure are the same.
+Built for whoever is receiving it
+A lender, a solicitor, the HSE and Revenue all want something slightly different. Tell us who the report is for and we will work to what they need.
+Straight answers
+If the valuation is not what you were hoping for, we will tell you plainly. A figure that bends to suit the occasion is worth nothing to anyone who has to rely on it.
+How it works
+How a JWL valuation works
+Step 1 — Get in touch
+Tell us about the property and what the valuation is for. The purpose shapes the report, so we ask up front. Call, email, or use the form.
+Step 2 — Inspection
+We arrange a time that suits and inspect the property in person.
+Step 3 — Evidence and analysis
+We assemble the comparable evidence — recent sales of genuinely similar properties in the area — and apply professional valuation practice and experience to reach a figure.
+Step 4 — Your valuation
+Your valuation is issued in the format the receiving party requires — to you, or directly to your lender, solicitor or the relevant authority, whichever suits. Typically within [2–3 working days] of inspection. If you have questions, just ask.
+CLIENT TO CONFIRM: the turnaround figure in Step 4. This is one of the strongest conversion levers on the site and should be a commitment you are comfortable making in writing every time.
+The practice behind the valuation
+The practice behind the valuation
+Shane Cooke — Director
+MIPAV | REV | RESI | MMCEPI
+JWL was founded on a straightforward conviction: that a valuation should be able to withstand any amount of scrutiny, because the evidence behind it is there to see and the reasoning is transparent. Our valuers have been working the Dublin and Leinster market for over ten years, and the practice is led by Shane Cooke, MIPAV REV RESI MMCEPI.
+Every valuation is carried out by an accredited valuer who inspects the property, prepares the report and signs it. If you want to understand how a figure was arrived at, you can ask the person who arrived at it.
+Link: More about JWL →
+Areas we cover
+Valuations across Dublin and Leinster
+We cover the greater Dublin area in full — Dublin city, north Dublin and Fingal, south Dublin and Dún Laoghaire-Rathdown, and west Dublin — along with Kildare, Wicklow, Meath, Louth, Carlow, Kilkenny, Laois, Longford, Offaly, Westmeath and Wexford.
+Local knowledge counts for a lot in this work. Two similar houses a mile apart can be worth quite different amounts, and knowing an area well makes that difference easier to read. If you are not sure whether your property is within our area, give us a call — and if we are not the right practice for it, we will tell you.
+Insights teaser
+Insights from the Dublin and Leinster market
+Practical guidance on valuation, grounded in what the evidence actually shows.
+What a Probate Valuation Actually Involves — And Why the Date Matters More Than You Think
+Local Property Tax 2026: How to Value Your Home for the New Bands with Confidence
+Could a Loan to Value Valuation Cut Your Mortgage Rate?
+CLIENT DECISION (design review): the on-page homepage FAQ block has been removed at your request, in favour of keeping FAQs on their own page under the FAQ nav tab. This does not cost you the SEO value — FAQPage schema and the keyword-rich Q&amp;A content live on the dedicated /faq/ page, which is linked from the main nav on every page, so it is just as discoverable to Google as a homepage block would have been. Having the schema in one place also avoids two pages on the same site competing for the same rich-snippet slot.
+Closing call to action
+Need a valuation you can rely on?
+Tell us about the property and what the valuation is for. We will confirm the fee and the timeline before any work begins.
+Primary button: Request a Valuation
+Or call 087 960 4211  ·  Email shane@jwl.ie
+
+4. About Us
+Page hero
+Expert Property Valuers in Dublin and Leinster
+More than ten years of evidence-led valuation across the greater Dublin area and the wider Leinster market.
+Who we are
+Valuation is not a sideline for us. It is the whole business.
+JWL Property Valuations has been valuing property across the greater Dublin area and Leinster for over ten years. In that time we have prepared valuations for banks and credit unions, for solicitors handling probate and family law matters, for families navigating the Fair Deal Scheme, for landlords and investors, and for homeowners who simply needed to know with certainty what their property was worth.
+Most property valuations in Ireland are carried out by estate agents, for whom valuation is one service among many and often a route to a sales instruction. We work differently. JWL is a dedicated valuation practice. We are not trying to sell your house, we are not looking for the listing, and we have no interest in the figure being anything other than accurate. That independence is the point, and it is why solicitors and lenders come back to us.
+It also means the work gets our full attention. Valuation methodology, market evidence, professional standards and report structure are not things we fit in around other business. They are the business.
+Our team of valuers works across the greater Dublin area and Leinster, which means we can cover ground quickly without ever sending someone who does not know the area. Whoever carries out your valuation, the accreditation, the standards and the approach are the same.
+Our approach
+Evidence before opinion
+Our tagline is also our method. In property valuation, and especially in the legally sensitive work that makes up much of what we do, opinions carry very little weight. Evidence carries all of it.
+A valuation that says &quot;in our opinion, this property is worth €X&quot; gives a solicitor nothing to work with, gives Revenue nothing to accept and gives a court nothing to rely on. A valuation that shows what it is based on — recent sales of similar properties nearby, and how this property compares — is a document that can be examined, tested and relied upon.
+In practice, that means four things:
+Every valuation is backed by documented evidence — comparable sales, current market data and recognised professional standards.
+Our reasoning is transparent. You understand not just the figure, but the evidence behind it.
+Our valuations are defensible. They stand up to scrutiny because they are grounded in fact rather than assumption.
+We communicate with confidence. We state our findings plainly, because we can show where they came from.
+Shane Cooke, Director
+Shane Cooke — Director
+MIPAV  |  REV  |  RESI  |  MMCEPI
+Shane Cooke founded JWL and leads the practice. With over a decade of experience valuing property across Dublin and Leinster, he has worked on everything from single-bed apartments in the city centre to development sites and substantial period homes, and he sets the standards our valuers work to.
+He is a Member of the Institute of Professional Auctioneers and Valuers (MIPAV) and holds the TEGoVA designations of Recognised European Valuer (REV) and Recognised European Residential Valuer (RESI) — accreditations awarded on the basis of demonstrated education, experience and adherence to European Valuation Standards. He is also a member of the Mediators&apos; and Court Experts&apos; Institute (MMCEPI), reflecting the volume of JWL&apos;s work that is prepared for legal proceedings and independent expert instruction.
+What that adds up to in practice is straightforward: every JWL valuation is carried out by an accredited valuer who inspects the property, prepares the report and puts their name to it. If you want to understand how a valuation was arrived at, you can ask the person who arrived at it.
+CLIENT TO CONFIRM: I have interpreted RESI as the TEGoVA Recognised European Residential Valuer designation and MMCEPI as membership of the Mediators&apos; and Court Experts&apos; Institute. Please confirm both, and let me know the year you qualified and the year JWL was founded — specific dates are stronger evidence than &quot;over ten years&quot; and I would like to use them.
+Credentials and regulation
+Qualified, accredited and regulated
+Anyone in Ireland can offer an opinion on what a house is worth. Far fewer are qualified, accredited and licensed to produce a valuation that a lender, a solicitor or a court will accept. Here is where JWL stands:
+PSRA Licence No. 004865
+JWL is licensed by the Property Services Regulatory Authority, the statutory body regulating property services providers in Ireland. Our licence number appears on every report we issue.
+IPAV membership
+JWL&apos;s work is carried out by IPAV-registered valuers. IPAV is the professional body representing qualified auctioneers and valuers across Ireland, and membership carries continuing professional development and conduct obligations. Our director, Shane Cooke, is a Member of the Institute.
+CLIENT TO CONFIRM: I have written this as &quot;IPAV-registered valuers&quot; across the practice. Please confirm that every valuer carrying out JWL work holds IPAV membership. If some do not, I will reword so the claim sits with the individuals it applies to — this is a regulated profession and the claim needs to be exactly right.
+TEGoVA accreditation — TRV and REV
+TEGoVA is the European Group of Valuers&apos; Associations, author of the European Valuation Standards known throughout the industry as the Blue Book. Its TRV and REV designations are awarded only to valuers who meet a defined standard of education and experience and who work to those standards. In Ireland, IPAV is the body with awarding rights. It means the valuations we produce are recognised well beyond Dublin.
+Who we work with
+Who we work with
+JWL valuations are relied upon by:
+Banks, credit unions and other lenders assessing loan security
+Solicitors handling probate, estate administration and family law matters
+Families applying to the HSE Nursing Homes Support Scheme (Fair Deal)
+Homeowners establishing an LPT band or challenging an assessment
+Landlords, tenants and investors on rent reviews and investment decisions
+Accountants and financial advisers on capital taxes and asset valuation
+Homeowners switching mortgage or seeking a better LTV rate band
+Areas we cover
+Where we work
+We cover the greater Dublin area in full, including Dublin city centre, north Dublin and Fingal, south Dublin, Dún Laoghaire-Rathdown and west Dublin, along with Kildare, Wicklow, Meath, Louth, Carlow, Kilkenny, Laois, Longford, Offaly, Westmeath and Wexford.
+Coverage on a map is one thing; knowing an area is another. Local detail tends to matter more than people expect — which side of a road commands a premium, how a particular estate has traded this year, what a south-facing garden is worth in that part of town. That kind of familiarity builds up over years of working the same market.
+Call to action
+Talk to us about your valuation
+Whether it is for a lender, a solicitor, the HSE or your own peace of mind, we will confirm the fee and the timeline before any work begins.
+Primary button: Request a Valuation
+Or call 087 960 4211  ·  Email shane@jwl.ie
+
+5. Services — hub page
+Property Valuation Services in Dublin and Leinster
+Twelve types of valuation. One evidence-led method behind every one of them.
+The reason you need a valuation shapes the report you should receive. A lender wants a figure in a specific format against defined security criteria. A solicitor administering an estate needs a defensible market value as at the date of death. The HSE needs a valuation that will pass a financial assessment. Revenue needs a self-assessment you can stand over. A court needs an impartial figure that both sides can examine.
+Getting the format wrong costs time you may not have. So the first question we ask is always what the valuation is for — and the report we produce is built for the party who will read it.
+What does not change is the approach. Every JWL valuation, whatever its purpose, is built on a physical inspection, real comparable evidence and the experience to read what the market is actually doing.
+CLIENT — PLEASE READ. Each of the twelve service pages carries a &quot;What your valuation includes&quot; list. I have written those from what a valuation of that type would normally contain, not from your actual reports, so they are informed assumptions rather than fact. Two things would let me fix that properly: a sample report (redacted is fine — probate or lender would be most useful), and confirmation of how the valuation usually reaches the client. At the moment the copy assumes a written report issued either to the client or directly to the lender, solicitor or authority. If some instructions are handled differently, tell me and I will reword. Nothing on the site should describe a deliverable the practice does not actually produce.
+Not sure which valuation you need?
+That is a common position to be in, and it is an easy one to resolve. Call us on 087 960 4211 and tell us the situation. We will tell you which valuation applies, what it will cost and how long it will take — and if it turns out you do not need a formal valuation at all, we will tell you that too.
+
+Property Valuation
+Property Valuation in Dublin and Leinster
+An independent, evidence-based market valuation of your property — from a practice that values property for a living and has nothing to sell you afterwards.
+What is a property valuation?
+A property valuation is a professional assessment of what a property would sell for on the open market at a specific date. It is not an asking price, and it is not an estate agent&apos;s estimate of what might be achievable with the right campaign. It is a considered figure, supported by evidence, that can be relied upon for a financial or legal decision.
+Our valuations are prepared to European Valuation Standards and set out not only the figure but the comparable sales, market conditions and property characteristics that produced it.
+When do you need one?
+Buying or selling and wanting an independent view free of any sales agenda
+Applying for or restructuring a loan secured on property
+Transferring property between family members or dissolving joint ownership
+Establishing a value for tax purposes, including Capital Acquisitions Tax and Capital Gains Tax
+Insurance, accounting, or company and pension asset valuation
+Settling a dispute where an impartial figure is needed
+What your valuation includes
+A full internal and external inspection of the property
+A written report stating the open market value as at a defined date
+The comparable sales evidence the valuation is based on
+Commentary on the property&apos;s condition, accommodation and any factors materially affecting value
+A report signed by a PSRA-licensed, IPAV-registered valuer holding TEGoVA REV accreditation
+Why choose an independent valuer?
+An estate agent valuing your home is, in most cases, also pitching for the instruction to sell it. There is nothing improper about that, but it does mean the figure serves two purposes at once. When the valuation has to satisfy a lender, a solicitor or Revenue, that ambiguity is a problem.
+JWL does not sell property. We produce a figure and we show you the evidence for it. That is the entire service.
+Property valuation FAQs
+How much does a property valuation cost in Dublin?
+It depends on the property and the type of report required. Tell us what you need and we will come back to you with a fee before anything starts.
+How long does the inspection take?
+Typically 30 to 60 minutes for a standard residential property. Larger or more complex properties take longer.
+How long is a valuation valid for?
+A valuation states a value at a specific date. In a moving market most lenders and institutions will treat a report as current for around three to six months, though the receiving party sets its own requirement. If yours has expired, we can usually update it more quickly and economically than starting fresh.
+Related services
+Bank &amp; Credit Union Valuation  ·  Probate Valuation  ·  Loan to Value Valuation
+Request a property valuation
+Tell us about the property and what the valuation is for. Call 087 960 4211 or use the form and we will come back to you with a fee and a timeline.
+
+Bank &amp; Credit Union Valuation
+Bank and Credit Union Property Valuations
+Lender-format valuation reports prepared to the standards banks and credit unions require — so the valuation is not the thing holding up your loan.
+What is a bank or credit union valuation?
+When a lender advances money secured against property, it needs an independent professional assessment of what that security is worth. That is a loan security valuation, and it is a different document from a general market valuation: it follows the lender&apos;s format, states the value on a defined basis, and comments on anything that could affect the property&apos;s suitability as security.
+Credit unions have grown substantially as mortgage and home improvement lenders in recent years, and their valuation requirements are broadly similar to the banks&apos;. We prepare reports for both.
+When you will need one
+Applying for a mortgage on a purchase
+Drawing down a self-build or renovation loan in stages
+Applying for a home improvement or top-up loan against existing property
+Releasing equity or restructuring existing borrowing
+A lender review of security on existing borrowing
+Refinancing, or moving borrowing to a different institution
+Why lenders accept our reports
+Our valuations are prepared to European Valuation Standards, the framework published by TEGoVA and known in the industry as the Blue Book. JWL operates under PSRA Licence No. 004865, and our director, Shane Cooke, holds TEGoVA&apos;s REV accreditation and IPAV membership.
+Just as importantly, the reports are complete. A valuation returned to a lender missing a photograph, a floor area or a required declaration costs everybody a week — so if your lender has its own template or panel requirement, send it to us at the outset and we will work to it.
+What we need from you
+To move quickly, tell us three things when you first make contact: the lender or credit union involved, whether they have supplied a specific valuation template or panel requirement, and the deadline you are working to. If your lender has issued a form, send it with your enquiry.
+Bank valuation FAQs
+Is JWL on my lender&apos;s panel?
+[CLIENT TO CONFIRM: list the specific banks and credit unions whose valuation panels JWL is on. This is one of the most valuable pieces of content on the site — people search for it by name.]
+Is a valuation the same as a structural survey?
+No. A valuation establishes what the property is worth; a survey assesses its physical condition and identifies defects. Lenders often require both, and they are separate instructions. We provide the valuation.
+How quickly can you turn a lender valuation around?
+We aim to inspect within [1–2 working days] of instruction and issue the report within [2–3 working days] of inspection. If you are up against a drawdown date, tell us and we will do our best to work to it.
+Related services
+Loan to Value Valuation  ·  Switcher Valuation  ·  Blue Book Valuation
+Need a valuation for your lender?
+Send us the lender&apos;s name and any form they have issued. Call 087 960 4211 or use the form.
+
+Probate Valuation
+Probate Property Valuations in Dublin and Leinster
+Accurate, well-evidenced date-of-death valuations for probate and estate administration — prepared for solicitors, executors and personal representatives.
+What is a probate valuation?
+A probate valuation establishes the open market value of a property as at the date of the owner&apos;s death. That figure is required for the Statement of Affairs (Probate) Form SA.2 submitted to Revenue, and it forms the basis on which the estate is administered and any Capital Acquisitions Tax is calculated.
+The date matters more than people expect. The valuation is not what the house is worth today — it is what it was worth on a specific past date, which may be months or even years ago. Getting that right requires evidence from the market as it stood then, not as it stands now.
+Why the figure needs to be defensible
+A probate valuation is submitted to Revenue and relied upon by beneficiaries. Under-value the property and the estate risks a Revenue query, an amended return and, potentially, interest and penalties. Over-value it and beneficiaries may pay tax on value that was never there. Where the property is later sold, the difference between the probate value and the sale price has capital gains consequences for the estate.
+A figure that is simply asserted is difficult to defend if it is questioned. A figure supported by documented comparable evidence from around the valuation date is straightforward to defend, because the reasoning is on the page.
+We understand the circumstances
+Probate work almost always follows a bereavement, often recently. We keep the process as light as we reasonably can: we arrange the inspection at a time that suits the family, we do not need the house cleared or presented, and we deal directly with the solicitor on the paperwork if that is easier for you.
+What your probate valuation includes
+A full inspection of the property, arranged at your convenience
+A written valuation stating open market value as at the date of death
+Comparable sales evidence from around the valuation date, not today&apos;s market
+A report in a format suited to Form SA.2 and to your solicitor&apos;s requirements
+A signed report from a PSRA-licensed, IPAV-registered valuer
+Probate valuation FAQs
+Can you value a property as at a date in the past?
+Yes. Retrospective valuation is routine work for us. We use comparable evidence from the market as it stood at the relevant date. See our Historic Valuation page for more.
+Do I need a formal valuation, or will an estate agent&apos;s letter do?
+Revenue and most solicitors will accept a valuation from a qualified professional. Where the estate is substantial, where beneficiaries may disagree, or where the property is unusual, a formal report from an accredited valuer is considerably more robust — and much easier to defend if it is questioned.
+Can you deal with our solicitor directly?
+Yes, and we frequently do. Give us their details and we will liaise with them.
+The house is in poor condition. Does that matter?
+It matters to the valuation, which is exactly why we inspect. Condition is one of the factors we assess and reflect in the figure. You do not need to do anything to the property before we visit.
+Related services
+Historic Valuation  ·  Family Law Valuation  ·  Fair Deal Valuation
+Arrange a probate valuation
+Call 087 960 4211 or email shane@jwl.ie. We can deal with you or your solicitor directly, whichever is easier.
+
+Family Law Valuation
+Family Law Property Valuations
+Impartial, court-ready valuations for separation, divorce and judicial separation — evidence both sides and the court can rely on.
+What is a family law valuation?
+When a couple separates, the family home is usually the largest asset in the settlement. Before it can be divided, sold, transferred or offset against other assets, its value has to be established — and established in a way that both parties, their solicitors and, if it comes to it, the court will accept.
+A family law valuation is an independent professional assessment of open market value, prepared to a documented methodology and set out in a report structured for legal proceedings.
+Independence is the whole point
+In a separation, a valuation that appears to favour one party is worse than no valuation at all — it becomes another thing to argue about, and it costs both parties in legal fees.
+We are frequently instructed jointly by both parties or by both solicitors, precisely because we have no stake in the outcome. We are not selling the house, we are not acting for either side, and our figure is what the evidence supports. We are equally comfortable being instructed by one party, and the report is prepared to the same standard either way.
+Our director, Shane Cooke, is a member of the Mediators&apos; and Court Experts&apos; Institute (MMCEPI), which reflects the volume of JWL&apos;s work prepared for legal proceedings and expert instruction.
+What your report includes
+A full inspection, arranged discreetly and at a time that suits the occupier
+Open market value as at a clearly stated date
+The comparable sales evidence supporting the figure, clearly set out
+A report structured for use in family law proceedings and for both solicitors
+Where required, valuation of investment properties, sites or land in the same instruction
+Family law valuation FAQs
+Can you be instructed jointly by both parties?
+Yes, and it is often the most efficient route. A single agreed valuer removes one point of dispute and one set of fees.
+Will you give evidence in court if needed?
+[CLIENT TO CONFIRM: whether you act as an expert witness and attend court where required. If you do, say so plainly — it is a significant differentiator and solicitors search for it.]
+My former partner is living in the house. How does the inspection work?
+We arrange access directly with whoever is in occupation, at a time that suits them. The inspection is professional and discreet, and we do not discuss the case or the figure with either party during the visit.
+Do you value assets other than the family home?
+Yes. Investment properties, land and sites can all be covered in the same instruction.
+Related services
+Property Valuation  ·  Probate Valuation  ·  Rental Valuation
+Arrange a family law valuation
+We can take instruction from you, from your solicitor, or jointly from both parties. Call 087 960 4211 or email shane@jwl.ie.
+
+Fair Deal Valuation
+Fair Deal Scheme Property Valuations
+Independent property valuations for the HSE Nursing Homes Support Scheme financial assessment — accurate, evidenced and prepared without delay.
+What is a Fair Deal valuation?
+The Nursing Homes Support Scheme, universally known as Fair Deal, helps meet the cost of long-term residential care. How much a person contributes is determined by a financial assessment of their income and assets — and for most applicants, the principal private residence is the largest asset in that assessment.
+The HSE requires a market valuation of the property as part of that assessment. A Fair Deal valuation is an independent professional valuation prepared for that purpose.
+Why the figure matters to the family
+The valuation directly affects the weekly contribution towards care. An inaccurately high valuation means a family contributes more than the scheme actually requires of them, potentially for years. An inaccurately low one risks the application being queried and delayed at a point when the family needs a decision.
+Neither outcome is acceptable, and neither is necessary. A valuation grounded in genuine comparable evidence is simply correct — and being correct is what makes it hold up.
+We know the process is difficult
+Fair Deal applications are made at hard times. A parent has usually just moved into care, or is about to, and the family is dealing with the emotional side of that while working through an unfamiliar application form with deadlines attached.
+We keep our part of it simple. We arrange the inspection at a time that suits, there is no need to prepare or present the house in any particular way, and the valuation is provided in the form the HSE needs. If you are not sure what the HSE is asking for, ask us — we deal with these applications regularly.
+What your valuation includes
+A full inspection of the property at a time convenient to the family
+A written valuation of open market value as at the date of inspection
+Comparable sales evidence supporting the figure
+A report formatted for the HSE financial assessment
+A signed report from a PSRA-licensed, IPAV-registered valuer
+Fair Deal valuation FAQs
+Does the HSE require a professional valuation?
+The financial assessment requires the market value of the applicant&apos;s assets, including property. A valuation from a qualified, licensed valuer is the most straightforward way to evidence it, and reduces the likelihood of the figure being queried.
+How often is a Fair Deal valuation needed?
+A valuation is required at application. Property assets may be reassessed in later years depending on the circumstances of the case, so an updated valuation is sometimes requested. Check the current requirements with the HSE or your solicitor, and we can advise on the valuation side.
+The house is empty. Is that a problem?
+Not at all. We simply need access. If keys are with a family member, a solicitor or an auctioneer, we will arrange it with them.
+Can you deal with our solicitor?
+Yes. Many Fair Deal applications are handled by a solicitor and we work with them directly.
+CLIENT TO CONFIRM: Fair Deal rules on asset reassessment and the three-year cap change from time to time. This page should be reviewed against current HSE guidance before publication and re-checked annually. I have deliberately kept the copy general rather than quoting figures that will date.
+Related services
+Probate Valuation  ·  Property Valuation  ·  Historic Valuation
+Arrange a Fair Deal valuation
+Call 087 960 4211 or email shane@jwl.ie. We will explain exactly what is needed and confirm the fee before we begin.
+
+Local Property Tax (LPT) Valuation
+Local Property Tax (LPT) Valuations
+Independent evidence to support your LPT band — for homeowners who want a self-assessment they can stand over.
+What is an LPT valuation?
+Local Property Tax is a self-assessed tax. Revenue does not tell you what your property is worth; you declare a valuation band, and you are responsible for that declaration being reasonable and defensible.
+For most homes, a careful look at recent local sales makes the band obvious. For a good many others it does not — and those are the cases we are instructed on.
+When homeowners get a professional LPT valuation
+The property sits close to a band boundary, where the difference between two bands is real money each year
+The property is unusual, and there are few or no genuine comparables — a period home, a converted building, a large site, or a house in an area that rarely trades
+Revenue has queried the declared band and evidence is needed to support it
+The property is held in an estate, a trust or a company, where the declaration needs to be supported by documentation
+The owner is an executor or attorney declaring on someone else&apos;s behalf and wants the decision properly evidenced
+Self-assessment means you carry the risk
+Because LPT is self-assessed, an under-declared band is your exposure, not Revenue&apos;s error. If the declaration is queried, what protects you is being able to show that the band was arrived at reasonably, on the basis of evidence available at the valuation date.
+That is precisely what a written valuation from an accredited valuer provides — a documented, dated record of the comparable evidence and the reasoning behind the band you declared.
+What your LPT valuation includes
+Inspection of the property, or a desktop assessment where that is appropriate to the case
+A written valuation as at the relevant LPT valuation date
+The comparable evidence supporting the figure and the band
+A clear statement of the band the valuation places the property in
+A signed report from a PSRA-licensed, IPAV-registered valuer
+LPT valuation FAQs
+Which date should my property be valued at?
+LPT operates on a fixed valuation date that applies for the whole of a given valuation period, rather than on today&apos;s value. Tell us which period your declaration relates to and we will value as at the correct date. Current dates and bands are published by Revenue.
+What if my property has changed since the valuation date?
+The declaration relates to the property as it stood at the valuation date, so a later extension or refurbishment does not usually change the band for that period. We can advise on how your circumstances apply.
+Can you help if Revenue has queried my band?
+Yes. We prepare a valuation with full supporting evidence that you or your accountant can put forward in response.
+CLIENT TO CONFIRM: LPT bands, rates and valuation dates changed for the 2026–2030 period. This page should be reviewed against Revenue&apos;s current published guidance before it goes live, and I would recommend a short factual paragraph naming the current valuation date once confirmed — that phrase attracts a lot of search traffic.
+Related services
+Property Valuation  ·  Historic Valuation  ·  Probate Valuation
+Get an evidenced LPT valuation
+Call 087 960 4211 or use the form. We will confirm the fee and turnaround before starting.
+
+Local Authority Valuation
+Local Authority Home Loan Valuations
+Valuation reports prepared to local authority requirements — for Local Authority Home Loans, Purchase and Renovation Loans, and council housing schemes.
+What is a local authority valuation?
+State-backed lending schemes administered through local authorities have their own valuation requirements, and they are not always the same as a bank&apos;s. The Local Authority Home Loan and the Local Authority Purchase and Renovation Loan both require valuation reports in a prescribed format, and renovation lending typically requires more than one — a value before works and a projected value after them.
+Getting the form or the basis wrong here is a costly mistake, because it usually means starting the loan assessment again.
+Where a local authority valuation is required
+Local Authority Home Loan applications
+Local Authority Purchase and Renovation Loan applications, including pre- and post-works valuations
+Vacant and derelict property grant schemes where a valuation is required
+Tenant purchase and affordable purchase schemes
+Local authority property acquisitions and disposals
+Why the format matters
+Local authority schemes are administered to defined rules. The valuation must be on the correct form, on the correct basis, and signed by a valuer with the required accreditation. Send us the scheme details and any form the council has issued, and we will work to what they have asked for.
+What your valuation includes
+Inspection of the property in its current condition
+A report on the local authority&apos;s prescribed form where one is specified
+Where the scheme requires it, both a current value and a projected post-renovation value
+Supporting comparable evidence
+A signed report from a PSRA-licensed, IPAV-registered valuer
+Local authority valuation FAQs
+I am buying a derelict property to renovate. What do I need?
+Renovation lending generally requires a valuation of the property as it stands and an assessment of value once the proposed works are complete. Send us the schedule of works or the drawings with your enquiry and we will confirm what the scheme requires.
+Which councils do you cover?
+All four Dublin local authorities and the local authorities throughout Leinster.
+The council has sent me a form. Can you complete it?
+Yes. Send it with your enquiry and we will work to it directly.
+Related services
+Bank &amp; Credit Union Valuation  ·  Property Valuation  ·  Loan to Value Valuation
+Need a local authority valuation?
+Send us the scheme and any form issued. Call 087 960 4211 or use the form.
+
+Historic Valuation
+Historic and Retrospective Property Valuations
+What was the property worth then? A properly evidenced valuation as at a specific past date, for tax, legal and accounting purposes.
+What is a historic valuation?
+A historic — or retrospective — valuation establishes what a property was worth at a defined date in the past rather than today. It is a distinct discipline: today&apos;s market is irrelevant, and the valuer has to reconstruct the market as it stood, using only evidence that existed at or around the relevant date.
+Ireland&apos;s property market has moved dramatically over the last two decades. The gap between what a house was worth in 2007, in 2012 and today can be enormous, so the date is not a detail — it is the entire question.
+When you need one
+Capital Gains Tax, where the base cost is the value at acquisition or at a specified date
+Capital Acquisitions Tax on a gift or inheritance taken at an earlier date
+Probate where the date of death has passed some time ago, or an estate is being reopened
+The 6 April 1974 CGT rebasing date, and other statutory valuation dates
+Legal proceedings where value at a particular moment is in dispute
+Correcting or supporting a return already filed with Revenue
+Company accounts, pension schemes and trust accounting requiring a value as at a year end
+How we do it
+We assemble comparable evidence from the market as it stood at the valuation date — recorded transactions, published data and, where the date predates the Property Price Register, other contemporaneous sources. We then assess the subject property as it stood at that date, allowing for its condition and configuration at the time rather than as it is now.
+Retrospective valuations attract scrutiny from Revenue more often than current ones, for obvious reasons. That is exactly why the evidence trail matters more here than anywhere else, and why our reports set the full trail out.
+Historic valuation FAQs
+How far back can you go?
+We routinely value back to the 1990s and, where sufficient evidence is available, considerably further — including the 1974 CGT rebasing date. Tell us the date you need and we will tell you honestly what evidence exists for it.
+Do you need to inspect the property?
+Usually yes, because the current property informs our understanding of what was there before. Where access is impossible, we can prepare a desktop valuation from documentary evidence — we will tell you at the outset whether that is appropriate in your case and what its limitations are.
+Will Revenue accept a retrospective valuation?
+A valuation from a qualified, accredited valuer that documents its evidence and methodology is the appropriate way to support a return. We cannot speak for Revenue in any individual case, but a well-evidenced report is far easier to stand over than an unsupported figure.
+Related services
+Probate Valuation  ·  LPT Valuation  ·  Family Law Valuation
+Need a valuation as at a past date?
+Tell us the property and the date. Call 087 960 4211 or email shane@jwl.ie.
+
+Blue Book Valuation
+Blue Book Valuations — European Valuation Standards
+Valuation reports prepared to European Valuation Standards by a TEGoVA-accredited valuer — recognised by lenders and institutions across Ireland and Europe.
+What is a Blue Book valuation?
+The Blue Book is the property industry&apos;s name for European Valuation Standards, published by TEGoVA, the European Group of Valuers&apos; Associations. EVS sets out the definitions, bases of value, methodology and reporting requirements that a professional valuation should follow.
+A Blue Book valuation is one prepared in accordance with those standards by a valuer accredited to apply them. In Ireland, TEGoVA&apos;s accreditations — Recognised European Valuer (REV) and TEGoVA Residential Valuer (TRV) — are awarded through IPAV, the only Irish institute with awarding rights.
+Blue Book and Red Book
+People often ask which standard they need. Both are recognised professional valuation frameworks: the Blue Book is TEGoVA&apos;s European Valuation Standards, applied across the EU and administered in Ireland through IPAV; the Red Book is the RICS Valuation Global Standards, applied through RICS and the SCSI.
+They cover much the same ground and both produce valuations to a recognised professional standard. What matters in practice is what the party receiving the report requires. If your lender, solicitor or institution has specified one, tell us at the outset. If they have not specified, ask them — and if you would rather not, we are happy to ask on your behalf.
+Why it matters
+Working to a defined standard is what separates a professional valuation from an estimate. It means the basis of value is stated explicitly, the methodology is recognised, the assumptions are disclosed, and the report contains what a reader needs in order to test the conclusion.
+That is the same idea as our tagline, expressed in a formal standard. Evidence before opinion is not just how we prefer to work; it is what EVS requires.
+What a Blue Book valuation covers
+Houses, apartments and period properties
+Investment and buy-to-let property, including residential portfolios
+Loan security valuations for lenders and institutions
+Sites, land and development property
+Pension fund, trust and company asset valuations
+Blue Book valuation FAQs
+Is JWL accredited to produce Blue Book valuations?
+Yes. JWL operates under PSRA Licence No. 004865, and our director, Shane Cooke, holds TEGoVA&apos;s Recognised European Valuer (REV) accreditation, awarded through IPAV.
+Will my bank accept a Blue Book valuation?
+European Valuation Standards are widely recognised by Irish lenders, but individual institutions set their own panel and format requirements. Tell us who the report is for and we will confirm before we begin.
+Do I need a Blue Book valuation for a normal house purchase?
+Usually your lender will simply require a valuation in its own format. Blue Book valuations tend to be requested for institutional purposes, investment and portfolio lending, pension and trust assets, and cross-border matters.
+Related services
+Bank &amp; Credit Union Valuation  ·  Property Valuation  ·  Local Authority Valuation
+Request a Blue Book valuation
+Tell us who the report is for and we will confirm the standard, the format and the fee. Call 087 960 4211.
+
+Switcher Valuation
+Mortgage Switcher Valuations
+The valuation your new lender needs, in the format they require, without the delay that stalls most switches.
+What is a switcher valuation?
+When you move your mortgage from one lender to another, the new lender needs its own independent valuation of the property it is taking as security. It will not rely on the valuation done when you first bought, however recent that was.
+A switcher valuation is a loan security valuation prepared for that purpose, in the new lender&apos;s format.
+Switching is usually worth doing — and usually done badly
+Irish homeowners leave a great deal of money on the table by staying with their original lender out of inertia. Over the remaining term of a mortgage, a rate difference of a fraction of a percent is a substantial sum.
+Two things commonly go wrong. The first is delay: the valuation is left to the end, and the switch stalls waiting for it. The second is that people switch without checking whether their loan to value band has improved — if your property has risen in value or your balance has fallen, you may qualify for a materially better rate than the one you are being quoted. It is worth checking before you commit.
+What we do
+Confirm your new lender&apos;s valuation requirements and template before we inspect
+Inspect the property, typically within [1–2 working days] of instruction
+Issue a report in the lender&apos;s required format, normally within [2–3 working days] of inspection
+Where it is relevant, confirm the LTV band your valuation places you in
+Deal directly with your broker or solicitor if that is easier
+Switcher valuation FAQs
+Can I reuse the valuation from when I bought the house?
+Almost never. Lenders require a current valuation instructed for their own purposes.
+Who pays for the switcher valuation?
+Usually the borrower, though some lenders offer switching packages that cover valuation or legal costs. Check what your new lender is offering — it is worth asking.
+Will a valuation help me get a better rate?
+It can. Many lenders price by loan to value band, so if your property has risen in value or your balance has reduced, a current valuation may move you into a cheaper band. See our LTV valuation page.
+My broker is handling the switch. Can you deal with them?
+Yes. Give us their details and we will liaise with them directly.
+Related services
+Loan to Value Valuation  ·  Bank &amp; Credit Union Valuation  ·  Property Valuation
+Switching your mortgage?
+Send us your new lender&apos;s name and any form they have issued. Call 087 960 4211 or use the form.
+
+Rental Valuation
+Rental Valuations and Market Rent Assessments
+Independent, evidence-based assessments of open market rent — for landlords, tenants, rent reviews and disputes.
+What is a rental valuation?
+A rental valuation establishes the open market rent for a property: what it would reasonably let for, on the terms in question, at a stated date. Like a capital valuation, it is built from comparable evidence — in this case, comparable lettings — rather than from what a listing site suggests or what a landlord hopes to achieve.
+Ireland&apos;s rental market operates under a substantial and evolving body of regulation, and the market rent question frequently arises in a regulatory or contractual context rather than a straightforward letting one. That is where an independent, evidenced assessment earns its keep.
+When a rental valuation is needed
+Rent reviews on residential tenancies
+Disputes between landlord and tenant over what market rent actually is
+Residential Tenancies Board matters requiring evidence of market rent
+Lease reviews, renewals and new lettings
+Investment appraisal — assessing yield and income potential before purchase
+Family law and probate matters where an income-producing property must be valued
+Accounts, trust and pension reporting where rental value is required
+Evidence, not asking prices
+Advertised rents are asking prices, not achieved rents, and the two are not the same thing. Our assessments are grounded in comparable letting evidence and in the specific characteristics of the property — its condition, its BER, its accommodation, its location within the area and the terms of the tenancy itself.
+Where the assessment is for a dispute or a regulatory process, the report is structured so that the other side and the decision-maker can follow exactly how the figure was reached.
+Rental valuation FAQs
+Do you act for tenants as well as landlords?
+Yes. Our assessment is of market rent, and the figure is what the evidence supports regardless of who instructs us.
+Do you assess rents for multi-unit and portfolio landlords?
+Yes. Individual units, whole buildings and residential portfolios, including rent review and renewal work.
+Can you also value the property for sale purposes?
+Yes. Capital value and rental value are often needed together, particularly for investment properties, and we can cover both in one instruction.
+CLIENT TO CONFIRM: rent pressure zone rules and RTB requirements have changed repeatedly. I have kept this page free of specific regulatory figures so it does not date, but if you would like a section on the current rules, tell me and I will draft one against the guidance in force at the time.
+Related services
+Property Valuation  ·  Family Law Valuation  ·  Blue Book Valuation
+Request a rental valuation
+Call 087 960 4211 or email shane@jwl.ie and tell us about the property and the purpose.
+
+Loan to Value (LTV) Valuation
+Loan to Value (LTV) Valuations
+If your property is worth more than when you bought it, an up-to-date valuation may support a move into a lower interest rate band. Several of the main lenders have a formal process for exactly this.
+What is loan to value?
+Loan to value is the size of your mortgage expressed as a percentage of the property&apos;s value. Borrow €300,000 against a €400,000 property and your LTV is 75%.
+Most Irish lenders price their mortgage rates in LTV bands — typically breaking at 90%, 80%, 70%, 60% and 50%. The lower the band, the lower the risk to the lender, and the lower the rate on offer.
+Why this is worth ten minutes of your attention
+Your LTV falls over time for two reasons at once: you pay down the balance, and the property changes in value. Neither happens on your lender&apos;s initiative. Your rate is set against the LTV recorded when the loan was drawn down, and it generally stays there until somebody evidences a change.
+That means a homeowner who bought several years ago may already be in a cheaper band and simply paying the older rate. The only thing standing between them and it is a current valuation showing where the property now sits.
+Worked example: a mortgage of €270,000 on a property valued at €300,000 sits at 90% LTV. If the property is now worth €340,000 and the balance has fallen to €255,000, the LTV is 75% — two bands lower. Whether that translates into a lower rate depends on your lender and your product, but where it does, the saving over the remaining term is set against a single one-off valuation fee.
+When to get an LTV valuation
+Property prices in your area have risen since you bought
+You have been paying down the mortgage for several years
+You have extended, renovated or materially improved the property
+You are switching lender and want to secure the best band available
+You are coming off a fixed rate and choosing a new product
+You are considering a top-up or equity release and need to know where you stand
+Before you instruct anyone — check three things with your lender
+An LTV band move is a formal process, and each lender runs it slightly differently. One phone call before you spend anything will tell you whether it is worth doing.
+Does the valuer need to be on the lender&apos;s approved panel? Several of the main lenders will only accept a report from a valuer on their own list.
+How recent must the valuation be? Lenders typically require a report dated within the last four to six months, so timing matters.
+Are you on a fixed rate? If so, moving rate before the fixed period ends can trigger a breakage cost. Some lenders let you apply in the months before your fixed rate matures.
+CLIENT TO CONFIRM: this section is written from the published LTV band movement processes of the main Irish lenders as at August 2026. Please sense-check it against what you see in practice, and tell me which lender panels JWL is on — see the note below, this one is important.
+What we do
+Confirm your lender&apos;s valuation requirements, panel rules and LTV band structure before we start
+Inspect the property and assess current open market value on evidence
+Issue a report in your lender&apos;s required format, signed and stamped as they require
+State clearly the LTV band the valuation places you in
+LTV valuation FAQs
+Will my lender definitely reduce my rate?
+That is the lender&apos;s decision and it depends on their current products and criteria. What we can do is provide the independent evidence of value that the request depends on. Ask your lender what band structure applies to your product before you instruct us — it takes one phone call and tells you whether the exercise is worth doing.
+Will the lender accept a valuation I commissioned myself?
+For an LTV band move, several of the main lenders will only accept a report from a valuer on their own approved panel, and some require the original signed and stamped report rather than a copy. Check your lender&apos;s position first and tell us what they say — it is the first thing we would ask anyway. [CLIENT TO CONFIRM: which panels JWL is on.]
+What if the valuation does not improve my band?
+Then it does not, and we will tell you straight. We give you the figure the evidence supports — not the figure that would be convenient. That is the whole basis on which our reports are worth having.
+Related services
+Switcher Valuation  ·  Bank &amp; Credit Union Valuation  ·  Property Valuation
+Find out where your LTV stands
+Call 087 960 4211 or use the form. We will confirm the fee and the turnaround before starting — and if your lender will not accept our report, we will tell you that first rather than take the instruction.
+CLIENT — PLEASE READ. This page depends on JWL being on the relevant lender panels. AIB, EBS, Haven and PTSB all publish formal LTV band movement processes, and each requires a valuer from its own approved panel; PTSB also sets the valuation fee itself. If JWL is not on those panels, this page will generate enquiries the practice cannot fulfil, which is worse than not having the page. Tell me which panels you are on and I will name them here — that is both a trust signal and a strong search term. If you are on none of them, we should discuss whether LTV stays as one of the three featured homepage services.
+
+7. Insights
+Insights
+Practical guidance on property valuation in Ireland, grounded in what the evidence actually shows.
+Article One
+What a Probate Valuation Actually Involves — And Why the Date Matters More Than You Think
+Executors are often told they need &quot;a valuation for probate&quot; without being told what that means, why the date is critical, or what happens if the figure is wrong. Here is the plain-English version.
+If you have been appointed executor of an estate, one of the first practical tasks that lands on you is establishing what the deceased&apos;s property was worth. It sounds simple. It is where a surprising number of estates run into difficulty months later.
+It is not what the house is worth today
+A probate valuation states the open market value of the property as at the date of death. Not today. Not when the house eventually sells. On that specific date.
+Where death occurred recently and the market has been stable, the distinction may make little practical difference. Where probate has been delayed — and delays of a year or more are common where a will is contested, assets are complicated or family members live abroad — it matters a great deal. A valuation carried out today, in today&apos;s market, is simply answering a different question from the one Revenue is asking.
+Why the figure gets scrutinised
+The probate value does more work than most executors realise. It goes into the Statement of Affairs (Probate) Form SA.2 submitted to Revenue. It determines each beneficiary&apos;s inheritance and their Capital Acquisitions Tax position. And if the property is subsequently sold, the difference between the probate value and the sale price is the gain — with capital gains tax consequences for the estate.
+This creates a trap that catches people out. An executor, wanting to be helpful, accepts a conservative figure. The house then sells eighteen months later for considerably more. The estate now faces a capital gains liability that could have been reduced, and Revenue may reasonably ask whether the original valuation was realistic.
+The reverse trap is just as real. An optimistic valuation means beneficiaries pay inheritance tax on value that was never actually there.
+What makes a probate valuation defensible
+The distinction that matters is not between a high figure and a low one. It is between a figure that is asserted and a figure that is evidenced.
+An asserted valuation says the property was worth €X. If Revenue queries it, there is nothing behind it but the valuer&apos;s say-so.
+An evidenced valuation says the property was worth €X, and here are the sales of similar properties nearby from around that date that support it. That is a document that can be tested — and that is why it tends to survive being tested.
+What executors should ask for
+A valuation stated as at the date of death, with the date set out explicitly in the report
+Comparable evidence from around that date, not from the current market
+A signed report from a qualified, PSRA-licensed valuer, with their credentials on it
+A format your solicitor can work with for Form SA.2
+A valuer willing to explain the reasoning if anyone later questions the figure
+A note on the practical side
+Executors often worry about the state of the house — that it is cluttered, that it has not been decorated in decades, that the garden has gone wild. None of that needs attention before a valuation. Condition is one of the things we are assessing, and it is reflected in the figure. There is nothing to prepare and nothing to apologise for.
+The valuation is one of the more straightforward parts of administering an estate, provided it is done properly and once.
+JWL provides probate valuations across Dublin and Leinster, working directly with executors or with their solicitors. Call 087 960 4211 or email shane@jwl.ie.
+Internal links: Probate Valuation · Historic Valuation · Contact
+
+Article Two
+Local Property Tax: How to Value Your Home for the Bands With Confidence
+LPT is a self-assessed tax. Revenue does not tell you what your home is worth — you declare it, and you carry the responsibility for that declaration being reasonable.
+Most homeowners treat their LPT return as a five-minute administrative job. For most homes, that is a fair assessment: the property is ordinary, the road has traded recently, the band is obvious, and the declaration is straightforward.
+For a significant minority of properties, none of that is true — and those are the returns where a little care now saves considerable difficulty later.
+Self-assessment means the risk sits with you
+This is the point most often missed. Revenue does not issue you a valuation. You declare a band, and you are responsible for that declaration being reasonable and supportable.
+If your declared band is later queried, the question will not be whether you got the number exactly right. It will be whether you arrived at it reasonably, on the basis of evidence available at the valuation date. Being able to answer that question is what a documented valuation gives you.
+The valuation date is not today
+LPT works on a fixed valuation date that applies for an entire valuation period, rather than on a rolling current value. Your declaration relates to what the property was worth on that date — so a rise in prices afterwards, or an extension built later, does not generally change your band for that period.
+This trips people up in both directions. Some over-declare because they are thinking of today&apos;s market. Others assume a recent improvement pushes them up a band when, for the period in question, it does not.
+CLIENT TO CONFIRM: insert the current LPT valuation date and the band structure here once verified against Revenue&apos;s published guidance for the 2026–2030 period. Naming the specific date is worth real search traffic — but only if it is right, so it must be checked before publication.
+When to be careful
+Take extra care where:
+Your property sits close to a band boundary. The difference between two bands is a real annual sum, and boundary cases are exactly where a casual estimate is most likely to be wrong.
+Your home is unusual. Period properties, converted buildings, houses on large sites and homes in areas that rarely trade all lack the obvious comparables that make a band self-evident.
+You are declaring on someone else&apos;s behalf — as an executor, an attorney or a trustee. You are making a declaration you may later have to justify.
+The property is held in a company or a trust, where the declaration forms part of a wider set of accounts and returns.
+How to arrive at a band you can stand over
+Start with genuine comparable evidence. The Residential Property Price Register records actual sale prices, which is considerably more useful than asking prices on a listing site — asking prices are aspirations, and the gap between the two varies with the market.
+Look for properties genuinely like yours: same type, similar size, same immediate area, sold as close as possible to the valuation date. Three good comparables beat twenty loose ones. Then adjust honestly for the differences — size, condition, BER, garden, aspect, parking, and the specific location within the area.
+Write down what you did and keep it. If the band you reach is comfortably inside a band rather than sitting on a boundary, your work is probably done.
+When to get a professional valuation
+If you are on a boundary, if the property is unusual, if you are declaring for someone else, or if Revenue has already queried the band, a written valuation from an accredited valuer is a proportionate step. It gives you a dated, documented record of the evidence and reasoning behind the band you declared — which is precisely what you need if the declaration is ever examined.
+JWL provides LPT valuations across Dublin and Leinster, including for boundary cases and unusual properties. Call 087 960 4211 or email shane@jwl.ie.
+Internal links: LPT Valuation · Property Valuation · Contact
+
+Article Three
+Could a Loan to Value Valuation Cut Your Mortgage Rate?
+Your mortgage rate may be set against a loan to value figure recorded years ago. If your property has risen in value since, you could already qualify for a cheaper band — but nobody will tell you.
+Most Irish lenders price mortgages in loan to value bands. Your LTV is the size of your mortgage as a percentage of the property&apos;s value, and the bands typically break around 90%, 80%, 70%, 60% and 50%. The lower your LTV, the less risk the lender carries, and the better the rate on offer.
+Here is the part that costs homeowners money: your rate is generally set against the LTV recorded when the loan was drawn down. It does not adjust itself as your circumstances improve.
+Your LTV improves in two ways at once
+The first is obvious. Every repayment reduces the balance outstanding.
+The second is the one people forget. The property&apos;s value changes independently of anything you do. Someone who bought in 2018 and has been paying down a mortgage since may be in a materially different band from the one their rate reflects — and paying accordingly.
+What the difference looks like
+Take a mortgage of €270,000 drawn down against a property valued at €300,000. That is a 90% LTV, and it will have been priced at 90% rates.
+Some years on, the balance has fallen to €255,000 and the property is now worth €340,000. The LTV is 75% — two bands lower. If the lender&apos;s pricing rewards that with a lower rate, the saving over the remaining term of the mortgage is a significant sum, against a one-off valuation fee.
+That gap does not close on its own. It closes when somebody evidences the change.
+How to check whether it is worth doing
+Three steps, and the first two are free.
+One: find your current outstanding balance. It is on your most recent mortgage statement or in your online banking.
+Two: call your lender and ask two questions — what LTV band your current rate is priced at, and what bands and rates are available on your product. Ask specifically whether they will re-band on the basis of an updated valuation, and whether the valuation must come from their panel.
+Three: if the answers suggest a band change is realistically in reach, get an independent valuation. If they do not, you have spent one phone call finding out — which is a good outcome either way.
+A word on honesty
+It is worth being clear about something. A valuation might come back showing you are exactly where you thought, with no band change available. That is a legitimate result, and any valuer who implies otherwise is not someone you want writing a report you intend to rely on.
+A valuation is worth having because it tells you what is true. If the answer is favourable, it can be worth a great deal. If it is not, you have paid a modest fee to stop wondering — and you know where you stand for the next time you look at your mortgage.
+While you are at it
+If you are looking at your LTV, look at switching too. The two questions belong together: the band your valuation puts you in affects the rate a new lender will offer, and a switch is often where the improved band actually gets realised.
+JWL provides LTV and switcher valuations across Dublin and Leinster in lender-required formats. Call 087 960 4211 or email shane@jwl.ie.
+Internal links: Loan to Value Valuation · Switcher Valuation · Bank &amp; Credit Union Valuation
+Suggested content pipeline
+Three articles establishes the section. To make it work as an SEO asset, add one every four to six weeks. Suggested next pieces, in priority order:
+&quot;Fair Deal and the Family Home: What the Financial Assessment Actually Looks At&quot; — high search volume, high emotional stakes, directly commercial.
+&quot;Blue Book or Red Book: Which Valuation Standard Do You Actually Need?&quot; — almost no good Irish content exists on this, and it ranks quickly.
+&quot;Valuing the Family Home in a Separation: How the Process Works&quot; — a page solicitors will share with clients.
+&quot;What Comparable Evidence Really Means (And Why Asking Prices Are Not It)&quot; — the purest expression of the JWL positioning, and useful as a link target from every service page.
+A quarterly Dublin and Leinster market note, using the Property Price Register. Recurring, distinctive, and exactly the kind of thing that earns links.
+
+8. FAQ page
+Property Valuation FAQs
+The questions we are asked most often, answered plainly.
+H2: About valuations generally
+What is a property valuation?
+A professional assessment of what a property would sell for on the open market at a specific date, supported by comparable sales evidence and prepared to recognised valuation standards. It is a considered, evidenced figure — not an asking price or a marketing estimate.
+What is the difference between a valuation and a survey?
+A valuation establishes what a property is worth. A structural survey assesses its physical condition and identifies defects. They answer different questions and are separate instructions. Lenders frequently require both. JWL provides valuations.
+How is a valuation different from an estate agent&apos;s appraisal?
+An estate agent&apos;s appraisal is usually free, usually verbal, and usually connected to a pitch for the selling instruction. A formal valuation is an independent written report from a licensed valuer, setting out the evidence and reasoning, and prepared to be relied upon by a lender, a solicitor, a court or Revenue.
+How long is a valuation valid for?
+A valuation states a value as at a specific date. In practice, most lenders and institutions treat a report as current for around three to six months, though each sets its own requirement. If yours has expired, an update is usually quicker and cheaper than a fresh instruction.
+What types of property do you value?
+Houses, apartments, period properties, buy-to-let and investment properties, residential portfolios, sites and land — across Dublin and Leinster.
+H2: Cost and timing
+How much does a property valuation cost?
+It depends on the property, its location and the type of report required — a lender valuation and a court-ready family law report involve very different amounts of work. Tell us what you need and we will come back to you with a fee before anything starts.
+How long does the process take?
+We aim to inspect within [1–2 working days] of instruction. The inspection itself takes 30 to 60 minutes for a typical residential property, and your written report normally follows within [2–3 working days]. If you are working to a court date, a drawdown or a Revenue deadline, tell us at the outset.
+Can you work to an urgent deadline?
+Often, yes. Tell us the deadline when you first make contact and we will tell you honestly whether we can meet it.
+What do you need from me to get started?
+The property address, what the valuation is for, who will be receiving the report, and any form or template that party has issued. If access is with someone else — a tenant, a family member, an agent — their details as well.
+H2: Legal, probate and statutory valuations
+Do you provide valuations for probate?
+Yes. Probate valuations are a substantial part of our work. We value as at the date of death using comparable evidence from that period, in a format suited to Form SA.2, and we deal with your solicitor directly if that is easier.
+Can you value a property as at a date in the past?
+Yes. Retrospective valuation is routine for us, for CGT, CAT, probate and legal purposes, using evidence from the market as it stood at the relevant date.
+Do you provide valuations for the Fair Deal Scheme?
+Yes. We prepare independent valuations for the HSE Nursing Homes Support Scheme financial assessment, in the format the HSE expects.
+Can both parties in a separation instruct you jointly?
+Yes, and it is frequently the most efficient approach — a single agreed valuer removes one point of dispute and one set of fees. We are equally happy to be instructed by one party, and the report is prepared to the same standard either way.
+Are your reports accepted by Revenue and the courts?
+Our reports are prepared to European Valuation Standards by a PSRA-licensed, IPAV-registered valuer holding TEGoVA REV accreditation, and they document the evidence and methodology behind the figure. That is what makes a valuation capable of being relied upon and defended. We cannot speak for any individual decision-maker, but an evidenced report is considerably more robust than an unsupported figure.
+H2: Lending, LTV and switching
+Are your valuations accepted by banks and credit unions?
+Yes. We prepare reports in lenders&apos; required formats and to European Valuation Standards. If your lender has a specific template or a panel requirement, tell us when you get in touch. [CLIENT TO CONFIRM: add the specific lender panels JWL is on — people search for these by name.]
+Can a valuation reduce my mortgage rate?
+It can. Most lenders price by loan to value band, so if your property has risen in value or your balance has fallen, a current valuation may support a move into a cheaper band. Before instructing anyone, ask your lender three things: whether they will re-band on an updated valuation, whether the valuer must be on their panel, and how recent the report has to be. That one call tells you whether it is worth doing.
+Can I reuse an old valuation when switching mortgage?
+Almost never. A new lender requires a current valuation instructed for its own purposes.
+What is a Blue Book valuation?
+A valuation prepared in accordance with European Valuation Standards, published by TEGoVA and known in the industry as the Blue Book. Our director, Shane Cooke, holds TEGoVA&apos;s REV accreditation, awarded in Ireland through IPAV.
+H2: About JWL
+What areas do you cover?
+The greater Dublin area in full, together with Kildare, Wicklow, Meath, Louth, Carlow, Kilkenny, Laois, Longford, Offaly, Westmeath and Wexford.
+Are you licensed and regulated?
+Yes. JWL operates under PSRA Licence No. 004865, and our work is carried out by IPAV-registered valuers. Our director, Shane Cooke, holds the TEGoVA REV and RESI designations.
+Who carries out the valuation?
+An accredited JWL valuer inspects the property, prepares the report and puts their name to it. You can always speak to the valuer who did the work.
+Do you sell property as well?
+No. Valuation is all we do. That independence is the reason our valuations are worth having.
+Still have a question?
+Call 087 960 4211, email shane@jwl.ie, or use the form and we will come back to you.
+
+9. Contact
+Request a Valuation
+Tell us about the property and what the valuation is for. We will come back to you with a fixed fee and a timeline before any work begins.
+Contact details block
+Email: shane@jwl.ie
+Phone: 087 960 4211
+PSRA Licence No. 004865
+Areas covered: Greater Dublin area and Leinster
+CLIENT TO CONFIRM: a postal address and business hours. Both materially help local SEO — a verifiable Irish address is one of the strongest ranking signals for &quot;property valuation Dublin&quot; and it is also a trust signal for someone deciding whether to hand over a probate instruction. If there is no public office address, a town or area plus &quot;by appointment&quot; is better than nothing.
+Contact form
+Form heading: Request a valuation
+Intro line: The more you can tell us, the faster we can come back with a fee and a date.
+Field
+Type
+Required
+Notes
+Your name
+Text
+Yes
+
+Email address
+Email
+Yes
+
+Phone number
+Tel
+Yes
+Most valuation enquiries are resolved fastest by phone.
+Property address
+Text
+Yes
+Including Eircode if known.
+What is the valuation for?
+Dropdown
+Yes
+Options listed below. This single field routes the enquiry and shapes the report.
+Property type
+Dropdown
+No
+House · Apartment · Investment / buy-to-let · Site or land · Other
+Who is the report for?
+Text
+No
+e.g. lender name, solicitor, HSE, Revenue.
+Is there a deadline?
+Text
+No
+Court date, drawdown date, application deadline.
+Tell us a bit more
+Textarea
+No
+Anything else that would help us quote accurately.
+Consent
+Checkbox
+Yes
+GDPR consent to be contacted about this enquiry.
+
+&quot;What is the valuation for?&quot; dropdown options
+Property valuation (general) · Bank or credit union · Probate · Family law / separation · Fair Deal Scheme · Local Property Tax (LPT) · Local authority loan · Historic / retrospective · Blue Book / EVS · Mortgage switcher · Rental / market rent · Loan to value (LTV) · Not sure — please advise
+Confirmation message
+Thank you — your enquiry has reached us.
+We will be in touch shortly, usually within one working day, to confirm the fee and arrange a time to inspect. If it is urgent, call 087 960 4211 and we will deal with it straight away.
+Auto-reply email
+Subject: Your valuation enquiry — JWL Property Valuations
+Thank you for contacting JWL.
+We have received your enquiry about [property address] and will come back to you shortly — usually within one working day — to confirm the fee and arrange a time to inspect the property.
+If your matter is urgent or you are working to a deadline, call 087 960 4211 and we will deal with it directly.
+Shane Cooke
+Director, JWL Property Valuations
+MIPAV | REV | RESI | MMCEPI  ·  PSRA Licence No. 004865
+Evidence before opinion.
+
+12. Questions for you
+Everything below is either a placeholder in the draft or a decision that will materially change the copy. Answer what you can and I will revise.
+Facts I need confirmed
+1. Turnaround. I have used [1–2 working days] to inspect and [2–3 working days] to report throughout. What can you commit to in writing, every time? This appears in the hero, the process section and several service pages, and it is one of the strongest conversion levers on the site.
+2. Lender panels — the most important question on this list. Which banks and credit unions is JWL on the valuation panel for? This started as an SEO point and has become a structural one. AIB, EBS, Haven and PTSB all publish formal LTV band movement processes, and each will only accept a valuation from a valuer on its own approved panel. Since LTV is one of the three services featured on the homepage, the site is currently promising something that depends entirely on your panel status. Tell me which panels you are on and I will name them throughout — it is a strong trust signal and people search &quot;[bank name] approved valuer Dublin&quot; directly. If the answer is none of them, we should talk about what takes LTV&apos;s place on the homepage.
+3. Founding year and years qualified. &quot;Over ten years&quot; is fine; &quot;established 2013&quot; is stronger evidence, and dated specifics are what the positioning framework asks for.
+4. Credentials. I have read RESI as TEGoVA Recognised European Residential Valuer and MMCEPI as the Mediators&apos; and Court Experts&apos; Institute. Please confirm both so I can describe them accurately.
+5. Expert witness. Do you attend court as an expert witness? If so I will say so on the family law page — solicitors search for exactly that.
+6. Address and hours. A verifiable Irish address is one of the strongest local SEO signals available and I have left a placeholder on the Contact page.
+7. A sample report. The &quot;What your valuation includes&quot; list on each service page is my best assumption about what a valuation of that type contains, not a description of your actual reports. Send me one redacted sample — probate or lender would be most useful — and I will rewrite all twelve lists to match what you really produce. Also worth confirming: does the valuation usually go to the client, or straight to the lender, solicitor or authority? I have written it as either.
+Decisions that change the copy
+8. Pricing. I have written the site enquiry-led, with no published fees, on the basis that it suits a professional practice positioned on defensibility. Your main competitor publishes prices and sells online. Publishing &quot;from €X&quot; guide prices would capture more price-led searchers but shifts the positioning toward the transactional. Which do you want?
+9. Testimonials and case studies. The positioning framework calls for these explicitly, and there is currently nowhere on the site for them. Do you have client permission for any — particularly from solicitors? Even two or three anonymised outcomes would strengthen the homepage considerably, and I would add a section.
+10. Commercial work — now removed. At your direction, all references to commercial property have been taken out and the site now reads as purely residential. Two consequences worth knowing: the Blue Book and Rental pages were the ones carrying most of that content, so both are narrower than they were, and any commercial instruction that does come in will have no page supporting it. If you do take commercial work even occasionally, one line on the Property Valuation page would cover it without changing the site&apos;s residential positioning. Say the word and I will add it.
+11. &quot;Portfolio Valuation&quot;. Your competitor lists it and you have not asked for it. If you value residential portfolios for investors or institutions, it is worth a thirteenth service page — those are among the highest-value instructions available.
+12. The team. I have reworked the copy so it reads as a practice with a team of valuers rather than a one-man operation, with Shane named as director rather than as the person who does every inspection. Two follow-ups: how many valuers are there, and do you want a team section on the About page with names, credentials and photos? A named, credentialled team is a strong trust signal for probate and family law work, where the reader is deciding whether to hand over something sensitive. If you would rather keep the site led by the director alone, that works too — just say and I will leave the team references general.
+Things I would add next
+13. Area landing pages. Pages for &quot;Property Valuation Dublin 6&quot;, &quot;Property Valuation South Dublin&quot;, &quot;Property Valuation Kildare&quot; and similar would capture a substantial volume of local search that the current structure misses. Roughly eight to twelve pages. Worth doing once the main site is live.
+14. A downloadable guide. &quot;The Executor&apos;s Guide to Probate Valuations in Ireland&quot; as a PDF, in exchange for an email address, would build a list of solicitors and executors — the highest-value referral audience you have.
+15. Google Business Profile. Not a website item, but it drives more local valuation enquiries than the website will in the first six months. Worth setting up alongside launch.

@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-serif: 'Source Serif 4', 'Iowan Old Style', Georgia, serif;
+  --font-grotesque: 'Public Sans', 'Helvetica Neue', Arial, sans-serif;
+
+  --text-display: 600 clamp(2.5rem, 4vw, 3.75rem)/1.05 var(--font-serif);
+  --text-h1: 600 2.25rem/1.15 var(--font-serif);
+  --text-h2: 600 1.5rem/1.25 var(--font-serif);
+  --text-h3: 600 1.125rem/1.3 var(--font-serif);
+  --text-body: 400 1rem/1.6 var(--font-grotesque);
+  --text-body-sm: 400 0.875rem/1.55 var(--font-grotesque);
+  --text-label: 600 0.75rem/1.2 var(--font-grotesque);
+  --text-eyebrow: 600 0.6875rem/1.2 var(--font-grotesque);
+  --tracking-label: 0.08em;
+  --tracking-eyebrow: 0.14em;
+  --tracking-wordmark: 0.02em;
+
+  font-variant-numeric: tabular-nums lining-nums;
+}

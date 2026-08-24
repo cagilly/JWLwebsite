@@ -1,0 +1,36 @@
+:root {
+  /* Base palette — exact values from brand direction doc; do not round */
+  --ink-navy: #12233C;
+  --brass: #B08A4A;
+  --paper: #FAF7F1;
+  --charcoal: #3A3833;
+
+  /* Tints/shades for states. Mixed in srgb, not oklch: paper's chroma is
+     near-zero, so an oklch mix lets ink-navy's hue dominate even at 3% and the
+     result comes out cool blue-grey against warm paper. */
+  --ink-navy-90: color-mix(in srgb, var(--ink-navy) 90%, black);
+  --ink-navy-10: color-mix(in srgb, var(--ink-navy) 10%, var(--paper));
+  --ink-navy-06: color-mix(in srgb, var(--ink-navy) 6%, var(--paper));
+  --brass-dim: color-mix(in srgb, var(--brass) 70%, var(--charcoal));
+  --charcoal-60: color-mix(in srgb, var(--charcoal) 60%, var(--paper));
+  --hairline: color-mix(in srgb, var(--charcoal) 18%, var(--paper));
+  --hairline-on-ink: color-mix(in srgb, var(--paper) 22%, var(--ink-navy));
+
+  /* Semantic aliases */
+  --surface-page: var(--paper);
+  --surface-ink: var(--ink-navy);
+  /* warm off-white for alternating bands — mixed toward charcoal, not navy */
+  --surface-raised: color-mix(in srgb, var(--paper) 96%, var(--charcoal));
+  --text-inverse-muted: color-mix(in srgb, var(--paper) 65%, var(--ink-navy));
+  --text-primary: var(--charcoal);
+  --text-heading: var(--ink-navy);
+  --text-muted: var(--charcoal-60);
+  --text-inverse: var(--paper);
+  --accent: var(--brass);
+  --accent-strong: var(--brass-dim);
+  --border-default: var(--hairline);
+  --border-on-ink: var(--hairline-on-ink);
+  --border-strong: var(--ink-navy);
+
+  --shadow-card: 0 1px 2px rgba(18,35,60,0.07), 0 6px 16px rgba(18,35,60,0.05);
+}
