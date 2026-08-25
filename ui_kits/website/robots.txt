@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /jobs/
+Sitemap: https://www.jwl.ie/sitemap.xml
