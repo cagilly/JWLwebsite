@@ -2,6 +2,7 @@
 
 :root {
   --font-serif: 'Source Serif 4', 'Iowan Old Style', Georgia, serif;
+  --font-wordmark: 'Playfair Display', 'Iowan Old Style', Georgia, serif;
   --font-grotesque: 'Public Sans', 'Helvetica Neue', Arial, sans-serif;
 
   --text-display: 600 clamp(2.5rem, 4vw, 3.75rem)/1.05 var(--font-serif);
