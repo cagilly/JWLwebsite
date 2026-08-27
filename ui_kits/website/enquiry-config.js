@@ -3,7 +3,7 @@
    registered with. Add one key per recipient.
 
    To set up:
-     1. Go to web3forms.com, enter shane@jwl.ie, copy the access key.
+     1. Go to web3forms.com, enter hello@jwl.ie, copy the access key.
      2. Do the same for roisin@raycooke.ie and shanejasminwise@gmail.com.
      3. Paste all three below, replacing the placeholder text.
 
@@ -11,7 +11,7 @@
    one key — then Shane manages who receives enquiries from his email
    admin rather than from this file. */
 window.JWL_FORM_KEYS = [
-  '7b3b48cc-fe85-48f4-bec3-6485ee3a145d',       // shane@jwl.ie
+  '7b3b48cc-fe85-48f4-bec3-6485ee3a145d',       // hello@jwl.ie
   'REPLACE-WITH-ROISIN-ACCESS-KEY',             // roisin@raycooke.ie
   'REPLACE-WITH-SHANEJASMINWISE-ACCESS-KEY'     // shanejasminwise@gmail.com
 ];
