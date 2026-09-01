@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JWL Property Valuations | Independent Property Valuers, Dublin &amp; Leinster</title>
+<meta name="description" content="Independent, PSRA-licensed property valuations across Dublin and Leinster for banks, solicitors, probate, Fair Deal, and family law. Fast turnaround, clear fees.">
+<link rel="canonical" href="https://www.jwl.ie/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JWL Property Valuations | Independent Property Valuers, Dublin & Leinster">
+<meta property="og:description" content="Independent, PSRA-licensed property valuations across Dublin and Leinster for banks, solicitors, probate, Fair Deal, and family law. Fast turnaround, clear fees.">
+<meta property="og:url" content="https://www.jwl.ie/">
+<meta property="og:site_name" content="JWL Property Valuations">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JWL Property Valuations | Independent Property Valuers, Dublin & Leinster">
+<meta name="twitter:description" content="Independent, PSRA-licensed property valuations across Dublin and Leinster for banks, solicitors, probate, Fair Deal, and family law. Fast turnaround, clear fees.">
+<link rel="stylesheet" href="styles.css">
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js" integrity="sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js" integrity="sha384-Ukv1p/xTma6P4/2bY5KzWBw+ydSpXmhCMtyciIQVDJ1RmOxtCYNMF1uXT9T63H67" crossorigin="anonymous"></script>
+<script src="./image-slot.js"></script>
+<link rel="stylesheet" href="./site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "JWL Property Valuations",
+  "url": "https://www.jwl.ie/",
+  "description": "Independent, PSRA-licensed property valuations across Dublin and Leinster for banks, solicitors, probate, Fair Deal, and family law. Fast turnaround, clear fees.",
+  "areaServed": [
+    "Dublin",
+    "Leinster"
+  ],
+  "email": "hello@jwl.ie"
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="brand" aria-label="JWL Property Valuations, home">
+      <span class="word">JW<span>L</span></span>
+      <span class="rule" aria-hidden="true"><b></b><i style="left:0%"></i><i style="left:12.5%"></i><i style="left:25%"></i><i style="left:37.5%"></i><i style="left:50%"></i><i style="left:62.5%"></i><i style="left:75%"></i><i style="left:87.5%"></i><i style="left:100%"></i></span>
+    </a>
+    <nav class="navlinks" aria-label="Primary">
+      <a class="navlink" href="#" aria-current="page">Home</a>
+      <a class="navlink" href="./about/index.html">About</a>
+      <div class="dd" data-open="false">
+        <button class="navlink" aria-haspopup="true" aria-expanded="false" onclick="toggleMenu(this)">Services <span class="caret">▾</span></button>
+        <div class="mega" role="menu">
+          <div class="mega-cols">
+            <div>
+              <h4>Lending &amp; Finance</h4>
+              <ul>
+                <li><a href="./services/bank-credit-union-valuation.html">Bank &amp; Credit Union Valuation</a></li>
+                <li><a href="./services/loan-to-value-valuation.html">Loan to Value (LTV) Valuation</a></li>
+                <li><a href="./services/switcher-valuation.html">Switcher Valuation</a></li>
+                <li><a href="./services/local-authority-valuation.html">Local Authority Valuation</a></li>
+                <li><a href="./services/blue-book-valuation.html">Blue Book Valuation</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Legal &amp; Statutory</h4>
+              <ul>
+                <li><a href="./services/probate-valuation.html">Probate Valuation</a></li>
+                <li><a href="./services/family-law-valuation.html">Family Law Valuation</a></li>
+                <li><a href="./services/fair-deal-valuation.html">Fair Deal Valuation</a></li>
+                <li><a href="./services/lpt-valuation.html">LPT Valuation</a></li>
+                <li><a href="./services/historic-valuation.html">Historic Valuation</a></li>
+              </ul>
+            </div>
+          </div>
+          <a href="./services/index.html" class="mega-all">View all valuations, including property &amp; rental →</a>
+        </div>
+      </div>
+      <a class="navlink" href="./insights/index.html">Insights</a>
+      <a class="navlink" href="faq/index.html">FAQ</a>
+      <a class="navlink" href="contact/index.html">Contact</a>
+    </nav>
+    <div class="navcta">
+      <a href="https://www.linkedin.com/company/jwlproperty" target="_blank" rel="noopener" aria-label="JWL on LinkedIn" style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid var(--border-on-ink);border-radius:50%;color:var(--paper);flex:none">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55v11.45z"/></svg>
+      </a>
+      <a class="btn btn-sm btn-primary" href="contact/index.html">Request a Valuation</a>
+      <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilenav"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav id="mobilenav" data-open="false" aria-label="Mobile">
+    <div class="wrap">
+      <ul>
+        <li><a href="#" aria-current="page">Home</a></li>
+        <li><a href="./about/index.html">About</a></li>
+        <li>
+          <div class="grp">Lending &amp; Finance</div>
+          <a class="sub" href="./services/bank-credit-union-valuation.html">Bank &amp; Credit Union Valuation</a>
+          <a class="sub" href="./services/loan-to-value-valuation.html">Loan to Value (LTV) Valuation</a>
+          <a class="sub" href="./services/switcher-valuation.html">Switcher Valuation</a>
+          <a class="sub" href="./services/local-authority-valuation.html">Local Authority Valuation</a>
+          <a class="sub" href="./services/blue-book-valuation.html">Blue Book Valuation</a>
+          <div class="grp">Legal &amp; Statutory</div>
+          <a class="sub" href="./services/probate-valuation.html">Probate Valuation</a>
+          <a class="sub" href="./services/family-law-valuation.html">Family Law Valuation</a>
+          <a class="sub" href="./services/fair-deal-valuation.html">Fair Deal Valuation</a>
+          <a class="sub" href="./services/lpt-valuation.html">LPT Valuation</a>
+          <a class="sub" href="./services/historic-valuation.html">Historic Valuation</a>
+          <a class="sub" href="./services/index.html" style="font-weight:600;color:var(--brass-dim)">View all valuations →</a>
+        </li>
+        <li><a href="./insights/index.html">Insights</a></li>
+        <li><a href="faq/index.html">FAQ</a></li>
+        <li><a href="contact/index.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-stack">
+      <h1>Property Valuations in Dublin and Leinster</h1>
+      <p class="tag">Evidence before opinion.</p>
+      <p class="lede">When a valuation has to satisfy a lender, a solicitor, the Revenue Commissioners or a court, the figure on its own is not enough. You need to know where it came from. JWL has been valuing property across the greater Dublin area and Leinster for more than ten years, and every valuation we issue is built on real comparable evidence, current market conditions and the expert judgement that comes from knowing these areas well.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="contact/index.html">Request a Valuation</a>
+      </div>
+      <div class="creds">
+        <img src="assets/badges/ipav.png" alt="Institute of Professional Auctioneers &amp; Valuers">
+        <img src="assets/badges/tegova.png" alt="TEGoVA, The European Group of Valuers' Associations">
+        <img src="assets/badges/psra.png" alt="Property Services Regulatory Authority">
+        <div style="width:46px;height:52px"><image-slot id="creds-boi" shape="rect" fit="contain" src="assets/badges/bank-of-ireland.png" placeholder="Bank of Ireland panel badge"></image-slot></div>
+        <span class="lic">PSRA Licence No. 004865</span>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="assets/photos/hero-dublin-aerial.png" alt="Aerial view of a Dublin residential street, with Dublin Bay and the Poolbeg chimneys beyond" style="width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap trust-grid">
+    <div><b>10+ years</b><span>Valuing property across Dublin and Leinster</span></div>
+    <div><b>Regulated</b><span>PSRA Licence No. 004865</span></div>
+    <div><b>Qualified</b><span>Director holds MIPAV, REV, RESI, TRV</span></div>
+    <div><b>Accepted</b><span>By lenders, credit unions, solicitors and the HSE</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Judgement · Worth · Legitimacy</span>
+      <h2>What goes into a JWL Property Valuation</h2>
+      <p class="lede">Three things, in every valuation we issue.</p>
+    </div>
+    <div class="jwl-grid">
+      <div class="jwl-card">
+        <h3><em>J</em>udgement</h3>
+        <p>More than ten years valuing property across Dublin and Leinster. We know how a particular road or estate actually trades, rather than what an online estimate or index suggests.</p>
+      </div>
+      <div class="jwl-card">
+        <h3><em>W</em>orth</h3>
+        <p>A figure grounded in the market as it stands: recent sales of comparable properties, current conditions, and the particular qualities of the property itself.</p>
+      </div>
+      <div class="jwl-card">
+        <h3><em>L</em>egitimacy</h3>
+        <p>Professional qualifications and recognised valuation standards behind the report, so it is accepted by the lender, solicitor or authority who has to rely on it.</p>
+      </div>
+    </div>
+    <p class="pull">That is what we mean by evidence before opinion.</p>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Services</span>
+      <h2>Our most requested valuations</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Property Valuation</h3>
+        <p>An independent market valuation of your home or investment property, backed by comparable sales evidence you can see. The starting point for most decisions involving property.</p>
+        <a class="more" href="./services/property-valuation.html">Property valuation →</a>
+      </div>
+      <div class="card">
+        <h3>Bank &amp; Credit Union Valuation</h3>
+        <p>Lender-format valuation reports prepared to the standards banks and credit unions require, so your loan or drawdown is not the thing holding up the transaction.</p>
+        <a class="more" href="./services/bank-credit-union-valuation.html">Bank &amp; credit union valuation →</a>
+      </div>
+      <div class="card">
+        <h3>Loan to Value (LTV) Valuation</h3>
+        <p>If your property has risen in value, an up-to-date valuation may move your mortgage into a lower LTV rate band. Several of the main lenders have a formal process for it, and the valuation is usually the only thing standing in the way.</p>
+        <a class="more" href="./services/loan-to-value-valuation.html">LTV valuation →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="steps">
+  <div class="wrap">
+    <div class="head">
+      <h2>How a JWL valuation works</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <span class="n">01</span>
+        <span class="rule on-ink" aria-hidden="true"><b></b><i style="left:0%"></i><i style="left:25%"></i><i style="left:50%"></i><i style="left:75%"></i><i style="left:100%"></i></span>
+        <h3>Get in touch</h3>
+        <p>Tell us about the property and what the valuation is for. The purpose shapes the report, so we ask up front. Call, email, or use the form.</p>
+      </div>
+      <div class="step">
+        <span class="n">02</span>
+        <span class="rule on-ink" aria-hidden="true"><b></b><i style="left:0%"></i><i style="left:25%"></i><i style="left:50%"></i><i style="left:75%"></i><i style="left:100%"></i></span>
+        <h3>Inspection</h3>
+        <p>We arrange a time that suits and inspect the property in person.</p>
+      </div>
+      <div class="step">
+        <span class="n">03</span>
+        <span class="rule on-ink" aria-hidden="true"><b></b><i style="left:0%"></i><i style="left:25%"></i><i style="left:50%"></i><i style="left:75%"></i><i style="left:100%"></i></span>
+        <h3>Evidence and analysis</h3>
+        <p>We assemble the comparable evidence (recent sales of genuinely similar properties in the area), and apply professional valuation practice and experience to reach a figure.</p>
+      </div>
+      <div class="step">
+        <span class="n">04</span>
+        <span class="rule on-ink" aria-hidden="true"><b></b><i style="left:0%"></i><i style="left:25%"></i><i style="left:50%"></i><i style="left:75%"></i><i style="left:100%"></i></span>
+        <h3>Your valuation</h3>
+        <p>Issued in the format the receiving party requires: to you, or directly to your lender, solicitor or the relevant authority, whichever suits.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="wrap practice-grid">
+    <div class="practice-media">
+      <img src="assets/photos/shane-cooke-practice.png" alt="Shane Cooke, Director" style="width:100%;height:100%;object-fit:cover;object-position:center 12%;display:block">
+    </div>
+    <div class="practice-body">
+      <h2>The practice behind the valuation</h2>
+      <div>
+        <div class="name">Shane Cooke, Director</div>
+        <div class="postnoms">MIPAV · REV · RESI · MMCEPI</div>
+      </div>
+      <p class="lede">JWL was founded on a straightforward conviction: that a valuation should be able to withstand any amount of scrutiny, because the evidence behind it is there to see and the reasoning is transparent. Our valuers have been working the Dublin and Leinster market for over ten years, and the practice is led by Shane Cooke, MIPAV REV RESI MMCEPI.</p>
+      <p class="lede">Every valuation is carried out by a qualified valuer who inspects the property, prepares the report and signs it. If you want to understand how a figure was arrived at, you can ask the person who arrived at it.</p>
+      <a class="more" href="./about/index.html" style="font:var(--text-body-sm);font-weight:600;color:var(--brass-dim)">More about JWL →</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap areas-grid">
+    <div class="head" style="margin-bottom:0">
+      <span class="eyebrow">Coverage</span>
+      <h2>Valuations across Dublin and Leinster</h2>
+      <p class="lede">We cover the greater Dublin area in full: Dublin city, north Dublin and Fingal, south Dublin and Dún Laoghaire-Rathdown, and west Dublin. We also cover Kildare, Wicklow, Meath, Louth, Carlow, Kilkenny, Laois, Longford, Offaly, Westmeath and Wexford.</p>
+      <p class="lede">Local knowledge counts for a lot in this work. Two similar houses a mile apart can be worth quite different amounts, and knowing an area well makes that difference easier to read.</p>
+      <div class="gd">
+        <h3>Greater Dublin, covered in full</h3>
+        <ul>
+          <li>Dublin city</li>
+          <li>North Dublin &amp; Fingal</li>
+          <li>South Dublin &amp; Dún Laoghaire-Rathdown</li>
+          <li>West Dublin</li>
+        </ul>
+      </div>
+      <div class="areas-cta">
+        <p class="lede">Not sure whether your property is within our area? Give us a call, and if we are not the right practice for it, we will tell you.</p>
+      </div>
+    </div>
+    <div>
+      <div id="map" role="img" aria-label="Map of Ireland showing the greater Dublin area and the eleven further Leinster counties JWL covers: Carlow, Kildare, Kilkenny, Laois, Longford, Louth, Meath, Offaly, Westmeath, Wexford and Wicklow"></div>
+      <div class="maplegend">
+        <span><i></i>The eleven further Leinster counties we cover</span>
+        <span><em></em>Republic of Ireland</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Insights</span>
+      <h2>Insights from the Dublin and Leinster market</h2>
+      <p class="lede">Practical guidance on valuation, grounded in what the evidence actually shows.</p>
+    </div>
+    <div class="grid-3">
+      <article class="insight">
+        <div class="insight-media"><image-slot id="insight-1" shape="rect" fit="cover" src="assets/photos/insight-probate-signing.jpg" placeholder="Article image, probate"></image-slot></div>
+        <div class="insight-body">
+          <span class="eyebrow">Probate</span>
+          <h3>What a Probate Valuation Actually Involves, And Why the Date Matters More Than You Think</h3>
+          <a class="more" href="./insights/probate-valuation-date-matters.html">Read more →</a>
+        </div>
+      </article>
+      <article class="insight">
+        <div class="insight-media"><image-slot id="insight-2" shape="rect" fit="cover" src="assets/photos/insight-lpt-town-aerial.jpg" placeholder="Article image, local property tax"></image-slot></div>
+        <div class="insight-body">
+          <span class="eyebrow">Local Property Tax</span>
+          <h3>Local Property Tax: How to Value Your Home for the Bands With Confidence</h3>
+          <a class="more" href="./insights/local-property-tax-bands.html">Read more →</a>
+        </div>
+      </article>
+      <article class="insight">
+        <div class="insight-media"><image-slot id="insight-3" shape="rect" fit="cover" src="assets/photos/insight-ltv-keys-euro.jpg" placeholder="Article image, loan to value"></image-slot></div>
+        <div class="insight-body">
+          <span class="eyebrow">Loan to Value</span>
+          <h3>Could a Loan to Value Valuation Cut Your Mortgage Rate?</h3>
+          <a class="more" href="./insights/ltv-valuation-mortgage-rate.html">Read more →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap" style="display:grid;grid-template-columns:1.25fr 1fr;gap:var(--space-8);align-items:center">
+    <div class="closing-inner">
+      <h2>Need a valuation you can rely on?</h2>
+      <p>Tell us about the property and what the valuation is for, and we will come back to you with a fee before anything starts.</p>
+      <div class="ctas">
+        <a class="btn btn-on-ink" href="contact/index.html">Request a Valuation</a>
+      </div>
+      <p class="line">Or email <a href="mailto:hello@jwl.ie" style="color:var(--paper)">hello@jwl.ie</a></p>
+    </div>
+    <div class="closing-media" style="width:100%;aspect-ratio:16/9">
+      <image-slot id="closing-1" shape="rect" fit="cover" src="assets/photos/cta-estate-aerial.jpg" placeholder="Drop an image, valuer at a property, or a Dublin street"></image-slot>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand" style="display:flex;flex-direction:column;gap:var(--space-3);align-items:flex-start">
+        <span class="word">JW<span>L</span></span>
+        <span class="rule on-ink" style="width:120px" aria-hidden="true"><b></b><i style="left:0%"></i><i style="left:12.5%"></i><i style="left:25%"></i><i style="left:37.5%"></i><i style="left:50%"></i><i style="left:62.5%"></i><i style="left:75%"></i><i style="left:87.5%"></i><i style="left:100%"></i></span>
+        <span class="eyebrow" style="color:var(--brass)">Independent Property Valuers</span>
+        <span class="foot-tag">Evidence before opinion.</span>
+        <p style="font:var(--text-body-sm);max-width:34ch">Independent property valuations across the greater Dublin area and Leinster.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+353879604211">087 960 4211</a></li>
+          <li><a href="mailto:hello@jwl.ie">hello@jwl.ie</a></li>
+          <li>Greater Dublin area &amp; Leinster</li>
+          <li><a href="https://www.linkedin.com/company/jwlproperty" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--brass)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55v11.45z"/></svg>
+            Follow us on LinkedIn
+          </a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="./about/index.html">About</a></li>
+          <li><a href="./services/index.html">Services</a></li>
+          <li><a href="./insights/index.html">Insights</a></li>
+          <li><a href="faq/index.html">FAQ</a></li>
+          <li><a href="contact/index.html">Contact</a></li>
+        <li><a href="./privacy/index.html">Privacy</a></li>
+</ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 JWL Property Valuations</span>
+      <span>PSRA Licence No. 004865 · MIPAV · REV · RESI · TRV</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(btn){
+  const li = btn.closest('.dd');
+  const open = li.getAttribute('data-open') === 'true';
+  document.querySelectorAll('.dd').forEach(el => el.setAttribute('data-open','false'));
+  li.setAttribute('data-open', open ? 'false' : 'true');
+  btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+}
+document.addEventListener('click', e => {
+  if(!e.target.closest('.dd')) document.querySelectorAll('.dd').forEach(el => el.setAttribute('data-open','false'));
+});
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape') document.querySelectorAll('.dd').forEach(el => el.setAttribute('data-open','false'));
+});
+
+/* Coverage map, real Natural Earth geometry (highest available resolution),
+   counties plotted at their true coordinates. Label side is set per county to
+   avoid collisions in the dense Dublin/Kildare/Wicklow cluster. */
+const COUNTIES = [
+  ['Louth',     54.00, -6.42, 'end'  ],
+  ['Meath',     53.65, -6.68, 'end'  ],
+  ['Dublin',    53.35, -6.26, 'start'],
+  ['Longford',  53.73, -7.79, 'end'  ],
+  ['Westmeath', 53.53, -7.34, 'end'  ],
+  ['Kildare',   53.16, -6.81, 'end'  ],
+  ['Offaly',    53.24, -7.49, 'end'  ],
+  ['Wicklow',   52.98, -6.30, 'start'],
+  ['Laois',     52.99, -7.33, 'end'  ],
+  ['Carlow',    52.72, -6.86, 'end'  ],
+  ['Kilkenny',  52.62, -7.25, 'end'  ],
+  ['Wexford',   52.42, -6.58, 'start']
+];
+
+/* per-label vertical nudges, where two counties sit at close latitudes */
+const LABEL_DY = { Kilkenny: 9, Carlow: -3 };
+
+const ATLASES = [
+  'https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-10m.json',
+  'https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-50m.json',
+  'https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json'
+];
+
+function vertexCount(feature){
+  const rings = feature.geometry.type === 'Polygon'
+    ? feature.geometry.coordinates
+    : feature.geometry.coordinates.flat();
+  return rings.reduce((n, r) => n + r.length, 0);
+}
+
+(async function drawMap(){
+  const el = document.getElementById('map');
+  let ireland = null, uk = null;
+
+  for (const url of ATLASES){
+    try {
+      const topology = await d3.json(url);
+      const feats = topojson.feature(topology, topology.objects.countries).features;
+      const ie = feats.find(f => f.properties.name === 'Ireland');
+      if (ie && vertexCount(ie) > 200){
+        ireland = ie;
+        uk = feats.find(f => f.properties.name === 'United Kingdom');
+        break;
+      }
+      if (ie && !ireland) { ireland = ie; uk = feats.find(f => f.properties.name === 'United Kingdom'); }
+    } catch (err) { /* try next resolution */ }
+  }
+
+  if (!ireland){
+    el.innerHTML = '<p style="font:var(--text-body-sm);color:var(--text-muted);padding:var(--space-5)">Coverage map could not load. We cover the greater Dublin area, Carlow, Kildare, Kilkenny, Laois, Longford, Louth, Meath, Offaly, Westmeath, Wexford and Wicklow.</p>';
+    return;
+  }
+
+  const w = el.clientWidth || 400, h = Math.round(w * 1.12);
+  const svg = d3.select(el).append('svg').attr('viewBox', `0 0 ${w} ${h}`);
+  const projection = d3.geoMercator().fitExtent([[26, 26], [w - 26, h - 26]], ireland);
+  const path = d3.geoPath(projection);
+
+  if (uk){
+    svg.append('path').datum(uk).attr('d', path)
+      .attr('fill', 'var(--ink-navy-06)')
+      .attr('stroke', 'var(--hairline)').attr('stroke-width', 1);
+  }
+
+  svg.append('path').datum(ireland).attr('d', path)
+    .attr('fill', 'var(--ink-navy-10)')
+    .attr('stroke', 'var(--ink-navy)')
+    .attr('stroke-width', 1.25)
+    .attr('stroke-linejoin', 'round');
+
+  const g = svg.append('g');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  COUNTIES.forEach(([name, lat, lon, anchor], i) => {
+    const p = projection([lon, lat]);
+    if (!p) return;
+    const dx = anchor === 'start' ? 9 : -9;
+    const line = g.append('line')
+      .attr('x1', p[0] + (anchor === 'start' ? 4 : -4)).attr('y1', p[1])
+      .attr('x2', p[0] + dx).attr('y2', p[1])
+      .attr('stroke', 'var(--charcoal-60)').attr('stroke-width', 1);
+    const dot = g.append('circle').attr('cx', p[0]).attr('cy', p[1])
+      .attr('r', reduce ? 3.5 : 0)
+      .attr('fill', 'var(--brass)');
+    const label = g.append('text')
+      .attr('x', p[0] + dx + (anchor === 'start' ? 3 : -3)).attr('y', p[1] + 3.5 + (LABEL_DY[name] || 0))
+      .attr('text-anchor', anchor)
+      .attr('font-family', 'var(--font-grotesque)')
+      .attr('font-size', 11).attr('font-weight', 600)
+      .attr('fill', 'var(--ink-navy)')
+      .text(name);
+
+    if (!reduce){
+      line.attr('opacity', 0); label.attr('opacity', 0);
+      const delay = 260 + i * 70;
+      dot.transition().delay(delay).duration(220).attr('r', 3.5);
+      line.transition().delay(delay + 60).duration(200).attr('opacity', 1);
+      label.transition().delay(delay + 60).duration(200).attr('opacity', 1);
+    }
+  });
+})();
+
+const mobileNav = document.getElementById('mobilenav');
+const burger = document.querySelector('.burger');
+burger.addEventListener('click', () => {
+  const open = mobileNav.getAttribute('data-open') === 'true';
+  mobileNav.setAttribute('data-open', open ? 'false' : 'true');
+  burger.setAttribute('aria-expanded', open ? 'false' : 'true');
+});
+mobileNav.addEventListener('click', e => {
+  if (e.target.tagName === 'A') {
+    mobileNav.setAttribute('data-open', 'false');
+    burger.setAttribute('aria-expanded', 'false');
+  }
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    mobileNav.setAttribute('data-open', 'false');
+    burger.setAttribute('aria-expanded', 'false');
+  }
+});
+
+/* Quiet entry motion: elements settle into place once, on first scroll into view. */
+(function revealOnScroll(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+
+  const targets = document.querySelectorAll(
+    '.hero-stack, .hero-media, .trust-grid > div, .head, .jwl-card, .pull, .card, ' +
+    '.step, .practice-media, .practice-body, .gd, .areas-cta, #map, .maplegend, ' +
+    '.insight, .closing-inner'
+  );
+  targets.forEach(el => el.classList.add('rv'));
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const siblings = el.parentElement ? [...el.parentElement.children].filter(c => c.classList.contains('rv')) : [];
+      const i = Math.max(0, siblings.indexOf(el));
+      el.style.transitionDelay = Math.min(i * 70, 280) + 'ms';
+      el.classList.add('rv-in');
+      io.unobserve(el);
+    });
+  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+
+  targets.forEach(el => io.observe(el));
+})();
+</script>
+<script src="./enquiry-config.js"></script>
+<script src="./enquiry-store.js"></script>
+<script src="./enquiry-modal.js" defer></script>
+<script src="./cookie-notice.js" defer></script>
+</body>
+</html>
