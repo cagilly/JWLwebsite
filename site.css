@@ -200,6 +200,7 @@
     .navlinks{display:none}
     .tel{display:none}
     .burger{display:flex}
+    .navcta .btn-primary{display:none}
     .hero-media,.practice-media{max-width:420px}
   }
   @media (max-width:620px){
