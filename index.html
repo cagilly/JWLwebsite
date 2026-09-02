@@ -494,10 +494,12 @@ function vertexCount(feature){
 
 const mobileNav = document.getElementById('mobilenav');
 const burger = document.querySelector('.burger');
+const headerEl = document.querySelector('header');
 burger.addEventListener('click', () => {
   const open = mobileNav.getAttribute('data-open') === 'true';
   mobileNav.setAttribute('data-open', open ? 'false' : 'true');
   burger.setAttribute('aria-expanded', open ? 'false' : 'true');
+  headerEl.style.zIndex = open ? '' : '850';
 });
 mobileNav.addEventListener('click', e => {
   if (e.target.tagName === 'A') {
