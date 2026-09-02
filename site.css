@@ -68,7 +68,7 @@
   .burger{display:none;background:none;border:1px solid var(--border-strong);cursor:pointer;padding:9px 11px;flex-direction:column;gap:3px}
   .burger span{display:block;width:16px;height:1.5px;background:var(--ink-navy)}
   .burger span:last-child{background:var(--brass)}
-  #mobilenav{display:none;border-top:1px solid var(--border-default);background:var(--surface-page)}
+#mobilenav{display:none;border-top:1px solid var(--border-default);background:var(--surface-page);max-height:calc(100vh - 65px);overflow-y:auto}
   #mobilenav[data-open=true]{display:block}
   #mobilenav ul{list-style:none;margin:0;padding:var(--space-4) 0;display:flex;flex-direction:column}
   #mobilenav li{border-bottom:1px solid var(--border-default)}
