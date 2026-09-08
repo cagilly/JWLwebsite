@@ -92,13 +92,13 @@
         '<label class="jwl-consent" for="jwl-consent"><input type="checkbox" id="jwl-consent" name="consent" required><span>I consent to JWL Property Valuations contacting me about this enquiry and holding my details for that purpose. <span class="req">*</span></span></label>' +
         '<div class="jwl-actions">' +
           '<button class="btn btn-primary" type="submit">Send enquiry</button>' +
-          '<span class="note">Or call <a href="tel:+353879604211" style="font-weight:600">087 960 4211</a></span>' +
+          '<span class="note">Or call <a href="tel:+353852117338" style="font-weight:600">085 211 7338</a></span>' +
         '</div>' +
-        '<p class="jwl-err">We could not send that just now. Please call <a href="tel:+353879604211" style="font-weight:600">087 960 4211</a> or email <a href="mailto:hello@jwl.ie" style="font-weight:600">hello@jwl.ie</a> and we will pick it up straight away.</p>' +
+        '<p class="jwl-err">We could not send that just now. Please call <a href="tel:+353852117338" style="font-weight:600">085 211 7338</a> or email <a href="mailto:hello@jwl.ie" style="font-weight:600">hello@jwl.ie</a> and we will pick it up straight away.</p>' +
       '</form>' +
       '<div class="jwl-thanks">' +
         '<h2>Thank you. Your enquiry has reached us.</h2>' +
-        '<p>We will be in touch shortly, usually within one working day, to confirm the fee and arrange a time to inspect. If it is urgent, call <a href="tel:+353879604211" style="font-weight:600">087 960 4211</a>.</p>' +
+        '<p>We will be in touch shortly, usually within one working day, to confirm the fee and arrange a time to inspect. If it is urgent, call <a href="tel:+353852117338" style="font-weight:600">085 211 7338</a>.</p>' +
       '</div>' +
     '</div>';
 
