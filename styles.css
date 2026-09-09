@@ -1,3 +1,85 @@
-@import 'tokens/colors.css';
-@import 'tokens/typography.css';
-@import 'tokens/spacing.css';
+/* Design tokens, inlined from tokens/*.css so the browser makes one request
+   instead of four chained imports. Edit here; the tokens/ files are kept for
+   reference but are no longer loaded. */
+
+:root {
+  /* Base palette — exact values from brand direction doc; do not round */
+  --ink-navy: #12233C;
+  --brass: #B08A4A;
+  --paper: #FAF7F1;
+  --charcoal: #3A3833;
+
+  /* Tints/shades for states. Mixed in srgb, not oklch: paper's chroma is
+     near-zero, so an oklch mix lets ink-navy's hue dominate even at 3% and the
+     result comes out cool blue-grey against warm paper. */
+  --ink-navy-90: color-mix(in srgb, var(--ink-navy) 90%, black);
+  --ink-navy-10: color-mix(in srgb, var(--ink-navy) 10%, var(--paper));
+  --ink-navy-06: color-mix(in srgb, var(--ink-navy) 6%, var(--paper));
+  --brass-dim: color-mix(in srgb, var(--brass) 70%, var(--charcoal));
+  --charcoal-60: color-mix(in srgb, var(--charcoal) 60%, var(--paper));
+  --hairline: color-mix(in srgb, var(--charcoal) 18%, var(--paper));
+  --hairline-on-ink: color-mix(in srgb, var(--paper) 22%, var(--ink-navy));
+
+  /* Semantic aliases */
+  --surface-page: var(--paper);
+  --surface-ink: var(--ink-navy);
+  /* warm off-white for alternating bands — mixed toward charcoal, not navy */
+  --surface-raised: color-mix(in srgb, var(--paper) 96%, var(--charcoal));
+  --text-inverse-muted: color-mix(in srgb, var(--paper) 65%, var(--ink-navy));
+  --text-primary: var(--charcoal);
+  --text-heading: var(--ink-navy);
+  --text-muted: var(--charcoal-60);
+  --text-inverse: var(--paper);
+  --accent: var(--brass);
+  --accent-strong: var(--brass-dim);
+  --border-default: var(--hairline);
+  --border-on-ink: var(--hairline-on-ink);
+  --border-strong: var(--ink-navy);
+
+  --shadow-card: 0 1px 2px rgba(18,35,60,0.07), 0 6px 16px rgba(18,35,60,0.05);
+}
+
+:root {
+  --font-serif: 'Source Serif 4', 'Iowan Old Style', Georgia, serif;
+  --font-wordmark: 'Playfair Display', 'Iowan Old Style', Georgia, serif;
+  --font-grotesque: 'Public Sans', 'Helvetica Neue', Arial, sans-serif;
+
+  --text-display: 600 clamp(2.5rem, 4vw, 3.75rem)/1.05 var(--font-serif);
+  --text-h1: 600 2.25rem/1.15 var(--font-serif);
+  --text-h2: 600 1.5rem/1.25 var(--font-serif);
+  --text-h3: 600 1.125rem/1.3 var(--font-serif);
+  --text-body: 400 1rem/1.6 var(--font-grotesque);
+  --text-body-sm: 400 0.875rem/1.55 var(--font-grotesque);
+  --text-label: 600 0.75rem/1.2 var(--font-grotesque);
+  --text-eyebrow: 600 0.6875rem/1.2 var(--font-grotesque);
+  --tracking-label: 0.08em;
+  --tracking-eyebrow: 0.14em;
+  --tracking-wordmark: 0.02em;
+
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* institutional, near-flat corners — no rounded/approachable radii */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-none: 0px;
+
+  --rule-weight-hairline: 1px;
+  --rule-weight-accent: 1.5px;
+
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --duration-fast: 120ms;
+  --duration-standard: 200ms;
+}
