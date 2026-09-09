@@ -17,9 +17,8 @@
 <meta name="twitter:title" content="JWL Property Valuations | Independent Property Valuers, Dublin & Leinster">
 <meta name="twitter:description" content="Independent, PSRA-licensed property valuations across Dublin and Leinster for banks, solicitors, probate, Fair Deal, and family law. Fast turnaround, clear fees.">
 <link rel="stylesheet" href="styles.css">
-<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js" integrity="sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js" integrity="sha384-Ukv1p/xTma6P4/2bY5KzWBw+ydSpXmhCMtyciIQVDJ1RmOxtCYNMF1uXT9T63H67" crossorigin="anonymous"></script>
-<script src="./image-slot.js"></script>
+<script src="./image-slot.js" defer></script>
+<link rel="preload" as="image" href="assets/photos/hero-dublin-aerial-900.jpg" imagesrcset="assets/photos/hero-dublin-aerial-900.jpg 900w, assets/photos/hero-dublin-aerial-1400.jpg 1400w, assets/photos/hero-dublin-aerial.jpg 1500w" imagesizes="(max-width: 900px) 100vw, 52vw" fetchpriority="high">
 <link rel="stylesheet" href="./site.css">
 <script type="application/ld+json">
 {
@@ -133,7 +132,7 @@
       </div>
     </div>
     <div class="hero-media">
-      <img src="assets/photos/hero-dublin-aerial.jpg" alt="Aerial view of a Dublin residential street, with Dublin Bay and the Poolbeg chimneys beyond" style="width:100%;height:100%;object-fit:cover;display:block">
+      <img src="assets/photos/hero-dublin-aerial-1400.jpg" srcset="assets/photos/hero-dublin-aerial-900.jpg 900w, assets/photos/hero-dublin-aerial-1400.jpg 1400w, assets/photos/hero-dublin-aerial.jpg 1500w" sizes="(max-width: 900px) 100vw, 52vw" width="1500" height="1123" fetchpriority="high" decoding="async" alt="Aerial view of a Dublin residential street, with Dublin Bay and the Poolbeg chimneys beyond" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
   </div>
 </section>
@@ -423,8 +422,22 @@ function vertexCount(feature){
   return rings.reduce((n, r) => n + r.length, 0);
 }
 
-(async function drawMap(){
+function loadScript(src, integrity){
+  return new Promise((res, rej) => {
+    const s = document.createElement('script');
+    s.src = src; s.crossOrigin = 'anonymous';
+    if (integrity) s.integrity = integrity;
+    s.onload = res; s.onerror = rej;
+    document.head.appendChild(s);
+  });
+}
+
+async function drawMap(){
   const el = document.getElementById('map');
+  await Promise.all([
+    loadScript('https://unpkg.com/d3@7.9.0/dist/d3.min.js', 'sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i'),
+    loadScript('https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js', 'sha384-Ukv1p/xTma6P4/2bY5KzWBw+ydSpXmhCMtyciIQVDJ1RmOxtCYNMF1uXT9T63H67')
+  ]);
   let ireland = null, uk = null;
 
   for (const url of ATLASES){
@@ -492,6 +505,16 @@ function vertexCount(feature){
       label.transition().delay(delay + 60).duration(200).attr('opacity', 1);
     }
   });
+}
+
+(function whenMapVisible(){
+  const el = document.getElementById('map');
+  if (!el) return;
+  if (!('IntersectionObserver' in window)) { drawMap(); return; }
+  const io = new IntersectionObserver(entries => {
+    if (entries.some(e => e.isIntersecting)) { io.disconnect(); drawMap(); }
+  }, { rootMargin: '400px' });
+  io.observe(el);
 })();
 
 const mobileNav = document.getElementById('mobilenav');
