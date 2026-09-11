@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="icon" type="image/png" href="../assets/logo/favicon-32.png">
 <link rel="apple-touch-icon" href="../assets/logo/favicon.png">
 <title>Insights | JWL Property Valuations</title>
@@ -56,8 +57,8 @@
   .pipeline li{counter-increment:p;display:flex;gap:var(--space-4);padding:11px 0;border-bottom:1px solid var(--border-default);font:var(--text-body-sm);color:var(--text-primary)}
   .pipeline li:last-child{border-bottom:0}
   .pipeline li::before{content:counter(p,decimal-leading-zero);color:var(--brass-dim);font-variant-numeric:tabular-nums;flex:none;font-weight:600}
-  .lead-pic image-slot{display:block;width:100%;aspect-ratio:4/3}
-  .art .thumb{display:block;width:100%;aspect-ratio:4/3}
+  .lead-pic img{object-fit:cover;display:block;width:100%;aspect-ratio:4/3}
+  .art .thumb{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
   @media (max-width:1000px){
     .art .thumb{max-width:280px}
     .lead-art{grid-template-columns:1fr}
@@ -68,7 +69,6 @@
     .art .read{display:none}
   }
 </style>
-<script src="../image-slot.js" defer></script>
 </head>
 <body>
 
@@ -86,7 +86,7 @@
         <div class="mega" role="menu">
           <div class="mega-cols">
             <div>
-              <h4>Lending &amp; Finance</h4>
+              <div class="mega-h">Lending &amp; Finance</div>
               <ul>
                 <li><a href="../services/bank-credit-union-valuation.html">Bank &amp; Credit Union Valuation</a></li>
                 <li><a href="../services/loan-to-value-valuation.html">Loan to Value (LTV) Valuation</a></li>
@@ -96,7 +96,7 @@
               </ul>
             </div>
             <div>
-              <h4>Legal &amp; Statutory</h4>
+              <div class="mega-h">Legal &amp; Statutory</div>
               <ul>
                 <li><a href="../services/probate-valuation.html">Probate Valuation</a></li>
                 <li><a href="../services/family-law-valuation.html">Family Law Valuation</a></li>
@@ -166,7 +166,7 @@
         <span class="read">6 min read</span>
       </div>
       <div class="lead-pic">
-        <image-slot id="idx-lead" shape="rect" src="../assets/photos/insight-probate-signing.jpg" placeholder="Drop the featured article image"></image-slot>
+        <img src="../assets/photos/insight-probate-signing.jpg" alt="Signing documents at a solicitor’s desk" loading="lazy" decoding="async" style="object-fit:cover">
       </div>
       <div class="lead-body">
         <h2><a href="./probate-valuation-date-matters.html">What a Probate Valuation Actually Involves, And Why the Date Matters More Than You Think</a></h2>
@@ -178,7 +178,7 @@
     <div class="art-list">
       <a class="art" href="./local-property-tax-bands.html">
         <span class="cat">Local Property Tax</span>
-        <image-slot class="thumb" id="idx-thumb-lpt" shape="rect" src="../assets/photos/insight-lpt-town-aerial.jpg" placeholder="Drop thumbnail"></image-slot>
+        <img class="thumb" src="../assets/photos/insight-lpt-town-aerial.jpg" alt="Aerial view of a Dublin suburban town" loading="lazy" decoding="async" style="object-fit:cover">
         <div class="txt">
           <h3>Local Property Tax: How to Value Your Home for the Bands With Confidence</h3>
           <p>LPT is a self-assessed tax. Revenue does not tell you what your home is worth. You declare it, and you carry the responsibility for that declaration being reasonable.</p>
@@ -187,7 +187,7 @@
       </a>
       <a class="art" href="./ltv-valuation-mortgage-rate.html">
         <span class="cat">Loan to Value</span>
-        <image-slot class="thumb" id="idx-thumb-ltv" shape="rect" src="../assets/photos/insight-ltv-keys-euro.jpg" placeholder="Drop thumbnail"></image-slot>
+        <img class="thumb" src="../assets/photos/insight-ltv-keys-euro.jpg" alt="House keys resting on euro notes" loading="lazy" decoding="async" style="object-fit:cover">
         <div class="txt">
           <h3>Could a Loan to Value Valuation Cut Your Mortgage Rate?</h3>
           <p>Your mortgage rate may be set against a loan to value figure recorded years ago. If your property has risen in value since, you could already qualify for a cheaper band, but nobody will tell you.</p>
@@ -220,7 +220,7 @@
         <p style="font:var(--text-body-sm);max-width:34ch">Independent property valuations across the greater Dublin area and Leinster.</p>
       </div>
       <div class="foot-col">
-        <h4>Contact</h4>
+        <h3>Contact</h3>
         <ul>
           <li><a href="tel:+353852117338">085 211 7338</a></li>
           <li><a href="mailto:hello@jwl.ie">hello@jwl.ie</a></li>
@@ -228,7 +228,7 @@
         </ul>
       </div>
       <div class="foot-col">
-        <h4>Site</h4>
+        <h3>Site</h3>
         <ul>
           <li><a href="../about/">About</a></li>
           <li><a href="../services/">Services</a></li>
