@@ -15,8 +15,8 @@
   --ink-navy-90: color-mix(in srgb, var(--ink-navy) 90%, black);
   --ink-navy-10: color-mix(in srgb, var(--ink-navy) 10%, var(--paper));
   --ink-navy-06: color-mix(in srgb, var(--ink-navy) 6%, var(--paper));
-  --brass-dim: color-mix(in srgb, var(--brass) 70%, var(--charcoal));
-  --charcoal-60: color-mix(in srgb, var(--charcoal) 60%, var(--paper));
+  --brass-dim: color-mix(in srgb, var(--brass) 52%, var(--charcoal));
+  --charcoal-60: color-mix(in srgb, var(--charcoal) 78%, var(--paper));
   --hairline: color-mix(in srgb, var(--charcoal) 18%, var(--paper));
   --hairline-on-ink: color-mix(in srgb, var(--paper) 22%, var(--ink-navy));
 
