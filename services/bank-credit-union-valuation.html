@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="icon" type="image/png" href="../assets/logo/favicon-32.png">
 <link rel="apple-touch-icon" href="../assets/logo/favicon.png">
 <title>Bank and Credit Union Property Valuations | JWL</title>
@@ -21,7 +22,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&family=Public+Sans:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="../site.css">
-<script src="../image-slot.js" defer></script>
 <style>
   .page-hero{padding:var(--space-8) 0 var(--space-7);border-bottom:1px solid var(--border-default)}
   .page-hero h1{font:600 clamp(2.2rem,3.2vw,3rem)/1.08 var(--font-serif);max-width:24ch}
@@ -85,7 +85,7 @@
         <div class="mega" role="menu">
           <div class="mega-cols">
             <div>
-              <h4>Lending &amp; Finance</h4>
+              <div class="mega-h">Lending &amp; Finance</div>
               <ul>
                 <li><a href="./bank-credit-union-valuation.html">Bank &amp; Credit Union Valuation</a></li>
                 <li><a href="./loan-to-value-valuation.html">Loan to Value (LTV) Valuation</a></li>
@@ -95,7 +95,7 @@
               </ul>
             </div>
             <div>
-              <h4>Legal &amp; Statutory</h4>
+              <div class="mega-h">Legal &amp; Statutory</div>
               <ul>
                 <li><a href="./probate-valuation.html">Probate Valuation</a></li>
                 <li><a href="./family-law-valuation.html">Family Law Valuation</a></li>
@@ -194,7 +194,7 @@
     </div>
     <div class="prose">
       <div style="width:64px;height:72px;margin-bottom:var(--space-4)">
-        <image-slot id="boi-panel-logo" shape="rect" fit="contain" src="../assets/badges/bank-of-ireland.png" placeholder="Drop the Bank of Ireland panel valuer logo/badge"></image-slot>
+        <img src="../assets/badges/bank-of-ireland.png" alt="Bank of Ireland" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain;display:block">
       </div>
       <p>JWL is an approved valuer on the Bank of Ireland panel. Our valuations are prepared to European Valuation Standards, the framework published by TEGoVA and known in the industry as the Blue Book. JWL operates under PSRA Licence No. 004865, and our director, Shane Cooke, holds TEGoVA's REV accreditation and IPAV membership.</p>
       <p>Just as importantly, the reports are complete. A valuation returned to a lender missing a photograph, a floor area or a required declaration costs everybody a week, so if your lender has its own template or panel requirement, send it to us at the outset and we will work to it.</p>
@@ -272,7 +272,7 @@
         <p style="font:var(--text-body-sm);max-width:34ch">Independent property valuations across the greater Dublin area and Leinster.</p>
       </div>
       <div class="foot-col">
-        <h4>Contact</h4>
+        <h3>Contact</h3>
         <ul>
           <li><a href="tel:+353852117338">085 211 7338</a></li>
           <li><a href="mailto:hello@jwl.ie">hello@jwl.ie</a></li>
@@ -280,7 +280,7 @@
         </ul>
       </div>
       <div class="foot-col">
-        <h4>Site</h4>
+        <h3>Site</h3>
         <ul>
           <li><a href="../about/">About</a></li>
           <li><a href="./">Services</a></li>
